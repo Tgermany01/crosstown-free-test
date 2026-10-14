@@ -1,0 +1,33 @@
+---
+import Base from '../layouts/Base.astro';
+import ContactForm from '../components/ContactForm.astro';
+import { img } from '../data/images';
+import { Content as Partners } from '../copy/partners.md';
+import { Content as Vovc } from '../copy/vovc.md';
+---
+<Base title="Ministry Partners" description="The local organizations Crosstown Community Church partners with in Stockton, CA.">
+  <section class="section">
+    <div class="wrap grid-2">
+      <div>
+        <h1>Ministry Partners</h1>
+        <Partners />
+      </div>
+      <img class="rounded" src={img('partners')} alt="Crosstown ministry partners" />
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap prose">
+      <h2>Victims of Violent Crimes</h2>
+      <Vovc />
+      <a class="btn" href="https://www.victimsofviolentcrimes.org/">Visit their website</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap prose">
+      <h2>Get in touch</h2>
+      <ContactForm subject="Ministry partners" />
+    </div>
+  </section>
+</Base>

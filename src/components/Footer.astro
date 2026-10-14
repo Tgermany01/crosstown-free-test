@@ -1,0 +1,48 @@
+---
+import { site } from '../data/site';
+import NewsletterForm from './NewsletterForm.astro';
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="wrap cols">
+    <div>
+      <h2>{site.name}</h2>
+      <p>
+        <a href={site.mapUrl}>{site.street}<br />{site.cityStateZip}</a><br />
+        Mailing: {site.mailing}
+      </p>
+      <p>
+        <a href={site.phoneHref}>{site.phone}</a><br />
+        <a href={`mailto:${site.email}`}>{site.email}</a>
+      </p>
+      <p>
+        <a href={site.facebookUrl}>Facebook</a> · <a href={site.youtubeUrl}>YouTube</a>
+      </p>
+    </div>
+    <div>
+      <h2>Gather with us</h2>
+      <ul>
+        {site.schedule.map((s) => <li><strong>{s.label}:</strong> {s.time}</li>)}
+      </ul>
+    </div>
+    <div>
+      <h2>Subscribe to the Crosstown Newsletter</h2>
+      <NewsletterForm />
+    </div>
+  </div>
+  <div class="wrap small">
+    <p>
+      © {year} {site.name}. Affiliated with <a href={site.affiliation.url}>{site.affiliation.name}</a>.
+      Web design by <a href="https://www.nectarine.ink">Nectarine Studio</a>.
+    </p>
+  </div>
+</footer>
+
+<style>
+  .site-footer { background: var(--ink); color: #e9edf0; padding: 56px 0 24px; }
+  .site-footer a { color: #ffd2bd; }
+  .site-footer h2 { font-size: 1.2rem; color: #fff; }
+  .cols { display: grid; gap: 32px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  ul { padding-left: 1.1em; margin: 0; }
+  .small { font-size: 0.9rem; opacity: 0.8; margin-top: 32px; }
+</style>

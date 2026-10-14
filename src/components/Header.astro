@@ -1,0 +1,47 @@
+---
+import { site } from '../data/site';
+import { img } from '../data/images';
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+---
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="/">
+      <img src={img('logo')} alt="" width="44" height="44" />
+      <span>{site.name}</span>
+    </a>
+    <details class="menu">
+      <summary aria-label="Menu">Menu</summary>
+      <nav aria-label="Main">
+        {site.nav.map((item) => (
+          <a href={item.href} aria-current={path === item.href ? 'page' : undefined}>{item.label}</a>
+        ))}
+        <a class="btn" href={site.donateUrl}>Donate</a>
+      </nav>
+    </details>
+  </div>
+</header>
+
+<style>
+  .site-header { background: #fff; border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 10; }
+  .bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 68px; }
+  .brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 700; }
+  .brand img { width: 44px; height: 44px; object-fit: contain; }
+  nav { display: flex; flex-direction: column; gap: 12px; padding: 16px 0; }
+  nav a:not(.btn) { color: var(--ink); text-decoration: none; font-weight: 600; }
+  nav a[aria-current='page'] { color: var(--accent); }
+  summary { cursor: pointer; font-weight: 600; list-style: none; padding: 8px 12px; border: 1px solid var(--line); border-radius: 8px; }
+  .menu[open] nav { position: absolute; left: 0; right: 0; top: 68px; background: #fff; padding: 16px; border-bottom: 1px solid var(--line); }
+  @media (min-width: 900px) {
+    summary { display: none; }
+    .menu nav, .menu[open] nav { display: flex; flex-direction: row; align-items: center; gap: 22px; position: static; padding: 0; border: 0; }
+  }
+</style>
+
+<script>
+  // Keep the nav visible on wide screens even though <details> starts closed.
+  const menu = document.querySelector<HTMLDetailsElement>('.menu');
+  const mq = window.matchMedia('(min-width: 900px)');
+  const sync = () => { if (menu) menu.open = mq.matches; };
+  mq.addEventListener('change', sync);
+  sync();
+</script>

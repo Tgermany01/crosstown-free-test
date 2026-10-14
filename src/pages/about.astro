@@ -1,0 +1,53 @@
+---
+import Base from '../layouts/Base.astro';
+import { img } from '../data/images';
+import { Content as Story } from '../copy/about-story.md';
+import { Content as WhoWeAre } from '../copy/about-who-we-are.md';
+import { Content as Purpose } from '../copy/about-purpose.md';
+
+// TODO: add each leader's role and photo once the original copy is in hand.
+const leaders = [
+  'Pastor Kevin White',
+  'Paula White',
+  'Rose Kaufmann',
+  'Brian Howes',
+  'Christine Carnahan',
+  'Charles Carnahan',
+];
+const gallery = ['about1', 'about2', 'about3', 'about4', 'about5', 'about6'] as const;
+---
+<Base title="About Us" description="Our story, what we believe, and the people who lead Crosstown Community Church in Stockton, CA.">
+  <section class="hero short">
+    <img src={img('aboutHero')} alt="" />
+    <div class="wrap">
+      <h1>About Us</h1>
+      <p>Our church family is small but growing.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap prose">
+      <h2>Our Story</h2>
+      <Story />
+      <h2>Who We Are</h2>
+      <WhoWeAre />
+      <h2>The Purpose Behind What We Do</h2>
+      <Purpose />
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap">
+      <h2>Crosstown Leadership</h2>
+      <div class="cards">
+        {leaders.map((name) => <div class="card"><h3>{name}</h3></div>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap cards">
+      {gallery.map((key) => <img class="rounded" src={img(key)} alt="Life at Crosstown" loading="lazy" />)}
+    </div>
+  </section>
+</Base>

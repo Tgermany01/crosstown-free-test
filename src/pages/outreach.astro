@@ -1,0 +1,67 @@
+---
+import Base from '../layouts/Base.astro';
+import ContactForm from '../components/ContactForm.astro';
+import { img } from '../data/images';
+import { site } from '../data/site';
+import { getCollection } from 'astro:content';
+import { Content as Csi } from '../copy/outreach-csi.md';
+import { Content as Feeding } from '../copy/outreach-feeding.md';
+
+const posts = (await getCollection('posts')).sort((a, b) => +b.data.date - +a.data.date);
+---
+<Base title="Community Outreach" description="Crime Scene Intercessors and God's Feeding Hands: how Crosstown Community Church serves Stockton.">
+  <section class="hero short">
+    <img src={img('outreachHero')} alt="" />
+    <div class="wrap">
+      <h1>Community Outreach</h1>
+      <p>"But you are a chosen people, a royal priesthood, a holy nation, God's special possession." 1 Peter 2:9</p>
+    </div>
+  </section>
+
+  <section class="section" id="csi">
+    <div class="wrap grid-2">
+      <div>
+        <h2>Crime Scene Intercessors</h2>
+        <Csi />
+        <a class="btn" href={`mailto:${site.email}?subject=Crime%20Scene%20Intercessors`}>Email us about CSI</a>
+      </div>
+      <img class="rounded" src={img('csi')} alt="Crime Scene Intercessors praying together" loading="lazy" />
+    </div>
+  </section>
+
+  <section class="section alt" id="feeding-hands">
+    <div class="wrap grid-2">
+      <img class="rounded" src={img('feeding2')} alt="Volunteers with God's Feeding Hands" loading="lazy" />
+      <div>
+        <h2>God's Feeding Hands</h2>
+        <Feeding />
+      </div>
+    </div>
+    <div class="wrap cards" style="margin-top:32px">
+      <img class="rounded" src={img('feeding3')} alt="God's Feeding Hands outreach" loading="lazy" />
+      <img class="rounded" src={img('feeding4')} alt="God's Feeding Hands outreach" loading="lazy" />
+      <img class="rounded" src={img('feeding1')} alt="God's Feeding Hands outreach" loading="lazy" />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Testimonies and reports</h2>
+      <div class="cards">
+        {posts.map((p) => (
+          <a class="card" href={`/post/${p.id}`} style="text-decoration:none;color:inherit">
+            <p class="eyebrow">{p.data.category}</p>
+            <h3>{p.data.title}</h3>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap prose">
+      <h2>Get involved</h2>
+      <ContactForm subject="Outreach volunteer" />
+    </div>
+  </section>
+</Base>

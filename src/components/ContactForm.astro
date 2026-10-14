@@ -1,0 +1,21 @@
+---
+import Turnstile from './Turnstile.astro';
+interface Props { subject?: string }
+const { subject = 'Website contact form' } = Astro.props;
+---
+<form class="stack js-form" method="post" action="/api/contact" data-success="Thanks! Your message was sent. We'll be in touch soon.">
+  <input type="hidden" name="subject" value={subject} />
+  <div class="row">
+    <label>First name <input name="firstName" autocomplete="given-name" required /></label>
+    <label>Last name <input name="lastName" autocomplete="family-name" /></label>
+  </div>
+  <div class="row">
+    <label>Email <input name="email" type="email" autocomplete="email" required /></label>
+    <label>Phone <input name="phone" type="tel" autocomplete="tel" /></label>
+  </div>
+  <label>Message <textarea name="message" rows="5" required></textarea></label>
+  <label class="hp" aria-hidden="true">Leave blank <input name="website" tabindex="-1" autocomplete="off" /></label>
+  <Turnstile />
+  <div><button class="btn" type="submit">Submit</button></div>
+  <p class="form-status" role="status"></p>
+</form>

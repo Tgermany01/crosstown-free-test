@@ -1,0 +1,10 @@
+---
+import Turnstile from './Turnstile.astro';
+---
+<form class="stack js-form" method="post" action="/api/subscribe" data-success="Thanks for subscribing!">
+  <label>Email <input name="email" type="email" autocomplete="email" required /></label>
+  <label class="hp" aria-hidden="true">Leave blank <input name="website" tabindex="-1" autocomplete="off" /></label>
+  <Turnstile />
+  <div><button class="btn" type="submit">Join Our Mailing List</button></div>
+  <p class="form-status" role="status"></p>
+</form>

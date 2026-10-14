@@ -1,0 +1,82 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { site } from '../data/site';
+import { img } from '../data/images';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+const { title, description = site.description, image = img('ogImage') } = Astro.props;
+const fullTitle = title ? `${title} | ${site.name}` : `${site.name} | ${site.city}, CA`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const ogImage = new URL(image, Astro.site);
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Church',
+  name: site.name,
+  url: Astro.site?.href,
+  telephone: site.phone,
+  email: site.email,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: site.street,
+    addressLocality: 'Stockton',
+    addressRegion: 'CA',
+    postalCode: '95205',
+    addressCountry: 'US',
+  },
+  sameAs: [site.facebookUrl, site.youtubeUrl],
+};
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body>
+    <Header />
+    <main><slot /></main>
+    <Footer />
+    <script>
+      // Submit forms with fetch so visitors stay on the page.
+      for (const form of document.querySelectorAll<HTMLFormElement>('form.js-form')) {
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const status = form.querySelector('.form-status');
+          const button = form.querySelector('button');
+          if (button) button.disabled = true;
+          try {
+            const res = await fetch(form.action, { method: 'POST', body: new FormData(form) });
+            if (!res.ok) throw new Error(await res.text());
+            form.reset();
+            if (status) status.textContent = form.dataset.success ?? 'Sent.';
+          } catch {
+            if (status) status.textContent = 'Sorry, that didn\'t go through. Please email or call us instead.';
+          } finally {
+            if (button) button.disabled = false;
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

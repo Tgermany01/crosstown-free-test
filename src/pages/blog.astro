@@ -1,0 +1,23 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('posts')).sort((a, b) => +b.data.date - +a.data.date);
+const fmt = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeZone: 'UTC' });
+---
+<Base title="Blog" description="News, testimonies and outreach reports from Crosstown Community Church.">
+  <section class="section">
+    <div class="wrap">
+      <h1>Blog</h1>
+      <div class="cards">
+        {posts.map((p) => (
+          <a class="card" href={`/post/${p.id}`} style="text-decoration:none;color:inherit">
+            <p class="eyebrow">{fmt.format(p.data.date)}</p>
+            <h2 style="font-size:1.3rem">{p.data.title}</h2>
+            {p.data.description && <p>{p.data.description}</p>}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>
