@@ -9,12 +9,13 @@ npm install
 npm run dev        # http://localhost:4321
 npm run build      # outputs dist/
 npm run images     # one-time: download the Wix images into public/images
+npm run scrape     # one-time: save the live site's text and images into scraped/
 ```
 
 ## Before launch
 
 - [ ] **Images:** run `npm run images` from your machine, then commit `public/images/`. Until then pages load images from the Wix CDN (`src/data/images.ts`), which stops working once Wix is cancelled.
-- [ ] **Copy:** the files in `src/copy/` and the three posts in `src/content/posts/` are drafts or placeholders marked `TODO` / `DRAFT`. Paste the original text from Wix.
+- [ ] **Copy:** run `npm run scrape`, then copy the original text from `scraped/*.md`. The files in `src/copy/` and the three posts in `src/content/posts/` are drafts or placeholders marked `TODO` / `DRAFT`. Paste the original text from Wix.
 - [ ] **Leaders:** add roles and photos on the About page (`src/pages/about.astro`).
 - [ ] **Service times:** confirm Sunday end time (Wix said both 12:30 and 1) in `src/data/site.ts`.
 - [ ] **Sermon:** confirm the YouTube id for "This Week's Sermon" in `src/data/site.ts`.
