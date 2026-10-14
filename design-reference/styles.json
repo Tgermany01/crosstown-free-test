@@ -1,0 +1,2967 @@
+{
+  "h1": [
+    {
+      "tag": "h1",
+      "text": "\"If Crosstown had an anthem, it would be the song that begins, ‘Everyone needs c",
+      "styles": {
+        "font-family": "wfont_c7a2b0_0755fd3570b44e30864b531d246466ca, wf_0755fd3570b44e30864b531d2, orig_vollkorn_italic",
+        "font-size": "32px",
+        "font-weight": "400",
+        "line-height": "45.12px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 31, 61)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      },
+      "innerSpan": {
+        "font-family": "wfont_c7a2b0_0755fd3570b44e30864b531d246466ca, wf_0755fd3570b44e30864b531d2, orig_vollkorn_italic",
+        "font-size": "32px",
+        "font-weight": "400",
+        "line-height": "45.12px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(255, 255, 255)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "h1",
+      "text": "Sunday Gatherings",
+      "styles": {
+        "font-family": "wfont_c7a2b0_0755fd3570b44e30864b531d246466ca, wf_0755fd3570b44e30864b531d2, orig_vollkorn_italic",
+        "font-size": "45px",
+        "font-weight": "400",
+        "line-height": "63.45px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 31, 61)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      },
+      "innerSpan": {
+        "font-family": "wfont_c7a2b0_0755fd3570b44e30864b531d246466ca, wf_0755fd3570b44e30864b531d2, orig_vollkorn_italic",
+        "font-size": "45px",
+        "font-weight": "400",
+        "line-height": "63.45px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(255, 255, 255)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "h1",
+      "text": "Watch Past Gatherings",
+      "styles": {
+        "font-family": "wfont_c7a2b0_0755fd3570b44e30864b531d246466ca, wf_0755fd3570b44e30864b531d2, orig_vollkorn_italic",
+        "font-size": "35px",
+        "font-weight": "400",
+        "line-height": "49.35px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 31, 61)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      },
+      "innerSpan": {
+        "font-family": "wfont_c7a2b0_0755fd3570b44e30864b531d246466ca, wf_0755fd3570b44e30864b531d2, orig_vollkorn_italic",
+        "font-size": "35px",
+        "font-weight": "400",
+        "line-height": "49.35px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(255, 255, 255)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "h1",
+      "text": "Live at 5",
+      "styles": {
+        "font-family": "wfont_c7a2b0_0755fd3570b44e30864b531d246466ca, wf_0755fd3570b44e30864b531d2, orig_vollkorn_italic",
+        "font-size": "45px",
+        "font-weight": "400",
+        "line-height": "63.45px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 31, 61)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      },
+      "innerSpan": {
+        "font-family": "wfont_c7a2b0_0755fd3570b44e30864b531d246466ca, wf_0755fd3570b44e30864b531d2, orig_vollkorn_italic",
+        "font-size": "45px",
+        "font-weight": "400",
+        "line-height": "63.45px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(255, 255, 255)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    }
+  ],
+  "h2": [
+    {
+      "tag": "h2",
+      "text": "About",
+      "styles": {
+        "font-family": "wfont_c7a2b0_0755fd3570b44e30864b531d246466ca, wf_0755fd3570b44e30864b531d2, orig_vollkorn_italic",
+        "font-size": "60px",
+        "font-weight": "400",
+        "line-height": "82.8px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 31, 61)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      },
+      "innerSpan": {
+        "font-family": "wfont_c7a2b0_0755fd3570b44e30864b531d246466ca, wf_0755fd3570b44e30864b531d2, orig_vollkorn_italic",
+        "font-size": "60px",
+        "font-weight": "400",
+        "line-height": "82.8px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(255, 255, 255)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    }
+  ],
+  "h3": [
+    {
+      "tag": "h3",
+      "text": "Can Your Faith Heal The Planet",
+      "styles": {
+        "font-family": "\"palatino linotype\", serif",
+        "font-size": "58px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(255, 255, 255)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Get in touch",
+      "styles": {
+        "font-family": "wfont_c7a2b0_0755fd3570b44e30864b531d246466ca, wf_0755fd3570b44e30864b531d2, orig_vollkorn_italic",
+        "font-size": "45px",
+        "font-weight": "400",
+        "line-height": "54px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 31, 61)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      },
+      "innerSpan": {
+        "font-family": "wfont_c7a2b0_0755fd3570b44e30864b531d246466ca, wf_0755fd3570b44e30864b531d2, orig_vollkorn_italic",
+        "font-size": "45px",
+        "font-weight": "400",
+        "line-height": "54px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(4, 81, 116)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    }
+  ],
+  "h4": [],
+  "p": [
+    {
+      "tag": "p",
+      "text": "Crosstown Community Church of Stockton",
+      "styles": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "20px",
+        "font-weight": "400",
+        "line-height": "33.4px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 31, 61)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      },
+      "innerSpan": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "20px",
+        "font-weight": "700",
+        "line-height": "33.4px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 31, 61)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "p",
+      "text": "Sunday Service at 11 a.m. | Bible Study on Wednesdays at 2 & 6:30 p.m.",
+      "styles": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "20px",
+        "font-weight": "400",
+        "line-height": "33.4px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 31, 61)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      },
+      "innerSpan": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "20px",
+        "font-weight": "700",
+        "line-height": "33.4px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 31, 61)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "p",
+      "text": "Come as you are.",
+      "styles": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "20px",
+        "font-weight": "400",
+        "line-height": "33.4px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 31, 61)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      },
+      "innerSpan": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "20px",
+        "font-weight": "400",
+        "line-height": "33.4px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 31, 61)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "p",
+      "text": "See this week's episode of Live at 5 with Pastor Kevin.",
+      "styles": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "12px",
+        "font-weight": "400",
+        "line-height": "22.56px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 31, 61)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      },
+      "innerSpan": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "12px",
+        "font-weight": "400",
+        "line-height": "22.56px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(4, 81, 116)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "p",
+      "text": "Find our church, request prayer, connect with us.",
+      "styles": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "12px",
+        "font-weight": "400",
+        "line-height": "22.56px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 31, 61)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      },
+      "innerSpan": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "12px",
+        "font-weight": "400",
+        "line-height": "22.56px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(4, 81, 116)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "p",
+      "text": "Click here to watch this Sunday's Service.",
+      "styles": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "12px",
+        "font-weight": "400",
+        "line-height": "22.56px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 31, 61)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      },
+      "innerSpan": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "12px",
+        "font-weight": "400",
+        "line-height": "22.56px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(4, 81, 116)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "p",
+      "text": "Get information about our homeless outreach ministry.",
+      "styles": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "12px",
+        "font-weight": "400",
+        "line-height": "22.56px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 31, 61)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      },
+      "innerSpan": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "12px",
+        "font-weight": "400",
+        "line-height": "22.56px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(4, 81, 116)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "p",
+      "text": "Click here to select from and watch past services.",
+      "styles": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "12px",
+        "font-weight": "400",
+        "line-height": "22.56px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 31, 61)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      },
+      "innerSpan": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "12px",
+        "font-weight": "400",
+        "line-height": "22.56px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(4, 81, 116)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "p",
+      "text": "Learn more about VOVC support groups & resources.",
+      "styles": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "12px",
+        "font-weight": "400",
+        "line-height": "22.56px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 31, 61)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      },
+      "innerSpan": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "12px",
+        "font-weight": "400",
+        "line-height": "22.56px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(4, 81, 116)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "p",
+      "text": "Browse book recommendations & Bible study resources.",
+      "styles": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "12px",
+        "font-weight": "400",
+        "line-height": "22.56px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 31, 61)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      },
+      "innerSpan": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "12px",
+        "font-weight": "400",
+        "line-height": "22.56px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(4, 81, 116)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "p",
+      "text": "At Crosstown Church we believe that every person matters to God and there’s no p",
+      "styles": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "16px",
+        "font-weight": "400",
+        "line-height": "26.72px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 31, 61)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      },
+      "innerSpan": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "16px",
+        "font-weight": "400",
+        "line-height": "26.72px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(255, 255, 255)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "p",
+      "text": "We gather for Worship Services every Sunday from 11 am to 12:30 pm, consisting o",
+      "styles": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "16px",
+        "font-weight": "400",
+        "line-height": "26.72px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 31, 61)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      },
+      "innerSpan": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "16px",
+        "font-weight": "400",
+        "line-height": "26.72px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(255, 255, 255)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "p",
+      "text": "To see past Sunday gatherings and sermons, you can click above to visit our YouT",
+      "styles": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "16px",
+        "font-weight": "400",
+        "line-height": "26.72px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 31, 61)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      },
+      "innerSpan": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "16px",
+        "font-weight": "400",
+        "line-height": "26.72px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(255, 255, 255)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "p",
+      "text": "Watch on Facebook Live",
+      "styles": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "15px",
+        "font-weight": "400",
+        "line-height": "25.05px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 31, 61)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      },
+      "innerSpan": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "15px",
+        "font-weight": "400",
+        "line-height": "25.05px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(255, 255, 255)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "p",
+      "text": "| Watch on Youtube",
+      "styles": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "15px",
+        "font-weight": "400",
+        "line-height": "25.05px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 31, 61)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      },
+      "innerSpan": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "15px",
+        "font-weight": "400",
+        "line-height": "25.05px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(255, 255, 255)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    }
+  ],
+  "a": [
+    {
+      "tag": "a",
+      "testid": "linkElement",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 238)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "a",
+      "testid": "linkElement",
+      "text": "Home",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 238)",
+        "background-color": "rgba(247, 247, 247, 0)",
+        "border-radius": "0px",
+        "padding": "10px"
+      }
+    },
+    {
+      "tag": "a",
+      "testid": "linkElement",
+      "text": "About Us",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 238)",
+        "background-color": "rgba(247, 247, 247, 0)",
+        "border-radius": "0px",
+        "padding": "10px"
+      }
+    },
+    {
+      "tag": "a",
+      "testid": "linkElement",
+      "text": "Ministry Partners",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 238)",
+        "background-color": "rgba(247, 247, 247, 0)",
+        "border-radius": "0px",
+        "padding": "10px"
+      }
+    },
+    {
+      "tag": "a",
+      "testid": "linkElement",
+      "text": "Community Outreach",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 238)",
+        "background-color": "rgba(247, 247, 247, 0)",
+        "border-radius": "0px",
+        "padding": "10px"
+      }
+    },
+    {
+      "tag": "a",
+      "testid": "linkElement",
+      "text": "Blog",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 238)",
+        "background-color": "rgba(247, 247, 247, 0)",
+        "border-radius": "0px",
+        "padding": "10px"
+      }
+    },
+    {
+      "tag": "a",
+      "testid": "linkElement",
+      "text": "Donate",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 238)",
+        "background-color": "rgb(250, 152, 47)",
+        "border-radius": "8px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "a",
+      "testid": "linkElement",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 238)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "a",
+      "testid": "linkElement",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 238)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "a",
+      "testid": "linkElement",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 238)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "a",
+      "testid": "linkElement",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 238)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "a",
+      "testid": "linkElement",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 238)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "a",
+      "testid": "linkElement",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 238)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "a",
+      "testid": "linkElement",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 0)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "a",
+      "testid": "linkElement",
+      "text": "Learn More",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 238)",
+        "background-color": "rgb(250, 152, 47)",
+        "border-radius": "8px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "a",
+      "testid": "linkElement",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 238)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "a",
+      "text": "Watch on Facebook Live",
+      "styles": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "15px",
+        "font-weight": "400",
+        "line-height": "25.05px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 31, 61)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "a",
+      "text": "Watch on Youtube",
+      "styles": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "15px",
+        "font-weight": "400",
+        "line-height": "25.05px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(255, 255, 255)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "a",
+      "text": "crosstownstockton@gmail.com",
+      "styles": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "16px",
+        "font-weight": "400",
+        "line-height": "26.72px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(255, 255, 255)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "a",
+      "testid": "linkElement",
+      "text": "Watch Live @ 5 Now",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 238)",
+        "background-color": "rgb(250, 152, 47)",
+        "border-radius": "8px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "a",
+      "text": "(209) 462 6560",
+      "styles": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "14px",
+        "font-weight": "400",
+        "line-height": "24.5px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(255, 255, 255)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "a",
+      "text": "crosstownstockton@gmail.com",
+      "styles": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "14px",
+        "font-weight": "400",
+        "line-height": "24.5px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(255, 255, 255)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "a",
+      "text": "924 North Filbert Street Stockton, CA 95205",
+      "styles": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "14px",
+        "font-weight": "400",
+        "line-height": "24.5px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(255, 255, 255)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "a",
+      "testid": "linkElement-0",
+      "text": "Home",
+      "styles": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "14px",
+        "font-weight": "400",
+        "line-height": "43px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(255, 255, 255)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px 10px"
+      }
+    },
+    {
+      "tag": "a",
+      "testid": "linkElement-1",
+      "text": "About Us",
+      "styles": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "14px",
+        "font-weight": "400",
+        "line-height": "43px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(251, 251, 251)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px 10px"
+      }
+    }
+  ],
+  "buttons": [
+    {
+      "tag": "a",
+      "testid": "linkElement",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 238)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "a",
+      "testid": "linkElement",
+      "text": "Home",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 238)",
+        "background-color": "rgba(247, 247, 247, 0)",
+        "border-radius": "0px",
+        "padding": "10px"
+      },
+      "innerSpan": {
+        "font-family": "wfont_c7a2b0_0755fd3570b44e30864b531d246466ca, wf_0755fd3570b44e30864b531d2, orig_vollkorn_italic",
+        "font-size": "18px",
+        "font-weight": "400",
+        "line-height": "12.06px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(255, 255, 255)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "a",
+      "testid": "linkElement",
+      "text": "About Us",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 238)",
+        "background-color": "rgba(247, 247, 247, 0)",
+        "border-radius": "0px",
+        "padding": "10px"
+      },
+      "innerSpan": {
+        "font-family": "wfont_c7a2b0_0755fd3570b44e30864b531d246466ca, wf_0755fd3570b44e30864b531d2, orig_vollkorn_italic",
+        "font-size": "18px",
+        "font-weight": "400",
+        "line-height": "12.06px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(255, 255, 255)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "a",
+      "testid": "linkElement",
+      "text": "Ministry Partners",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 238)",
+        "background-color": "rgba(247, 247, 247, 0)",
+        "border-radius": "0px",
+        "padding": "10px"
+      },
+      "innerSpan": {
+        "font-family": "wfont_c7a2b0_0755fd3570b44e30864b531d246466ca, wf_0755fd3570b44e30864b531d2, orig_vollkorn_italic",
+        "font-size": "18px",
+        "font-weight": "400",
+        "line-height": "12.06px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(255, 255, 255)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "a",
+      "testid": "linkElement",
+      "text": "Community Outreach",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 238)",
+        "background-color": "rgba(247, 247, 247, 0)",
+        "border-radius": "0px",
+        "padding": "10px"
+      },
+      "innerSpan": {
+        "font-family": "wfont_c7a2b0_0755fd3570b44e30864b531d246466ca, wf_0755fd3570b44e30864b531d2, orig_vollkorn_italic",
+        "font-size": "18px",
+        "font-weight": "400",
+        "line-height": "12.06px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(255, 255, 255)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "a",
+      "testid": "linkElement",
+      "text": "Blog",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 238)",
+        "background-color": "rgba(247, 247, 247, 0)",
+        "border-radius": "0px",
+        "padding": "10px"
+      },
+      "innerSpan": {
+        "font-family": "wfont_c7a2b0_0755fd3570b44e30864b531d246466ca, wf_0755fd3570b44e30864b531d2, orig_vollkorn_italic",
+        "font-size": "18px",
+        "font-weight": "400",
+        "line-height": "12.06px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(255, 255, 255)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "a",
+      "testid": "linkElement",
+      "text": "Donate",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 238)",
+        "background-color": "rgb(250, 152, 47)",
+        "border-radius": "8px",
+        "padding": "0px"
+      },
+      "innerSpan": {
+        "font-family": "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+        "font-size": "14px",
+        "font-weight": "400",
+        "line-height": "24.5px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 31, 61)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "a",
+      "testid": "linkElement",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 238)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "a",
+      "testid": "linkElement",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 238)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "a",
+      "testid": "linkElement",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 238)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "a",
+      "testid": "linkElement",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 238)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "a",
+      "testid": "linkElement",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 238)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "a",
+      "testid": "linkElement",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 238)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "a",
+      "testid": "linkElement",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 0)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "div",
+      "testid": "linkElement",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 0)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "10px",
+        "padding": "0px"
+      }
+    }
+  ],
+  "header": {
+    "tag": "header",
+    "id": "SITE_HEADER",
+    "text": "Home About Us Ministry Partners Community Outreach Blog Donate",
+    "styles": {
+      "font-family": "Arial, Helvetica, sans-serif",
+      "font-size": "10px",
+      "font-weight": "400",
+      "line-height": "normal",
+      "letter-spacing": "normal",
+      "text-transform": "none",
+      "color": "rgb(0, 0, 0)",
+      "background-color": "rgba(0, 0, 0, 0)",
+      "border-radius": "0px",
+      "padding": "0px"
+    }
+  },
+  "nav": {
+    "tag": "nav",
+    "text": "Home About Us Ministry Partners Community Outreach Blog",
+    "styles": {
+      "font-family": "Arial, Helvetica, sans-serif",
+      "font-size": "10px",
+      "font-weight": "400",
+      "line-height": "normal",
+      "letter-spacing": "normal",
+      "text-transform": "none",
+      "color": "rgb(0, 0, 0)",
+      "background-color": "rgba(255, 255, 255, 0)",
+      "border-radius": "0px",
+      "padding": "0px"
+    }
+  },
+  "navItems": [
+    {
+      "tag": "a",
+      "testid": "linkElement",
+      "text": "Home",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 238)",
+        "background-color": "rgba(247, 247, 247, 0)",
+        "border-radius": "0px",
+        "padding": "10px"
+      },
+      "innerSpan": {
+        "font-family": "wfont_c7a2b0_0755fd3570b44e30864b531d246466ca, wf_0755fd3570b44e30864b531d2, orig_vollkorn_italic",
+        "font-size": "18px",
+        "font-weight": "400",
+        "line-height": "12.06px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(255, 255, 255)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "a",
+      "testid": "linkElement",
+      "text": "About Us",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 238)",
+        "background-color": "rgba(247, 247, 247, 0)",
+        "border-radius": "0px",
+        "padding": "10px"
+      },
+      "innerSpan": {
+        "font-family": "wfont_c7a2b0_0755fd3570b44e30864b531d246466ca, wf_0755fd3570b44e30864b531d2, orig_vollkorn_italic",
+        "font-size": "18px",
+        "font-weight": "400",
+        "line-height": "12.06px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(255, 255, 255)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "a",
+      "testid": "linkElement",
+      "text": "Ministry Partners",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 238)",
+        "background-color": "rgba(247, 247, 247, 0)",
+        "border-radius": "0px",
+        "padding": "10px"
+      },
+      "innerSpan": {
+        "font-family": "wfont_c7a2b0_0755fd3570b44e30864b531d246466ca, wf_0755fd3570b44e30864b531d2, orig_vollkorn_italic",
+        "font-size": "18px",
+        "font-weight": "400",
+        "line-height": "12.06px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(255, 255, 255)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "a",
+      "testid": "linkElement",
+      "text": "Community Outreach",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 238)",
+        "background-color": "rgba(247, 247, 247, 0)",
+        "border-radius": "0px",
+        "padding": "10px"
+      },
+      "innerSpan": {
+        "font-family": "wfont_c7a2b0_0755fd3570b44e30864b531d246466ca, wf_0755fd3570b44e30864b531d2, orig_vollkorn_italic",
+        "font-size": "18px",
+        "font-weight": "400",
+        "line-height": "12.06px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(255, 255, 255)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    },
+    {
+      "tag": "a",
+      "testid": "linkElement",
+      "text": "Blog",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 238)",
+        "background-color": "rgba(247, 247, 247, 0)",
+        "border-radius": "0px",
+        "padding": "10px"
+      },
+      "innerSpan": {
+        "font-family": "wfont_c7a2b0_0755fd3570b44e30864b531d246466ca, wf_0755fd3570b44e30864b531d2, orig_vollkorn_italic",
+        "font-size": "18px",
+        "font-weight": "400",
+        "line-height": "12.06px",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(255, 255, 255)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      }
+    }
+  ],
+  "footer": {
+    "tag": "footer",
+    "id": "SITE_FOOTER",
+    "text": "Crosstown Community Church Sundays 11-1 (209) 462 6560 crosstownstockton@gmail.c",
+    "styles": {
+      "font-family": "Arial, Helvetica, sans-serif",
+      "font-size": "10px",
+      "font-weight": "400",
+      "line-height": "normal",
+      "letter-spacing": "normal",
+      "text-transform": "none",
+      "color": "rgb(0, 0, 0)",
+      "background-color": "rgba(0, 0, 0, 0)",
+      "border-radius": "0px",
+      "padding": "0px"
+    }
+  },
+  "body": {
+    "tag": "body",
+    "text": "Skip to Main Content Home About Us Ministry Partners Community Outreach Blog Don",
+    "styles": {
+      "font-family": "Arial, Helvetica, sans-serif",
+      "font-size": "10px",
+      "font-weight": "400",
+      "line-height": "normal",
+      "letter-spacing": "normal",
+      "text-transform": "none",
+      "color": "rgb(0, 0, 0)",
+      "background-color": "rgba(0, 0, 0, 0)",
+      "border-radius": "0px",
+      "padding": "0px"
+    }
+  },
+  "sections": [
+    {
+      "tag": "section",
+      "id": "comp-llcerdwk",
+      "text": "Welcome to Crosstown Community Church of Stockton Sunday Ser",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 0)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      },
+      "background": {
+        "background-color": "rgb(255, 255, 255)",
+        "background-image": "none"
+      },
+      "height": 846
+    },
+    {
+      "tag": "section",
+      "id": "comp-llcerdwl",
+      "text": "Resources Live at 5 See this week's episode of Live at 5 wit",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 0)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      },
+      "background": {
+        "background-color": "rgb(255, 255, 255)",
+        "background-image": "none"
+      },
+      "height": 703
+    },
+    {
+      "tag": "section",
+      "id": "comp-llcerdwn",
+      "text": "\"If Crosstown had an anthem, it would be the song that begin",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 0)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      },
+      "background": {
+        "background-color": "rgb(4, 81, 116)",
+        "background-image": "none"
+      },
+      "height": 2004
+    },
+    {
+      "tag": "section",
+      "id": "comp-llcerdwo",
+      "text": "Sunday Gatherings We gather for Worship Services every Sunda",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 0)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      },
+      "background": {
+        "background-color": "rgb(0, 31, 61)",
+        "background-image": "none"
+      },
+      "height": 1569
+    },
+    {
+      "tag": "section",
+      "id": "comp-mkyo4pvw",
+      "styles": {
+        "font-family": "Arial, Helvetica, sans-serif",
+        "font-size": "10px",
+        "font-weight": "400",
+        "line-height": "normal",
+        "letter-spacing": "normal",
+        "text-transform": "none",
+        "color": "rgb(0, 0, 0)",
+        "background-color": "rgba(0, 0, 0, 0)",
+        "border-radius": "0px",
+        "padding": "0px"
+      },
+      "background": {
+        "background-color": "rgba(255, 255, 255, 0)",
+        "background-image": "none"
+      },
+      "height": 791
+    }
+  ],
+  "fontFaces": [
+    {
+      "family": "wix-vod-fontello",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"data:font/woff2;base64,d09GMgABAAAAACZEAA8AAAAASVQAACXsAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHFQGVgCJUAggCZZwEQgK3lDTSwE2AiQDgWgLdgAEIAWFTQeFPQyBBhtOQnUHGPY4AJJ9kCKqVYns//983BgiYKi52v/DaSfKWS1y81ALYwL5nFxTDy5e7k3DzR+2vphv6Qwf8eNrlHU6XJbX67IM06RMS1vZcrymcdDikNFwI6vI9aDQMD1vqjbvviXH0i4etti0MTvZXcJU3KGS"
+    },
+    {
+      "family": "wix-vod-ruble",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"data:font/woff;base64,d09GRgABAAAAAAWEAA0AAAAAB8QAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAABMAAAABsAAAAcdNCgdkdERUYAAAFMAAAAHgAAAB4AKQAKT1MvMgAAAWwAAABLAAAAYGOhh9VjbWFwAAABuAAAAD4AAAFCAA8kaGdhc3AAAAH4AAAACAAAAAj//wADZ2x5ZgAAAgAAAAEQAAABEO+zGgBoZWFkAAADEAAAADAAAAA2B2rQ/2hoZWEAAANAAAAAHgAAACQMFwN1a"
+    },
+    {
+      "family": "Proxima-N-W01-Reg",
+      "weight": "",
+      "style": "",
+      "src": "url(\"//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/64017d81-9430-4cba-8219-8f5cc28b923e.woff2\") format(\"woff2\"), url(\"//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/e56ecb6d-da41-4bd9-982d-2d295bec9ab0.woff\") format(\"woff\"), url(\"//static.parast"
+    },
+    {
+      "family": "wf_0755fd3570b44e30864b531d2",
+      "weight": "",
+      "style": "",
+      "src": "url(\"https://static.wixstatic.com/ufonts/c7a2b0_0755fd3570b44e30864b531d246466ca/woff2/file.woff2\") format(\"woff2\"), url(\"https://static.wixstatic.com/ufonts/c7a2b0_0755fd3570b44e30864b531d246466ca/woff/file.woff\") format(\"woff\")"
+    },
+    {
+      "family": "wf_deb3c120e2dc444d97789cb12",
+      "weight": "",
+      "style": "",
+      "src": "url(\"https://static.wixstatic.com/ufonts/45c84f_deb3c120e2dc444d97789cb1263c1bcd/woff2/file.woff2\") format(\"woff2\"), url(\"https://static.wixstatic.com/ufonts/45c84f_deb3c120e2dc444d97789cb1263c1bcd/woff/file.woff\") format(\"woff\")"
+    },
+    {
+      "family": "avenir-lt-w01_35-light1475496",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/fonts/v2/af36905f-3c92-4ef9-b0c1-f91432f16ac1/v1/avenir-lt-w05_35-light.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "avenir-lt-w01_35-light1475496",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/fonts/v2/af36905f-3c92-4ef9-b0c1-f91432f16ac1/v1/avenir-lt-w01_35-light1475496.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "\"cormorant garamond\"",
+      "weight": "400",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/cormorantgaramond/v16/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtHmSqn7B6DxjY.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "\"cormorant garamond\"",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/cormorantgaramond/v16/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYpntKky2F7i6C.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "\"cormorant garamond\"",
+      "weight": "700",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/cormorantgaramond/v16/co3YmX5slCNuHLi8bLeY9MK7whWMhyjQEl5fsQ-IxBSL_g94.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "\"cormorant garamond\"",
+      "weight": "700",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/cormorantgaramond/v16/co3WmX5slCNuHLi8bLeY9MK7whWMhyjYrEPzvD-FzhOp_D95AnI.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "\"cormorant garamond\"",
+      "weight": "400",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/cormorantgaramond/v16/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtFmSqn7B6DxjY.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "\"cormorant garamond\"",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/cormorantgaramond/v16/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYpHtKky2F7i6C.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "\"cormorant garamond\"",
+      "weight": "700",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/cormorantgaramond/v16/co3YmX5slCNuHLi8bLeY9MK7whWMhyjQEl5fsw-IxBSL_g94.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "\"cormorant garamond\"",
+      "weight": "700",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/cormorantgaramond/v16/co3WmX5slCNuHLi8bLeY9MK7whWMhyjYrEPzvD-HzhOp_D95AnI.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "\"cormorant garamond\"",
+      "weight": "400",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/cormorantgaramond/v16/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtMmSqn7B6DxjY.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "\"cormorant garamond\"",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/cormorantgaramond/v16/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYrXtKky2F7i6C.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "\"cormorant garamond\"",
+      "weight": "700",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/cormorantgaramond/v16/co3YmX5slCNuHLi8bLeY9MK7whWMhyjQEl5fug-IxBSL_g94.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "\"cormorant garamond\"",
+      "weight": "700",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/cormorantgaramond/v16/co3WmX5slCNuHLi8bLeY9MK7whWMhyjYrEPzvD-OzhOp_D95AnI.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "\"cormorant garamond\"",
+      "weight": "400",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/cormorantgaramond/v16/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtGmSqn7B6DxjY.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "\"cormorant garamond\"",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/cormorantgaramond/v16/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYp3tKky2F7i6C.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "\"cormorant garamond\"",
+      "weight": "700",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/cormorantgaramond/v16/co3YmX5slCNuHLi8bLeY9MK7whWMhyjQEl5fsA-IxBSL_g94.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "\"cormorant garamond\"",
+      "weight": "700",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/cormorantgaramond/v16/co3WmX5slCNuHLi8bLeY9MK7whWMhyjYrEPzvD-EzhOp_D95AnI.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "\"cormorant garamond\"",
+      "weight": "400",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/cormorantgaramond/v16/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtImSqn7B6D.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "\"cormorant garamond\"",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/cormorantgaramond/v16/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYqXtKky2F7g.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "\"cormorant garamond\"",
+      "weight": "700",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/cormorantgaramond/v16/co3YmX5slCNuHLi8bLeY9MK7whWMhyjQEl5fvg-IxBSL_g.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "\"cormorant garamond\"",
+      "weight": "700",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/cormorantgaramond/v16/co3WmX5slCNuHLi8bLeY9MK7whWMhyjYrEPzvD-KzhOp_D95.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "cormorantgaramond",
+      "weight": "700",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/fonts/v2/2b314759-ac8f-48f7-9f7c-e863778ad50d/v1/cormorantgaramond.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "cormorantgaramond",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/fonts/v2/1ca3c197-aa89-4e46-9e10-6b0e6617534b/v1/cormorantgaramond.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "cormorantgaramond",
+      "weight": "400",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/fonts/v2/4ff5843c-24b1-481d-b1e6-75a00be1b055/v1/cormorantgaramond.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "cormorantgaramond",
+      "weight": "700",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/fonts/v2/94060c7d-573a-4cb5-96cd-9b99f3a5b03c/v1/cormorantgaramond.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "cormorantgaramond-semibold",
+      "weight": "700",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/cormorantgaramond/v5/zuqx3k1yUEl3Eavo-ZPEAoWXH9gdibkBmfnjU2pcZcs.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "cormorantgaramond-semibold",
+      "weight": "400",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/cormorantgaramond/v5/zuqx3k1yUEl3Eavo-ZPEAoNfVaeyxI1fRb3LCiKLt24.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "cormorantgaramond-semibold",
+      "weight": "700",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/cormorantgaramond/v5/iEjm9hVxcattz37Y8gZwVVYUpUlN7yzNHgIMH66hSOI.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "cormorantgaramond-semibold",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/cormorantgaramond/v5/iEjm9hVxcattz37Y8gZwVVBiiiFZ1SMKhjDurTuPCI4.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "helvetica-w01-roman",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/fonts/v2/2af1bf48-e783-4da8-9fa0-599dde29f2d5/v1/helvetica-lt-w10-roman.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "helvetica-w01-roman",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/fonts/v2/2af1bf48-e783-4da8-9fa0-599dde29f2d5/v1/helvetica-w02-roman.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "helvetica-w01-roman",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/fonts/v2/2af1bf48-e783-4da8-9fa0-599dde29f2d5/v1/helvetica-w01-roman.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "montserrat",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459WZhyyTh89ZNpQ.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "montserrat",
+      "weight": "400",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/montserrat/v14/JTUQjIg1_i6t8kCHKm459WxRxi7m0dR9pBOi.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "montserrat",
+      "weight": "700",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_dJE3gbD_vx3rCubqg.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "montserrat",
+      "weight": "700",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/montserrat/v14/JTUPjIg1_i6t8kCHKm459WxZcgvz8_Zwjimrq1Q_.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "montserrat",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459WRhyyTh89ZNpQ.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "montserrat",
+      "weight": "400",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/montserrat/v14/JTUQjIg1_i6t8kCHKm459WxRxC7m0dR9pBOi.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "montserrat",
+      "weight": "700",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_dJE3gTD_vx3rCubqg.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "montserrat",
+      "weight": "700",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/montserrat/v14/JTUPjIg1_i6t8kCHKm459WxZcgvz8fZwjimrq1Q_.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "montserrat",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459W1hyyTh89ZNpQ.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "montserrat",
+      "weight": "400",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/montserrat/v14/JTUQjIg1_i6t8kCHKm459WxRzS7m0dR9pBOi.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "montserrat",
+      "weight": "700",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_dJE3g3D_vx3rCubqg.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "montserrat",
+      "weight": "700",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/montserrat/v14/JTUPjIg1_i6t8kCHKm459WxZcgvz-PZwjimrq1Q_.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "montserrat",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459WdhyyTh89ZNpQ.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "montserrat",
+      "weight": "400",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/montserrat/v14/JTUQjIg1_i6t8kCHKm459WxRxy7m0dR9pBOi.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "montserrat",
+      "weight": "700",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_dJE3gfD_vx3rCubqg.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "montserrat",
+      "weight": "700",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/montserrat/v14/JTUPjIg1_i6t8kCHKm459WxZcgvz8vZwjimrq1Q_.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "montserrat",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "montserrat",
+      "weight": "400",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/montserrat/v14/JTUQjIg1_i6t8kCHKm459WxRyS7m0dR9pA.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "montserrat",
+      "weight": "700",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_dJE3gnD_vx3rCs.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "montserrat",
+      "weight": "700",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/montserrat/v14/JTUPjIg1_i6t8kCHKm459WxZcgvz_PZwjimrqw.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wf_5ef9b8857d2e4cb39fe3378fa",
+      "weight": "",
+      "style": "",
+      "src": "url(\"https://static.wixstatic.com/ufonts/c7a2b0_5ef9b8857d2e4cb39fe3378fa430e927/woff2/file.woff2\") format(\"woff2\"), url(\"https://static.wixstatic.com/ufonts/c7a2b0_5ef9b8857d2e4cb39fe3378fa430e927/woff/file.woff\") format(\"woff\")"
+    },
+    {
+      "family": "wf_d2b74fa2704044fa98373433c",
+      "weight": "",
+      "style": "",
+      "src": "url(\"https://static.wixstatic.com/ufonts/3f090f_d2b74fa2704044fa98373433c883f8ed/woff2/file.woff2\") format(\"woff2\"), url(\"https://static.wixstatic.com/ufonts/3f090f_d2b74fa2704044fa98373433c883f8ed/woff/file.woff\") format(\"woff\")"
+    },
+    {
+      "family": "wf_deb3c120e2dc444d97789cb12",
+      "weight": "",
+      "style": "",
+      "src": "url(\"https://static.wixstatic.com/ufonts/45c84f_deb3c120e2dc444d97789cb1263c1bcd/woff2/file.woff2\") format(\"woff2\"), url(\"https://static.wixstatic.com/ufonts/45c84f_deb3c120e2dc444d97789cb1263c1bcd/woff/file.woff\") format(\"woff\")"
+    },
+    {
+      "family": "wf_e9e4a865e08046e3a83050722",
+      "weight": "",
+      "style": "",
+      "src": "url(\"https://static.wixstatic.com/ufonts/942100_e9e4a865e08046e3a830507222512e38/woff2/file.woff2\") format(\"woff2\"), url(\"https://static.wixstatic.com/ufonts/942100_e9e4a865e08046e3a830507222512e38/woff/file.woff\") format(\"woff\")"
+    },
+    {
+      "family": "wf_fbdefa5f6fbe430796f92a569",
+      "weight": "",
+      "style": "",
+      "src": "url(\"https://static.wixstatic.com/ufonts/c7a2b0_fbdefa5f6fbe430796f92a56912632d3/woff2/file.woff2\") format(\"woff2\"), url(\"https://static.wixstatic.com/ufonts/c7a2b0_fbdefa5f6fbe430796f92a56912632d3/woff/file.woff\") format(\"woff\")"
+    },
+    {
+      "family": "futura-lt-w01-book",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/fonts/v2/790166f1-b347-4f16-8a29-f0c4931a7c35/v1/futura-lt-w01-book.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "helvetica-w01-roman",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/fonts/v2/2af1bf48-e783-4da8-9fa0-599dde29f2d5/v1/helvetica-lt-w10-roman.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "helvetica-w01-roman",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/fonts/v2/2af1bf48-e783-4da8-9fa0-599dde29f2d5/v1/helvetica-w02-roman.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "helvetica-w01-roman",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/fonts/v2/2af1bf48-e783-4da8-9fa0-599dde29f2d5/v1/helvetica-w01-roman.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "\"playfair display\"",
+      "weight": "700",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/playfairdisplay/v18/nuFnD-vYSZviVYUb_rj3ij__anPXDTngOWwu6zRmFqWF_ljR.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "\"playfair display\"",
+      "weight": "400",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/playfairdisplay/v18/nuFkD-vYSZviVYUb_rj3ij__anPXDTnojUk7yRZrPJ-M.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "\"playfair display\"",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/playfairdisplay/v18/nuFiD-vYSZviVYUb_rj3ij__anPXDTPYgEM86xRbPQ.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "\"playfair display\"",
+      "weight": "700",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/playfairdisplay/v18/nuFlD-vYSZviVYUb_rj3ij__anPXBYf9lWEe5j5hNKe1_w.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "\"playfair display\"",
+      "weight": "700",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/playfairdisplay/v18/nuFnD-vYSZviVYUb_rj3ij__anPXDTngOWwu4DRmFqWF_ljR.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "\"playfair display\"",
+      "weight": "400",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/playfairdisplay/v18/nuFkD-vYSZviVYUb_rj3ij__anPXDTnohkk7yRZrPJ-M.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "\"playfair display\"",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/playfairdisplay/v18/nuFiD-vYSZviVYUb_rj3ij__anPXDTjYgEM86xRbPQ.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "\"playfair display\"",
+      "weight": "700",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/playfairdisplay/v18/nuFlD-vYSZviVYUb_rj3ij__anPXBYf9lWoe5j5hNKe1_w.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "\"playfair display\"",
+      "weight": "700",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/playfairdisplay/v18/nuFnD-vYSZviVYUb_rj3ij__anPXDTngOWwu6jRmFqWF_ljR.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "\"playfair display\"",
+      "weight": "400",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/playfairdisplay/v18/nuFkD-vYSZviVYUb_rj3ij__anPXDTnojEk7yRZrPJ-M.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "\"playfair display\"",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/playfairdisplay/v18/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgEM86xRbPQ.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "\"playfair display\"",
+      "weight": "700",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/playfairdisplay/v18/nuFlD-vYSZviVYUb_rj3ij__anPXBYf9lWAe5j5hNKe1_w.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "\"playfair display\"",
+      "weight": "700",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/playfairdisplay/v18/nuFnD-vYSZviVYUb_rj3ij__anPXDTngOWwu5DRmFqWF_g.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "\"playfair display\"",
+      "weight": "400",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/playfairdisplay/v18/nuFkD-vYSZviVYUb_rj3ij__anPXDTnogkk7yRZrPA.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "\"playfair display\"",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/playfairdisplay/v18/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgEM86xQ.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "\"playfair display\"",
+      "weight": "700",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/playfairdisplay/v18/nuFlD-vYSZviVYUb_rj3ij__anPXBYf9lW4e5j5hNKc.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "playfairdisplay-bold",
+      "weight": "700",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/playfairdisplay/v13/n7G4PqJvFP2Kubl0VBLDEA9QP145tN5qB9RQEnC5ftI.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "playfairdisplay-bold",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/playfairdisplay/v13/UC3ZEjagJi85gF9qFaBgIIWMvkC5IXg8PD2cMeMDjBI.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "playfairdisplay-bold",
+      "weight": "700",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/playfairdisplay/v13/UC3ZEjagJi85gF9qFaBgILxv9TIgpWQaRKdG-_MdlP0.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "playfairdisplay-bold",
+      "weight": "400",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/playfairdisplay/v13/n7G4PqJvFP2Kubl0VBLDEPizZYmr4BUkAcTxjCN2kLE.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "proxima-n-w01-reg",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/fonts/v2/c24fcada-6239-48bc-8b88-9288338191c9/v1/proxima-n-w05-reg.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "proxima-n-w01-reg",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/fonts/v2/c24fcada-6239-48bc-8b88-9288338191c9/v1/proxima-n-w01-reg.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-display-v2",
+      "weight": "800",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefordisplay/v10/SZcl3EX9IbbyeJ8aOluD52KXgUA_7Ed1CV7uAmddFNBDUA.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-display-v2",
+      "weight": "500",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefordisplay/v10/SZcl3EX9IbbyeJ8aOluD52KXgUA_7Ed1CV7uAmddFNBDUA.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-display-v2",
+      "weight": "700",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefordisplay/v10/SZcl3EX9IbbyeJ8aOluD52KXgUA_7Ed1CV7uAmddFNBDUA.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-display-v2",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefordisplay/v10/SZcl3EX9IbbyeJ8aOluD52KXgUA_7Ed1CV7uAmddFNBDUA.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-display-v2",
+      "weight": "600",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefordisplay/v10/SZcl3EX9IbbyeJ8aOluD52KXgUA_7Ed1CV7uAmddFNBDUA.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-display-v2",
+      "weight": "800",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefordisplay/v10/SZcl3EX9IbbyeJ8aOluD52KXgUA_7Ed1CVzuAmddFNBDUA.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-display-v2",
+      "weight": "500",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefordisplay/v10/SZcl3EX9IbbyeJ8aOluD52KXgUA_7Ed1CVzuAmddFNBDUA.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-display-v2",
+      "weight": "700",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefordisplay/v10/SZcl3EX9IbbyeJ8aOluD52KXgUA_7Ed1CVzuAmddFNBDUA.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-display-v2",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefordisplay/v10/SZcl3EX9IbbyeJ8aOluD52KXgUA_7Ed1CVzuAmddFNBDUA.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-display-v2",
+      "weight": "600",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefordisplay/v10/SZcl3EX9IbbyeJ8aOluD52KXgUA_7Ed1CVzuAmddFNBDUA.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-display-v2",
+      "weight": "800",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefordisplay/v10/SZcl3EX9IbbyeJ8aOluD52KXgUA_7Ed1CVXuAmddFNBDUA.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-display-v2",
+      "weight": "500",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefordisplay/v10/SZcl3EX9IbbyeJ8aOluD52KXgUA_7Ed1CVXuAmddFNBDUA.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-display-v2",
+      "weight": "700",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefordisplay/v10/SZcl3EX9IbbyeJ8aOluD52KXgUA_7Ed1CVXuAmddFNBDUA.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-display-v2",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefordisplay/v10/SZcl3EX9IbbyeJ8aOluD52KXgUA_7Ed1CVXuAmddFNBDUA.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-display-v2",
+      "weight": "600",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefordisplay/v10/SZcl3EX9IbbyeJ8aOluD52KXgUA_7Ed1CVXuAmddFNBDUA.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-display-v2",
+      "weight": "800",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefordisplay/v10/SZcl3EX9IbbyeJ8aOluD52KXgUA_7Ed1CV_uAmddFNBDUA.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-display-v2",
+      "weight": "500",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefordisplay/v10/SZcl3EX9IbbyeJ8aOluD52KXgUA_7Ed1CV_uAmddFNBDUA.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-display-v2",
+      "weight": "700",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefordisplay/v10/SZcl3EX9IbbyeJ8aOluD52KXgUA_7Ed1CV_uAmddFNBDUA.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-display-v2",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefordisplay/v10/SZcl3EX9IbbyeJ8aOluD52KXgUA_7Ed1CV_uAmddFNBDUA.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-display-v2",
+      "weight": "600",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefordisplay/v10/SZcl3EX9IbbyeJ8aOluD52KXgUA_7Ed1CV_uAmddFNBDUA.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-display-v2",
+      "weight": "800",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefordisplay/v10/SZcl3EX9IbbyeJ8aOluD52KXgUA_7Ed1CVHuAmddFNA.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-display-v2",
+      "weight": "500",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefordisplay/v10/SZcl3EX9IbbyeJ8aOluD52KXgUA_7Ed1CVHuAmddFNA.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-display-v2",
+      "weight": "700",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefordisplay/v10/SZcl3EX9IbbyeJ8aOluD52KXgUA_7Ed1CVHuAmddFNA.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-display-v2",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefordisplay/v10/SZcl3EX9IbbyeJ8aOluD52KXgUA_7Ed1CVHuAmddFNA.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-display-v2",
+      "weight": "600",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefordisplay/v10/SZcl3EX9IbbyeJ8aOluD52KXgUA_7Ed1CVHuAmddFNA.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "700",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_lXI_oSymQ8Qj-Apx3HGN_Hu1RZioR5y4coj8y0A.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "700",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_jXI_oSymQ8Qj-Apx3HGN_Hu1RZiAh6iQbgD0C0fp2.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "800",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_lXI_oSymQ8Qj-Apx3HGN_Hu1RZioR5y4coj8y0A.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "800",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_jXI_oSymQ8Qj-Apx3HGN_Hu1RZiAh6iQbgD0C0fp2.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_lXI_oSymQ8Qj-Apx3HGN_Hu1RZioR5y4coj8y0A.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "400",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_jXI_oSymQ8Qj-Apx3HGN_Hu1RZiAh6iQbgD0C0fp2.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "600",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_lXI_oSymQ8Qj-Apx3HGN_Hu1RZioR5y4coj8y0A.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "600",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_jXI_oSymQ8Qj-Apx3HGN_Hu1RZiAh6iQbgD0C0fp2.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "500",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_lXI_oSymQ8Qj-Apx3HGN_Hu1RZioR5y4coj8y0A.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "500",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_jXI_oSymQ8Qj-Apx3HGN_Hu1RZiAh6iQbgD0C0fp2.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "700",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_lXI_oSymQ8Qj-Apx3HGN_Hu1RZigR5y4coj8y0A.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "700",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_jXI_oSymQ8Qj-Apx3HGN_Hu1RZiAh6CQbgD0C0fp2.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "800",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_lXI_oSymQ8Qj-Apx3HGN_Hu1RZigR5y4coj8y0A.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "800",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_jXI_oSymQ8Qj-Apx3HGN_Hu1RZiAh6CQbgD0C0fp2.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_lXI_oSymQ8Qj-Apx3HGN_Hu1RZigR5y4coj8y0A.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "400",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_jXI_oSymQ8Qj-Apx3HGN_Hu1RZiAh6CQbgD0C0fp2.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "600",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_lXI_oSymQ8Qj-Apx3HGN_Hu1RZigR5y4coj8y0A.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "600",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_jXI_oSymQ8Qj-Apx3HGN_Hu1RZiAh6CQbgD0C0fp2.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "500",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_lXI_oSymQ8Qj-Apx3HGN_Hu1RZigR5y4coj8y0A.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "500",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_jXI_oSymQ8Qj-Apx3HGN_Hu1RZiAh6CQbgD0C0fp2.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "700",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_lXI_oSymQ8Qj-Apx3HGN_Hu1RZiER5y4coj8y0A.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "700",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_jXI_oSymQ8Qj-Apx3HGN_Hu1RZiAh4SQbgD0C0fp2.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "800",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_lXI_oSymQ8Qj-Apx3HGN_Hu1RZiER5y4coj8y0A.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "800",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_jXI_oSymQ8Qj-Apx3HGN_Hu1RZiAh4SQbgD0C0fp2.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_lXI_oSymQ8Qj-Apx3HGN_Hu1RZiER5y4coj8y0A.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "400",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_jXI_oSymQ8Qj-Apx3HGN_Hu1RZiAh4SQbgD0C0fp2.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "600",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_lXI_oSymQ8Qj-Apx3HGN_Hu1RZiER5y4coj8y0A.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "600",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_jXI_oSymQ8Qj-Apx3HGN_Hu1RZiAh4SQbgD0C0fp2.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "500",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_lXI_oSymQ8Qj-Apx3HGN_Hu1RZiER5y4coj8y0A.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "500",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_jXI_oSymQ8Qj-Apx3HGN_Hu1RZiAh4SQbgD0C0fp2.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "700",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_lXI_oSymQ8Qj-Apx3HGN_Hu1RZisR5y4coj8y0A.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "700",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_jXI_oSymQ8Qj-Apx3HGN_Hu1RZiAh6yQbgD0C0fp2.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "800",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_lXI_oSymQ8Qj-Apx3HGN_Hu1RZisR5y4coj8y0A.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "800",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_jXI_oSymQ8Qj-Apx3HGN_Hu1RZiAh6yQbgD0C0fp2.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_lXI_oSymQ8Qj-Apx3HGN_Hu1RZisR5y4coj8y0A.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "400",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_jXI_oSymQ8Qj-Apx3HGN_Hu1RZiAh6yQbgD0C0fp2.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "600",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_lXI_oSymQ8Qj-Apx3HGN_Hu1RZisR5y4coj8y0A.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "600",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_jXI_oSymQ8Qj-Apx3HGN_Hu1RZiAh6yQbgD0C0fp2.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "500",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_lXI_oSymQ8Qj-Apx3HGN_Hu1RZisR5y4coj8y0A.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "500",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_jXI_oSymQ8Qj-Apx3HGN_Hu1RZiAh6yQbgD0C0fp2.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "700",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_lXI_oSymQ8Qj-Apx3HGN_Hu1RZiUR5y4coj8.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "700",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_jXI_oSymQ8Qj-Apx3HGN_Hu1RZiAh5SQbgD0C0Q.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "800",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_lXI_oSymQ8Qj-Apx3HGN_Hu1RZiUR5y4coj8.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "800",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_jXI_oSymQ8Qj-Apx3HGN_Hu1RZiAh5SQbgD0C0Q.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "400",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_lXI_oSymQ8Qj-Apx3HGN_Hu1RZiUR5y4coj8.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "400",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_jXI_oSymQ8Qj-Apx3HGN_Hu1RZiAh5SQbgD0C0Q.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "600",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_lXI_oSymQ8Qj-Apx3HGN_Hu1RZiUR5y4coj8.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "600",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_jXI_oSymQ8Qj-Apx3HGN_Hu1RZiAh5SQbgD0C0Q.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "500",
+      "style": "normal",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_lXI_oSymQ8Qj-Apx3HGN_Hu1RZiUR5y4coj8.woff2\") format(\"woff2\")"
+    },
+    {
+      "family": "wix-madefor-text-v2",
+      "weight": "500",
+      "style": "italic",
+      "src": "url(\"//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/wixmadefortext/v13/-W_jXI_oSymQ8Qj-Apx3HGN_Hu1RZiAh5SQbgD0C0Q.woff2\") format(\"woff2\")"
+    }
+  ],
+  "fontLinks": [
+    "https://static.parastorage.com/unpkg/@wix/wix-fonts@1.14.0/madefor.min.css"
+  ],
+  "usedFamilies": [
+    "Arial, Helvetica, sans-serif",
+    "wfont_c7a2b0_0755fd3570b44e30864b531d246466ca, wf_0755fd3570b44e30864b531d2, orig_vollkorn_italic",
+    "wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd, wf_deb3c120e2dc444d97789cb12, orig_lora",
+    "wfont_c7a2b0_5ef9b8857d2e4cb39fe3378fa430e927, wf_5ef9b8857d2e4cb39fe3378fa, orig_vollkorn_semibold",
+    "wfont_c7a2b0_fbdefa5f6fbe430796f92a56912632d3, wf_fbdefa5f6fbe430796f92a569, orig_vollkorn_regular",
+    "\"Helvetica Neue\"",
+    "\"palatino linotype\", serif",
+    "wix-vod-fontello",
+    "Arial",
+    "HelveticaNeueW01-45Ligh, HelveticaNeueW02-45Ligh, HelveticaNeueW10-45Ligh, \"Helvetica Neue\", wix-vod-ruble, Helvetica, Arial, sans-serif",
+    "wfont_3f090f_d2b74fa2704044fa98373433c883f8ed, wf_d2b74fa2704044fa98373433c, orig_poppins_regular",
+    "wfont_942100_e9e4a865e08046e3a830507222512e38, wf_e9e4a865e08046e3a83050722, orig_poppins_regular",
+    "helvetica-w01-roman, helvetica-w02-roman, helvetica-lt-w10-roman, sans-serif"
+  ],
+  "customProperties": {
+    "--wst-button-color-fill-primary": "rgb(var(--color_48))",
+    "--wst-button-color-border-primary": "rgb(var(--color_49))",
+    "--wst-button-color-text-primary": "rgb(var(--color_50))",
+    "--wst-button-color-fill-primary-hover": "rgb(var(--color_51))",
+    "--wst-button-color-border-primary-hover": "rgb(var(--color_52))",
+    "--wst-button-color-text-primary-hover": "rgb(var(--color_53))",
+    "--wst-button-color-fill-primary-disabled": "rgb(var(--color_54))",
+    "--wst-button-color-border-primary-disabled": "rgb(var(--color_55))",
+    "--wst-button-color-text-primary-disabled": "rgb(var(--color_56))",
+    "--wst-button-color-fill-secondary": "rgb(var(--color_57))",
+    "--wst-button-color-border-secondary": "rgb(var(--color_58))",
+    "--wst-button-color-text-secondary": "rgb(var(--color_59))",
+    "--wst-button-color-fill-secondary-hover": "rgb(var(--color_60))",
+    "--wst-button-color-border-secondary-hover": "rgb(var(--color_61))",
+    "--wst-button-color-text-secondary-hover": "rgb(var(--color_62))",
+    "--wst-button-color-fill-secondary-disabled": "rgb(var(--color_63))",
+    "--wst-button-color-border-secondary-disabled": "rgb(var(--color_64))",
+    "--wst-button-color-text-secondary-disabled": "rgb(var(--color_65))",
+    "--wst-color-fill-base-1": "rgb(var(--color_36))",
+    "--wst-color-fill-base-2": "rgb(var(--color_37))",
+    "--wst-color-fill-base-shade-1": "rgb(var(--color_38))",
+    "--wst-color-fill-base-shade-2": "rgb(var(--color_39))",
+    "--wst-color-fill-base-shade-3": "rgb(var(--color_40))",
+    "--wst-color-fill-accent-1": "rgb(var(--color_41))",
+    "--wst-color-fill-accent-2": "rgb(var(--color_42))",
+    "--wst-color-fill-accent-3": "rgb(var(--color_43))",
+    "--wst-color-fill-accent-4": "rgb(var(--color_44))",
+    "--wst-color-fill-background-primary": "rgb(var(--color_11))",
+    "--wst-color-fill-background-secondary": "rgb(var(--color_12))",
+    "--wst-color-text-primary": "rgb(var(--color_15))",
+    "--wst-color-text-secondary": "rgb(var(--color_14))",
+    "--wst-color-action": "rgb(var(--color_18))",
+    "--wst-color-disabled": "rgb(var(--color_39))",
+    "--wst-color-title": "rgb(var(--color_45))",
+    "--wst-color-subtitle": "rgb(var(--color_46))",
+    "--wst-color-line": "rgb(var(--color_47))",
+    "--wst-font-style-h2": "var(--font_2)",
+    "--wst-font-style-h3": "var(--font_3)",
+    "--wst-font-style-h4": "var(--font_4)",
+    "--wst-font-style-h5": "var(--font_5)",
+    "--wst-font-style-h6": "var(--font_6)",
+    "--wst-font-style-body-large": "var(--font_7)",
+    "--wst-font-style-body-medium": "var(--font_8)",
+    "--wst-font-style-body-small": "var(--font_9)",
+    "--wst-font-style-body-x-small": "var(--font_10)",
+    "--wst-color-custom-1": "rgb(var(--color_13))",
+    "--wst-color-custom-2": "rgb(var(--color_16))",
+    "--wst-color-custom-3": "rgb(var(--color_17))",
+    "--wst-color-custom-4": "rgb(var(--color_19))",
+    "--wst-color-custom-5": "rgb(var(--color_20))",
+    "--wst-color-custom-6": "rgb(var(--color_21))",
+    "--wst-color-custom-7": "rgb(var(--color_22))",
+    "--wst-color-custom-8": "rgb(var(--color_23))",
+    "--wst-color-custom-9": "rgb(var(--color_24))",
+    "--wst-color-custom-10": "rgb(var(--color_25))",
+    "--wst-color-custom-11": "rgb(var(--color_26))",
+    "--wst-color-custom-12": "rgb(var(--color_27))",
+    "--wst-color-custom-13": "rgb(var(--color_28))",
+    "--wst-color-custom-14": "rgb(var(--color_29))",
+    "--wst-color-custom-15": "rgb(var(--color_30))",
+    "--wst-color-custom-16": "rgb(var(--color_31))",
+    "--wst-color-custom-17": "rgb(var(--color_32))",
+    "--wst-color-custom-18": "rgb(var(--color_33))",
+    "--wst-color-custom-19": "rgb(var(--color_34))",
+    "--wst-color-custom-20": "rgb(var(--color_35))",
+    "--color_0": "255,255,255",
+    "--color_1": "0,0,0",
+    "--color_2": "132,57,45",
+    "--color_3": "25,25,25",
+    "--color_4": "247,247,247",
+    "--color_5": "156,127,92",
+    "--color_6": "255,255,255",
+    "--color_7": "191,191,191",
+    "--color_8": "128,128,128",
+    "--color_9": "64,64,64",
+    "--color_10": "0,0,0",
+    "--color_11": "255,255,255",
+    "--color_12": "191,191,191",
+    "--color_13": "128,128,128",
+    "--color_14": "64,64,64",
+    "--color_15": "0,31,61",
+    "--color_16": "200,216,230",
+    "--color_17": "175,202,227",
+    "--color_18": "131,167,201",
+    "--color_19": "82,128,171",
+    "--color_20": "4,81,116",
+    "--color_21": "250,216,181",
+    "--color_22": "248,220,191",
+    "--color_23": "250,152,47",
+    "--color_24": "250,153,57",
+    "--color_25": "232,122,0",
+    "--color_26": "251,251,251",
+    "--color_27": "247,247,247",
+    "--color_28": "185,185,185",
+    "--color_29": "124,124,124",
+    "--color_30": "62,62,62",
+    "--color_31": "254,214,198",
+    "--color_32": "253,194,169",
+    "--color_33": "252,134,85",
+    "--color_34": "168,89,57",
+    "--color_35": "84,45,28",
+    "--color_36": "255,255,255",
+    "--color_37": "0,31,61",
+    "--color_38": "191,191,191",
+    "--color_39": "128,128,128",
+    "--color_40": "64,64,64",
+    "--color_41": "131,167,201",
+    "--color_42": "4,81,116",
+    "--color_43": "82,128,171",
+    "--color_44": "232,122,0",
+    "--color_45": "0,31,61",
+    "--color_46": "0,31,61",
+    "--color_47": "64,64,64",
+    "--color_48": "131,167,201",
+    "--color_49": "131,167,201",
+    "--color_50": "255,255,255",
+    "--color_51": "255,255,255",
+    "--color_52": "131,167,201",
+    "--color_53": "131,167,201",
+    "--color_54": "128,128,128",
+    "--color_55": "128,128,128",
+    "--color_56": "255,255,255",
+    "--color_57": "255,255,255",
+    "--color_58": "131,167,201",
+    "--color_59": "131,167,201",
+    "--color_60": "131,167,201",
+    "--color_61": "131,167,201",
+    "--color_62": "255,255,255",
+    "--color_63": "255,255,255",
+    "--color_64": "128,128,128",
+    "--color_65": "128,128,128",
+    "--font_0": "normal normal normal 70px/1.41em wfont_c7a2b0_0755fd3570b44e30864b531d246466ca,wf_0755fd3570b44e30864b531d2,orig_vollkorn_italic",
+    "--font_1": "normal normal normal 14px/1.79em avenir-lt-w01_35-light1475496,sans-serif",
+    "--font_2": "normal normal normal 60px/1.38em wfont_c7a2b0_0755fd3570b44e30864b531d246466ca,wf_0755fd3570b44e30864b531d2,orig_vollkorn_italic",
+    "--font_3": "normal normal normal 50px/1.2em wfont_c7a2b0_0755fd3570b44e30864b531d246466ca,wf_0755fd3570b44e30864b531d2,orig_vollkorn_italic",
+    "--font_4": "normal normal normal 40px/1.25em wfont_c7a2b0_0755fd3570b44e30864b531d246466ca,wf_0755fd3570b44e30864b531d2,orig_vollkorn_italic",
+    "--font_5": "normal normal normal 35px/1.34em wfont_c7a2b0_0755fd3570b44e30864b531d246466ca,wf_0755fd3570b44e30864b531d2,orig_vollkorn_italic",
+    "--font_6": "normal normal normal 25px/1.35em wfont_c7a2b0_0755fd3570b44e30864b531d246466ca,wf_0755fd3570b44e30864b531d2,orig_vollkorn_italic",
+    "--font_7": "normal normal normal 16px/1.67em wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd,wf_deb3c120e2dc444d97789cb12,orig_lora",
+    "--font_8": "normal normal normal 14px/1.75em wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd,wf_deb3c120e2dc444d97789cb12,orig_lora",
+    "--font_9": "normal normal normal 12px/1.88em wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd,wf_deb3c120e2dc444d97789cb12,orig_lora",
+    "--font_10": "normal normal normal 14px/1.79em avenir-lt-w01_35-light1475496,sans-serif",
+    "--color": "0,0,0",
+    "--fontFamily": "wfont_3f090f_d2b74fa2704044fa98373433c883f8ed,wf_d2b74fa2704044fa98373433c,orig_poppins_regular",
+    "--fontSize": "15px",
+    "--fontWeight": "normal"
+  },
+  "customPropertiesResolved": {
+    "--wst-button-color-fill-primary": "rgb(131,167,201)",
+    "--wst-button-color-border-primary": "rgb(131,167,201)",
+    "--wst-button-color-text-primary": "rgb(255,255,255)",
+    "--wst-button-color-fill-primary-hover": "rgb(255,255,255)",
+    "--wst-button-color-border-primary-hover": "rgb(131,167,201)",
+    "--wst-button-color-text-primary-hover": "rgb(131,167,201)",
+    "--wst-button-color-fill-primary-disabled": "rgb(128,128,128)",
+    "--wst-button-color-border-primary-disabled": "rgb(128,128,128)",
+    "--wst-button-color-text-primary-disabled": "rgb(255,255,255)",
+    "--wst-button-color-fill-secondary": "rgb(255,255,255)",
+    "--wst-button-color-border-secondary": "rgb(131,167,201)",
+    "--wst-button-color-text-secondary": "rgb(131,167,201)",
+    "--wst-button-color-fill-secondary-hover": "rgb(131,167,201)",
+    "--wst-button-color-border-secondary-hover": "rgb(131,167,201)",
+    "--wst-button-color-text-secondary-hover": "rgb(255,255,255)",
+    "--wst-button-color-fill-secondary-disabled": "rgb(255,255,255)",
+    "--wst-button-color-border-secondary-disabled": "rgb(128,128,128)",
+    "--wst-button-color-text-secondary-disabled": "rgb(128,128,128)",
+    "--wst-color-fill-base-1": "rgb(255,255,255)",
+    "--wst-color-fill-base-2": "rgb(0,31,61)",
+    "--wst-color-fill-base-shade-1": "rgb(191,191,191)",
+    "--wst-color-fill-base-shade-2": "rgb(128,128,128)",
+    "--wst-color-fill-base-shade-3": "rgb(64,64,64)",
+    "--wst-color-fill-accent-1": "rgb(131,167,201)",
+    "--wst-color-fill-accent-2": "rgb(4,81,116)",
+    "--wst-color-fill-accent-3": "rgb(82,128,171)",
+    "--wst-color-fill-accent-4": "rgb(232,122,0)",
+    "--wst-color-fill-background-primary": "rgb(255,255,255)",
+    "--wst-color-fill-background-secondary": "rgb(191,191,191)",
+    "--wst-color-text-primary": "rgb(0,31,61)",
+    "--wst-color-text-secondary": "rgb(64,64,64)",
+    "--wst-color-action": "rgb(131,167,201)",
+    "--wst-color-disabled": "rgb(128,128,128)",
+    "--wst-color-title": "rgb(0,31,61)",
+    "--wst-color-subtitle": "rgb(0,31,61)",
+    "--wst-color-line": "rgb(64,64,64)",
+    "--wst-font-style-h2": "normal normal normal 60px/1.38em wfont_c7a2b0_0755fd3570b44e30864b531d246466ca,wf_0755fd3570b44e30864b531d2,orig_vollkorn_italic",
+    "--wst-font-style-h3": "normal normal normal 50px/1.2em wfont_c7a2b0_0755fd3570b44e30864b531d246466ca,wf_0755fd3570b44e30864b531d2,orig_vollkorn_italic",
+    "--wst-font-style-h4": "normal normal normal 40px/1.25em wfont_c7a2b0_0755fd3570b44e30864b531d246466ca,wf_0755fd3570b44e30864b531d2,orig_vollkorn_italic",
+    "--wst-font-style-h5": "normal normal normal 35px/1.34em wfont_c7a2b0_0755fd3570b44e30864b531d246466ca,wf_0755fd3570b44e30864b531d2,orig_vollkorn_italic",
+    "--wst-font-style-h6": "normal normal normal 25px/1.35em wfont_c7a2b0_0755fd3570b44e30864b531d246466ca,wf_0755fd3570b44e30864b531d2,orig_vollkorn_italic",
+    "--wst-font-style-body-large": "normal normal normal 16px/1.67em wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd,wf_deb3c120e2dc444d97789cb12,orig_lora",
+    "--wst-font-style-body-medium": "normal normal normal 14px/1.75em wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd,wf_deb3c120e2dc444d97789cb12,orig_lora",
+    "--wst-font-style-body-small": "normal normal normal 12px/1.88em wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd,wf_deb3c120e2dc444d97789cb12,orig_lora",
+    "--wst-font-style-body-x-small": "normal normal normal 14px/1.79em avenir-lt-w01_35-light1475496,sans-serif",
+    "--wst-color-custom-1": "rgb(128,128,128)",
+    "--wst-color-custom-2": "rgb(200,216,230)",
+    "--wst-color-custom-3": "rgb(175,202,227)",
+    "--wst-color-custom-4": "rgb(82,128,171)",
+    "--wst-color-custom-5": "rgb(4,81,116)",
+    "--wst-color-custom-6": "rgb(250,216,181)",
+    "--wst-color-custom-7": "rgb(248,220,191)",
+    "--wst-color-custom-8": "rgb(250,152,47)",
+    "--wst-color-custom-9": "rgb(250,153,57)",
+    "--wst-color-custom-10": "rgb(232,122,0)",
+    "--wst-color-custom-11": "rgb(251,251,251)",
+    "--wst-color-custom-12": "rgb(247,247,247)",
+    "--wst-color-custom-13": "rgb(185,185,185)",
+    "--wst-color-custom-14": "rgb(124,124,124)",
+    "--wst-color-custom-15": "rgb(62,62,62)",
+    "--wst-color-custom-16": "rgb(254,214,198)",
+    "--wst-color-custom-17": "rgb(253,194,169)",
+    "--wst-color-custom-18": "rgb(252,134,85)",
+    "--wst-color-custom-19": "rgb(168,89,57)",
+    "--wst-color-custom-20": "rgb(84,45,28)",
+    "--color_0": "255,255,255",
+    "--color_1": "0,0,0",
+    "--color_2": "132,57,45",
+    "--color_3": "25,25,25",
+    "--color_4": "247,247,247",
+    "--color_5": "156,127,92",
+    "--color_6": "255,255,255",
+    "--color_7": "191,191,191",
+    "--color_8": "128,128,128",
+    "--color_9": "64,64,64",
+    "--color_10": "0,0,0",
+    "--color_11": "255,255,255",
+    "--color_12": "191,191,191",
+    "--color_13": "128,128,128",
+    "--color_14": "64,64,64",
+    "--color_15": "0,31,61",
+    "--color_16": "200,216,230",
+    "--color_17": "175,202,227",
+    "--color_18": "131,167,201",
+    "--color_19": "82,128,171",
+    "--color_20": "4,81,116",
+    "--color_21": "250,216,181",
+    "--color_22": "248,220,191",
+    "--color_23": "250,152,47",
+    "--color_24": "250,153,57",
+    "--color_25": "232,122,0",
+    "--color_26": "251,251,251",
+    "--color_27": "247,247,247",
+    "--color_28": "185,185,185",
+    "--color_29": "124,124,124",
+    "--color_30": "62,62,62",
+    "--color_31": "254,214,198",
+    "--color_32": "253,194,169",
+    "--color_33": "252,134,85",
+    "--color_34": "168,89,57",
+    "--color_35": "84,45,28",
+    "--color_36": "255,255,255",
+    "--color_37": "0,31,61",
+    "--color_38": "191,191,191",
+    "--color_39": "128,128,128",
+    "--color_40": "64,64,64",
+    "--color_41": "131,167,201",
+    "--color_42": "4,81,116",
+    "--color_43": "82,128,171",
+    "--color_44": "232,122,0",
+    "--color_45": "0,31,61",
+    "--color_46": "0,31,61",
+    "--color_47": "64,64,64",
+    "--color_48": "131,167,201",
+    "--color_49": "131,167,201",
+    "--color_50": "255,255,255",
+    "--color_51": "255,255,255",
+    "--color_52": "131,167,201",
+    "--color_53": "131,167,201",
+    "--color_54": "128,128,128",
+    "--color_55": "128,128,128",
+    "--color_56": "255,255,255",
+    "--color_57": "255,255,255",
+    "--color_58": "131,167,201",
+    "--color_59": "131,167,201",
+    "--color_60": "131,167,201",
+    "--color_61": "131,167,201",
+    "--color_62": "255,255,255",
+    "--color_63": "255,255,255",
+    "--color_64": "128,128,128",
+    "--color_65": "128,128,128",
+    "--font_0": "normal normal normal 70px/1.41em wfont_c7a2b0_0755fd3570b44e30864b531d246466ca,wf_0755fd3570b44e30864b531d2,orig_vollkorn_italic",
+    "--font_1": "normal normal normal 14px/1.79em avenir-lt-w01_35-light1475496,sans-serif",
+    "--font_2": "normal normal normal 60px/1.38em wfont_c7a2b0_0755fd3570b44e30864b531d246466ca,wf_0755fd3570b44e30864b531d2,orig_vollkorn_italic",
+    "--font_3": "normal normal normal 50px/1.2em wfont_c7a2b0_0755fd3570b44e30864b531d246466ca,wf_0755fd3570b44e30864b531d2,orig_vollkorn_italic",
+    "--font_4": "normal normal normal 40px/1.25em wfont_c7a2b0_0755fd3570b44e30864b531d246466ca,wf_0755fd3570b44e30864b531d2,orig_vollkorn_italic",
+    "--font_5": "normal normal normal 35px/1.34em wfont_c7a2b0_0755fd3570b44e30864b531d246466ca,wf_0755fd3570b44e30864b531d2,orig_vollkorn_italic",
+    "--font_6": "normal normal normal 25px/1.35em wfont_c7a2b0_0755fd3570b44e30864b531d246466ca,wf_0755fd3570b44e30864b531d2,orig_vollkorn_italic",
+    "--font_7": "normal normal normal 16px/1.67em wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd,wf_deb3c120e2dc444d97789cb12,orig_lora",
+    "--font_8": "normal normal normal 14px/1.75em wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd,wf_deb3c120e2dc444d97789cb12,orig_lora",
+    "--font_9": "normal normal normal 12px/1.88em wfont_45c84f_deb3c120e2dc444d97789cb1263c1bcd,wf_deb3c120e2dc444d97789cb12,orig_lora",
+    "--font_10": "normal normal normal 14px/1.79em avenir-lt-w01_35-light1475496,sans-serif"
+  }
+}
