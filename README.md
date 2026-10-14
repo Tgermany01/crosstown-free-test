@@ -8,14 +8,15 @@ Static Astro site for [crosstowncommunitychurch.com](https://www.crosstowncommun
 npm install
 npm run dev        # http://localhost:4321
 npm run build      # outputs dist/
-npm run images     # one-time: download the Wix images into public/images
 npm run scrape     # one-time: save the live site's text and images into scraped/
 ```
 
 ## Before launch
 
-- [ ] **Images:** run `npm run images` from your machine, then commit `public/images/`. Until then pages load images from the Wix CDN (`src/data/images.ts`), which stops working once Wix is cancelled.
-- [ ] **Copy:** run `npm run scrape`, then copy the original text from `scraped/*.md`. The files in `src/copy/` and the three posts in `src/content/posts/` are drafts or placeholders marked `TODO` / `DRAFT`. Paste the original text from Wix.
+- [x] **Images and copy:** the live site's text and images are in `src/copy/`, `src/content/posts/` and `public/images/`. Screenshots and theme values from the Wix site are kept in `design-reference/` for comparison.
+- [ ] **Logo:** `public/images/logo-*.png` were generated from a small Wix JPG. Swap in the original SVG or a high-res PNG.
+- [ ] **Partner links:** add the Pray Stockton and Stockton Police Chaplaincy URLs in `src/data/site.ts` (the "Visit their website" button is hidden until a URL is set).
+- [ ] **Animations:** to match the Wix site, details to come.
 - [ ] **Leaders:** add roles and photos on the About page (`src/pages/about.astro`).
 - [ ] **Service times:** confirm Sunday end time (Wix said both 12:30 and 1) in `src/data/site.ts`.
 - [ ] **Sermon:** confirm the YouTube id for "This Week's Sermon" in `src/data/site.ts`.

@@ -1,0 +1,17 @@
+---
+// Wavy divider between two coloured sections, like the Wix site's section edges.
+// `top` is the colour above the wave, `bottom` the colour below.
+interface Props { top: string; bottom: string; flip?: boolean }
+const { top, bottom, flip = false } = Astro.props;
+const d = flip
+  ? 'M0,40 C320,80 720,0 1080,30 C1260,45 1380,40 1440,30 L1440,0 L0,0 Z'
+  : 'M0,30 C240,0 600,10 900,40 C1140,64 1320,40 1440,20 L1440,0 L0,0 Z';
+---
+<div class="wave" style={`background:${bottom}`} aria-hidden="true">
+  <svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d={d} fill={top} /></svg>
+</div>
+
+<style>
+  .wave { line-height: 0; margin: -1px 0; }
+  .wave svg { display: block; width: 100%; height: clamp(28px, 4vw, 60px); }
+</style>

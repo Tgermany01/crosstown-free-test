@@ -7,8 +7,11 @@ const posts = defineCollection({
   schema: z.object({
     title: z.string(),
     date: z.coerce.date(),
-    description: z.string().optional(),
-    category: z.string().optional(),
+    author: z.string(),
+    // Matches a key in `categories` in src/data/site.ts.
+    category: z.enum(['csi', 'feeding-hands']),
+    image: z.string(),
+    description: z.string(),
   }),
 });
 

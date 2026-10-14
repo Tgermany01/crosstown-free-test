@@ -1,10 +1,25 @@
 ---
 import Turnstile from './Turnstile.astro';
+interface Props {
+  list?: string;
+  button?: string;
+  success?: string;
+  buttonClass?: string;
+}
+const {
+  list = 'newsletter',
+  button = 'Join Our Mailing List',
+  success = 'Thanks for subscribing!',
+  buttonClass = 'btn btn-orange',
+} = Astro.props;
 ---
-<form class="stack js-form" method="post" action="/api/subscribe" data-success="Thanks for subscribing!">
-  <label>Email <input name="email" type="email" autocomplete="email" required /></label>
+<form class="stack js-form" method="post" action="/api/subscribe" data-success={success}>
+  <input type="hidden" name="list" value={list} />
+  <label class="field">Email *
+    <input name="email" type="email" autocomplete="email" placeholder="e.g., email@example.com" required />
+  </label>
   <label class="hp" aria-hidden="true">Leave blank <input name="website" tabindex="-1" autocomplete="off" /></label>
   <Turnstile />
-  <div><button class="btn" type="submit">Join Our Mailing List</button></div>
+  <button class={buttonClass} type="submit">{button}</button>
   <p class="form-status" role="status"></p>
 </form>

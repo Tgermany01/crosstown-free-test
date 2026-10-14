@@ -6,7 +6,6 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "images": "node scripts/fetch-wix-images.mjs",
     "scrape": "node scripts/scrape-live-site.mjs"
   },
   "engines": {

@@ -1,2 +1,1 @@
-<!-- DRAFT: replace with the original "The Purpose Behind What We Do" copy from Wix. -->
-Our church family is small but growing. Our mission is to make disciples through worship, growth and service.
+We have come to understand, over the years, about God’s power and love. As we walk with God, we learn by experience what God is like, and what we could do when we are walking with God each day. When we started, we didn’t really know what to expect. We had no plans of working with the homeless, or victims of crime, or venturing into the violent places, or working with the police or other churches. But we as a church have come to find that Jesus continues to do exceedingly, abundantly more than we could hope for or imagine!

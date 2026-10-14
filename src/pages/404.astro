@@ -3,10 +3,14 @@ import Base from '../layouts/Base.astro';
 ---
 <Base title="Page not found">
   <section class="section">
-    <div class="wrap prose">
+    <div class="narrow center">
       <h1>Page not found</h1>
       <p>That page may have moved when we updated our website.</p>
-      <a class="btn" href="/">Go to the homepage</a>
+      <a class="btn btn-orange" href="/">Go to the homepage</a>
     </div>
   </section>
 </Base>
+
+<style>
+  .center { text-align: center; min-height: 40vh; display: grid; place-content: center; justify-items: center; }
+</style>

@@ -1,5 +1,4 @@
 # Old Wix URLs that no longer exist. Everything else keeps its Wix path.
 /down-for-maintenance  /  301
 /home                  /  301
-/blog/*                /blog  301
 /blog-feed.xml         /blog  301

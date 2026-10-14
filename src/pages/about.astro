@@ -1,53 +1,82 @@
 ---
 import Base from '../layouts/Base.astro';
-import { img } from '../data/images';
+import Icon from '../components/Icon.astro';
+import Wave from '../components/Wave.astro';
+import { site, leaders } from '../data/site';
 import { Content as Story } from '../copy/about-story.md';
 import { Content as WhoWeAre } from '../copy/about-who-we-are.md';
 import { Content as Purpose } from '../copy/about-purpose.md';
-
-// TODO: add each leader's role and photo once the original copy is in hand.
-const leaders = [
-  'Pastor Kevin White',
-  'Paula White',
-  'Rose Kaufmann',
-  'Brian Howes',
-  'Christine Carnahan',
-  'Charles Carnahan',
-];
-const gallery = ['about1', 'about2', 'about3', 'about4', 'about5', 'about6'] as const;
 ---
 <Base title="About Us" description="Our story, what we believe, and the people who lead Crosstown Community Church in Stockton, CA.">
-  <section class="hero short">
-    <img src={img('aboutHero')} alt="" />
-    <div class="wrap">
+  <section class="split intro">
+    <img class="cover" src="/images/about-hero.jpg" alt="Crosstown members serving at a homeless encampment" fetchpriority="high" />
+    <div class="intro-text">
       <h1>About Us</h1>
-      <p>Our church family is small but growing.</p>
+      <p>{site.mission}</p>
+      <a class="down" href="#our-story" aria-label="Read our story"><Icon name="chevron-down" size={22} /></a>
     </div>
   </section>
 
-  <section class="section">
-    <div class="wrap prose">
-      <h2>Our Story</h2>
-      <Story />
-      <h2>Who We Are</h2>
-      <WhoWeAre />
-      <h2>The Purpose Behind What We Do</h2>
-      <Purpose />
+  <Wave top="#ffffff" bottom="#001f3d" />
+  <section class="bg-navy section" id="our-story">
+    <div class="narrow">
+      <h2 class="dot-heading">Our Story</h2>
+      <div class="indent body"><Story /></div>
     </div>
   </section>
 
-  <section class="section alt">
-    <div class="wrap">
-      <h2>Crosstown Leadership</h2>
-      <div class="cards">
-        {leaders.map((name) => <div class="card"><h3>{name}</h3></div>)}
-      </div>
+  <Wave top="#001f3d" bottom="#045174" flip />
+  <section class="bg-teal section">
+    <div class="narrow">
+      <h2 class="dot-heading">Who We Are</h2>
+      <div class="indent body"><WhoWeAre /></div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="wrap cards">
-      {gallery.map((key) => <img class="rounded" src={img(key)} alt="Life at Crosstown" loading="lazy" />)}
+  <Wave top="#045174" bottom="#c8d8e6" />
+  <section class="bg-mist section">
+    <div class="narrow">
+      <h2 class="dot-heading">The Purpose Behind What We Do</h2>
+      <div class="indent body"><Purpose /></div>
+    </div>
+  </section>
+
+  <Wave top="#c8d8e6" bottom="#ffffff" flip />
+  <section class="section leadership">
+    <div class="narrow">
+      <h2 class="dot-heading">Crosstown Leadership</h2>
+      <p class="indent">Meet our dedicated church leadership team. Behind Crosstown's vibrant community, there's a passionate and faith-filled team of leaders working together to guide us on our faith journey.</p>
+    </div>
+    <div class="leaders">
+      {leaders.map((l) => (
+        <article class="leader">
+          <div class="leader-text">
+            <p class="role">{l.role}</p>
+            <h3>{l.name}</h3>
+            <p class="blurb">{l.blurb}</p>
+          </div>
+          <img class="cover" src={l.photo} alt={l.name} loading="lazy" />
+        </article>
+      ))}
     </div>
   </section>
 </Base>
+
+<style>
+  .intro { min-height: clamp(480px, 53vw, 760px); }
+  .intro > img { max-height: 760px; }
+  .intro-text { display: grid; place-content: center; justify-items: center; text-align: center; padding: 56px 16px; }
+  .intro-text p { max-width: 340px; font-size: 0.95rem; }
+  .down { width: 44px; height: 44px; border-radius: 50%; background: var(--teal); color: var(--white); display: grid; place-items: center; margin-top: 12px; }
+  .body { font-size: 0.9rem; line-height: 1.75; }
+  .bg-mist .body { color: var(--navy); }
+  .leadership h2 { color: var(--teal); }
+  .leadership .indent { max-width: 620px; }
+  .leaders { max-width: 1000px; margin: 40px auto 0; padding: 0 16px; display: grid; gap: 20px; grid-template-columns: 1fr; }
+  @media (min-width: 720px) { .leaders { grid-template-columns: 1fr 1fr; } }
+  .leader { display: grid; grid-template-columns: 1fr 1fr; background: var(--teal); color: var(--white); min-height: 370px; }
+  .leader-text { padding: 20px; display: flex; flex-direction: column; }
+  .role { font-size: 0.85rem; margin-bottom: 1.2em; }
+  .leader h3 { font-family: var(--body); font-style: normal; font-weight: 600; font-size: 1rem; }
+  .blurb { font-size: 0.8rem; margin-top: auto; padding-bottom: 25%; }
+</style>

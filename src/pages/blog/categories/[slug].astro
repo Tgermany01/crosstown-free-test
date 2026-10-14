@@ -1,0 +1,17 @@
+---
+import Base from '../../../layouts/Base.astro';
+import PostList from '../../../components/PostList.astro';
+import { getCollection } from 'astro:content';
+import { categories } from '../../../data/site';
+
+export async function getStaticPaths() {
+  return Object.entries(categories).map(([key, c]) => ({ params: { slug: c.slug }, props: { key } }));
+}
+
+const { key } = Astro.props as { key: keyof typeof categories };
+const posts = (await getCollection('posts', (p) => p.data.category === key)).sort((a, b) => +b.data.date - +a.data.date);
+const label = categories[key].label;
+---
+<Base title={label} description={`${label} posts from Crosstown Community Church.`}>
+  <PostList posts={posts} active={key} heading={label} />
+</Base>
