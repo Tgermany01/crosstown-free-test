@@ -6,6 +6,7 @@
 //   scraped/images/<page>/...  every image the page uses, at original size
 // Copy what you need from scraped/ into src/copy, src/content/posts and public/images.
 import { mkdir, writeFile } from 'node:fs/promises';
+import { pathToFileURL } from 'node:url';
 import { parse } from 'node-html-parser';
 
 const SITE = 'https://www.crosstowncommunitychurch.com';
@@ -113,4 +114,4 @@ async function main() {
   }
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) await main();
+if (import.meta.url === pathToFileURL(process.argv[1]).href) await main();
