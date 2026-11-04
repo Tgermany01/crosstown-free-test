@@ -265,18 +265,25 @@ add({
 
 add({
   type: 'quote', label: 'Big quote', icon: 'chat',
-  description: 'A large centred quote or statement in the italic heading font.',
+  description: 'A large centred quote or statement in the italic heading font. Optionally put a photo behind it that slides slowly as you scroll (parallax).',
   fields: [
     { key: 'text', label: 'Quote', type: 'markdown' },
     { key: 'attribution', label: 'Who said it (optional)', type: 'text' },
     bgField('teal'),
+    { key: 'image', label: 'Background photo (optional)', type: 'image', help: 'The photo sits behind the quote and slides as you scroll.' },
+    { key: 'tint', label: 'Photo tint', type: 'select', default: 'teal', options: [{ value: 'teal', label: 'Teal' }, { value: 'navy', label: 'Navy' }, { value: 'none', label: 'None (text may be hard to read)' }] },
+    { key: 'focus', label: 'Photo focus', type: 'select', options: FOCUS_OPTIONS, default: 'center' },
+    { key: 'parallax', label: 'Parallax scroll', type: 'boolean', default: true },
     ...commonFields,
   ],
-  defaults: { text: '"A quote or short statement."', attribution: '', bg: 'teal', edge: 'flat', anchor: '' },
+  defaults: { text: '"A quote or short statement."', attribution: '', bg: 'teal', image: '', tint: 'teal', focus: 'center', parallax: true, edge: 'flat', anchor: '' },
+  // With a photo behind it the section still counts as teal/navy for the wavy edge drawn below it.
   bg: bgOf,
   render(p, ctx) {
     const def = blocksByType.quote!;
-    return section(def, p, ctx, `<div class="narrow-720"><div class="quote-text">${md(p.text, { inline: true })}</div>${p.attribution ? `<p class="quote-by">${esc(p.attribution)}</p>` : ''}</div>`);
+    const photo = p.image ? parallaxImg(p.image, '', { parallax: p.parallax, speed: 0.3, focus: p.focus }) : '';
+    const inner = `${photo}<div class="narrow-720 quote-inner"><div class="quote-text">${md(p.text, { inline: true })}</div>${p.attribution ? `<p class="quote-by">${esc(p.attribution)}</p>` : ''}</div>`;
+    return section(def, p, ctx, inner, p.image ? `has-photo tint-${p.tint}` : '');
   },
 });
 

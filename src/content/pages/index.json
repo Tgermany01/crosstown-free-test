@@ -71,25 +71,17 @@
       ]
     },
     {
-      "id": "s_xxx3a",
-      "type": "photo-band",
-      "image": "/images/bible-study.jpg",
-      "focus": "bottom",
-      "tint": "teal",
-      "height": "short",
-      "parallax": true,
-      "edge": "wave",
-      "anchor": "",
-      "fit": "full"
-    },
-    {
       "id": "s_xxx4a",
       "type": "quote",
       "text": "\"If Crosstown had an anthem, it would be the song that begins, ‘Everyone needs compassion; A love that’s never failing, let mercy fall on me; Everyone needs forgiveness, the kindness of a Savior, the Hope of nations.\"",
       "attribution": "",
       "bg": "teal",
-      "edge": "flat",
-      "anchor": ""
+      "edge": "wave",
+      "anchor": "",
+      "image": "/images/bible-study.jpg",
+      "tint": "teal",
+      "focus": "center",
+      "parallax": true
     },
     {
       "id": "s_xxx5a",

@@ -441,3 +441,13 @@ form.stack { display: grid; gap: 14px; }
 .band-full { display: block; width: 100%; height: auto; }
 .blk-photo-band.fit-full.tint-teal::after { background: linear-gradient(rgba(4, 81, 116, 0.28), rgba(4, 81, 116, 0.4)); }
 .blk-photo-band.fit-full.tint-navy::after { background: linear-gradient(rgba(0, 31, 61, 0.28), rgba(0, 31, 61, 0.4)); }
+
+/* quote with a parallax photo behind it: the text sits on the photo */
+.blk-quote.has-photo { overflow: hidden; display: grid; place-items: center; min-height: clamp(420px, 43.4vw, 625px); }
+.blk-quote.has-photo::after { content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none; }
+.blk-quote.has-photo.tint-teal::after { background: linear-gradient(rgba(4, 81, 116, 0.72), rgba(4, 81, 116, 0.84)); }
+.blk-quote.has-photo.tint-navy::after { background: linear-gradient(rgba(0, 31, 61, 0.7), rgba(0, 31, 61, 0.84)); }
+.blk-quote.has-photo .quote-inner { position: relative; z-index: 2; }
+.blk-quote.has-photo .px { background: var(--teal); }
+/* fade the photo into the section colour at the bottom so the wavy edge below blends in */
+.blk-quote.has-photo .px { -webkit-mask-image: linear-gradient(#000 80%, transparent); mask-image: linear-gradient(#000 80%, transparent); }
