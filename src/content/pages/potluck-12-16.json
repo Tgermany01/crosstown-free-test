@@ -1,0 +1,104 @@
+{
+  "title": "Potluck 12/16",
+  "description": "Join Crosstown Community Church for a December potluck on the 16th in Stockton, California.",
+  "draft": true,
+  "sections": [
+    {
+      "id": "s_pxgc89",
+      "type": "hero",
+      "image": "/images/hero.jpg",
+      "focus": "center",
+      "overlay": "dark",
+      "logo": false,
+      "eyebrow": "December 16",
+      "heading": "Join Us for a Potluck",
+      "text": "Come share a meal and good company. Everyone is welcome.",
+      "buttons": [
+        {
+          "label": "Get Directions",
+          "url": "#location",
+          "style": "orange"
+        },
+        {
+          "label": "Ask a Question",
+          "url": "#contact",
+          "style": "outline"
+        }
+      ],
+      "height": "medium",
+      "parallax": true,
+      "edge": "flat",
+      "anchor": ""
+    },
+    {
+      "id": "s_1oob2p",
+      "type": "text",
+      "heading": "A Meal Together",
+      "headingStyle": "dot",
+      "body": "Our December potluck is on the 16th. Bring a dish to share if you can, and come hungry.\n\nThis is a relaxed time to eat, talk and get to know your neighbours. Add a short line here about the day, the theme or anything special planned.\n\n**Date:** December 16\n\n**Time:** [Add time]\n\n**Place:** 924 North Filbert Street, Stockton, CA 95205",
+      "buttons": [],
+      "align": "left",
+      "width": "narrow",
+      "bodyColor": "auto",
+      "space": "normal",
+      "bg": "white",
+      "edge": "wave",
+      "anchor": ""
+    },
+    {
+      "id": "s_7jhozg",
+      "type": "cards",
+      "heading": "What to Know",
+      "intro": "A few simple things to help you plan.",
+      "cards": [
+        {
+          "image": "",
+          "icon": "food",
+          "title": "Bring a Dish",
+          "text": "Bring something to share. Add ideas or sign-up details here.",
+          "linkLabel": "",
+          "link": ""
+        },
+        {
+          "image": "",
+          "icon": "users",
+          "title": "Bring Family",
+          "text": "Children, friends and neighbours are all welcome.",
+          "linkLabel": "",
+          "link": ""
+        },
+        {
+          "image": "",
+          "icon": "calendar",
+          "title": "Save the Date",
+          "text": "December 16. Add the start time here.",
+          "linkLabel": "",
+          "link": ""
+        }
+      ],
+      "columns": "3",
+      "bg": "ice",
+      "edge": "wave",
+      "anchor": ""
+    },
+    {
+      "id": "s_2lnrzk",
+      "type": "map",
+      "heading": "Find Us",
+      "address": "924 North Filbert Street, Stockton, CA 95205",
+      "text": "Crosstown Community Church\n\n924 North Filbert Street, Stockton, CA 95205\n\nAdd parking notes here.",
+      "bg": "white",
+      "edge": "wave-flip",
+      "anchor": "location"
+    },
+    {
+      "id": "s_jv5qb8",
+      "type": "contact-form",
+      "heading": "Questions? Get in Touch",
+      "subject": "Potluck 12/16",
+      "bg": "mist",
+      "edge": "wave",
+      "anchor": "contact"
+    }
+  ]
+}
