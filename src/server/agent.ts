@@ -82,7 +82,7 @@ export async function runAgent(env: AgentEnv, req: AgentRequest): Promise<AgentR
     : `Build this page: ${req.prompt}`;
   const res = await fetch(`${env.ANTHROPIC_BASE_URL ?? 'https://api.anthropic.com'}/v1/messages`, {
     method: 'POST',
-    headers: { 'x-api-key': env.ANTHROPIC_API_KEY, 'anthropic-version': '2023-06-01', 'content-type': 'application/json' },
+    headers: { 'x-api-key': env.ANTHROPIC_API_KEY.trim(), 'anthropic-version': '2023-06-01', 'content-type': 'application/json' },
     body: JSON.stringify({
       model: env.ANTHROPIC_MODEL ?? 'claude-sonnet-5-5',
       max_tokens: 12000,
@@ -92,7 +92,13 @@ export async function runAgent(env: AgentEnv, req: AgentRequest): Promise<AgentR
       messages: [{ role: 'user', content: user.slice(0, 60000) }],
     }),
   });
-  if (!res.ok) throw new AgentError(`The site agent could not be reached (${res.status}). Please try again in a moment.`, 502);
+  if (!res.ok) {
+    const raw = await res.text();
+    let reason = '';
+    try { reason = (JSON.parse(raw) as { error?: { message?: string } }).error?.message ?? ''; } catch { /* not JSON */ }
+    console.error(`Anthropic API ${res.status}: ${raw.slice(0, 500)}`);
+    throw new AgentError(explainAnthropicError(res.status, reason, env.ANTHROPIC_MODEL ?? 'claude-sonnet-5-5'), 502);
+  }
   const data = (await res.json()) as { content?: { type: string; name?: string; input?: any }[] };
   const call = data.content?.find((c) => c.type === 'tool_use' && c.name === 'build_page');
   if (!call?.input) throw new AgentError('The site agent did not return a page. Try rephrasing your request.', 502);
@@ -104,6 +110,19 @@ export async function runAgent(env: AgentEnv, req: AgentRequest): Promise<AgentR
     page: { ...page, draft: true, slug: slugify(String(call.input.slug || page.title)) || 'new-page' },
     notes: String(call.input.notes ?? '').slice(0, 600),
   };
+}
+
+/** Turns an Anthropic API error into something the person setting this up can act on. */
+export function explainAnthropicError(status: number, reason: string, model: string): string {
+  const r = reason.toLowerCase();
+  const detail = reason ? ` Anthropic said: "${reason.slice(0, 240)}"` : '';
+  if (status === 401) return 'Anthropic rejected the API key. ANTHROPIC_API_KEY is wrong, was deleted, or has extra spaces: make a new one at console.anthropic.com and update it in Cloudflare.';
+  if (r.includes('credit balance')) return 'The Anthropic account has no credit left. Add credits under Plans & Billing at console.anthropic.com, then try again.';
+  if (status === 403) return `The Anthropic key isn't allowed to do this.${detail}`;
+  if (status === 404 || r.includes('model')) return `Anthropic doesn't recognise the model "${model}" for this key. Remove ANTHROPIC_MODEL to use the default, or set it to a model your account can use.${detail}`;
+  if (status === 429) return 'Anthropic is rate-limiting this key. Wait a minute and try again.';
+  if (status === 529 || status >= 500) return 'Anthropic is busy or having trouble right now. Try again in a moment.';
+  return `Anthropic refused the request (${status}).${detail}`;
 }
 
 export class AgentError extends Error {
