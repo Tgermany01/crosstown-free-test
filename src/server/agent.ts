@@ -80,18 +80,31 @@ export async function runAgent(env: AgentEnv, req: AgentRequest): Promise<AgentR
   const user = req.current
     ? `Current page:\n${JSON.stringify(req.current)}\n\nRequest: ${req.prompt}`
     : `Build this page: ${req.prompt}`;
-  const res = await fetch(`${env.ANTHROPIC_BASE_URL ?? 'https://api.anthropic.com'}/v1/messages`, {
-    method: 'POST',
-    headers: { 'x-api-key': env.ANTHROPIC_API_KEY.trim(), 'anthropic-version': '2023-06-01', 'content-type': 'application/json' },
-    body: JSON.stringify({
-      model: env.ANTHROPIC_MODEL ?? 'claude-sonnet-5-5',
-      max_tokens: 12000,
-      system: system(req),
-      tools: [tool],
-      tool_choice: { type: 'tool', name: 'build_page' },
-      messages: [{ role: 'user', content: user.slice(0, 60000) }],
-    }),
-  });
+  const ask = async (toolChoice: Record<string, unknown>) =>
+    fetch(`${env.ANTHROPIC_BASE_URL ?? 'https://api.anthropic.com'}/v1/messages`, {
+      method: 'POST',
+      headers: { 'x-api-key': env.ANTHROPIC_API_KEY!.trim(), 'anthropic-version': '2023-06-01', 'content-type': 'application/json' },
+      body: JSON.stringify({
+        model: env.ANTHROPIC_MODEL?.trim() || 'claude-sonnet-5-5',
+        max_tokens: 12000,
+        system: system(req),
+        tools: [tool],
+        tool_choice: toolChoice,
+        messages: [{ role: 'user', content: user.slice(0, 60000) }],
+      }),
+    });
+
+  // Forcing one specific tool gives the most reliable answer, but some models refuse it (for example when they
+  // think before answering). If Anthropic objects to that, ask again and let the model choose; the instructions
+  // still tell it to answer by calling build_page.
+  let res = await ask({ type: 'tool', name: 'build_page' });
+  if (res.status === 400) {
+    const raw = await res.clone().text();
+    if (/tool_choice|thinking/i.test(raw)) {
+      console.error(`Anthropic rejected forced tool_choice, retrying with auto: ${raw.slice(0, 300)}`);
+      res = await ask({ type: 'auto' });
+    }
+  }
   if (!res.ok) {
     const raw = await res.text();
     let reason = '';
