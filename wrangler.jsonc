@@ -1,0 +1,16 @@
+{
+  // Crosstown Community Church: static Astro site (dist/) plus a small Worker for /api/*
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "crosstown-community",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-11-04",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    // Pages are served straight from the static files; only /api/* runs the Worker.
+    "run_worker_first": ["/api/*"],
+    // Serve dist/404.html for unknown addresses.
+    "not_found_handling": "404-page"
+  },
+  "observability": { "enabled": true }
+}

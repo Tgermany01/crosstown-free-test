@@ -6,7 +6,10 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "scrape": "node scripts/scrape-live-site.mjs"
+    "scrape": "node scripts/scrape-live-site.mjs",
+    "preview:worker": "astro build && wrangler dev",
+    "deploy": "astro build && wrangler deploy",
+    "typecheck:worker": "tsc -p worker/tsconfig.json"
   },
   "engines": {
     "node": ">=22.12.0"
@@ -19,6 +22,7 @@
     "@astrojs/check": "^0.9.10",
     "@cloudflare/workers-types": "^5.20261014.1",
     "node-html-parser": "^9.0.4",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "wrangler": "^4.157.0"
   }
 }

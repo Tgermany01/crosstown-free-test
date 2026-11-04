@@ -1,4 +1,4 @@
-// The /api/admin/* endpoints. Pure fetch-style handler so it runs in a Cloudflare Pages Function
+// The /api/admin/* endpoints. Pure fetch-style handler so it runs in the Cloudflare Worker
 // (GitHub storage) and in `npm run dev` (local files).
 import { blockDefs, normalizePage, PALETTE, type PageData } from '../lib/blocks';
 import { iconNames } from '../lib/icons';
@@ -86,6 +86,7 @@ export async function handleAdmin(request: Request, env: AdminEnv, store: Store,
       const [siteText, pageFiles, postFiles, mediaFiles] = await Promise.all([
         store.read(SITE_FILE), store.list(PAGES_DIR), store.list(POSTS_DIR), store.list(IMAGES_DIR),
       ]);
+      if (siteText === null) throw new HttpError('Connected to GitHub, but the site files were not found there. Check GITHUB_REPO and GITHUB_BRANCH (the branch must contain this site).', 502);
       const pages = await Promise.all(
         pageFiles.filter((f) => f.name.endsWith('.json')).map(async (f) => {
           const slug = f.name.replace(/\.json$/, '');

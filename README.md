@@ -1,6 +1,6 @@
 # Crosstown Community Church website
 
-Static Astro site for [crosstowncommunitychurch.com](https://www.crosstowncommunitychurch.com), replacing the Wix site. Hosted free on Cloudflare Pages. The team edits it at **`/admin`**.
+Static Astro site for [crosstowncommunitychurch.com](https://www.crosstowncommunitychurch.com), replacing the Wix site. Hosted on Cloudflare **Workers** (static assets plus a small Worker for `/api/*`). The team edits it at **`/admin`**.
 
 ## Develop
 
@@ -8,6 +8,7 @@ Static Astro site for [crosstowncommunitychurch.com](https://www.crosstowncommun
 npm install
 npm run dev        # http://localhost:4321  (site)  and  http://localhost:4321/admin  (editor)
 npm run build      # outputs dist/
+npm run preview:worker   # build, then run the real Worker locally (http://localhost:8787)
 ```
 
 In `npm run dev` the editor works without any setup: sign in with the password `crosstown` and every save is written straight into the files in this folder. To try the site agent locally, start the dev server with `ANTHROPIC_API_KEY=... npm run dev`.
@@ -40,41 +41,55 @@ Parallax: every photo section (hero, photo strip, video banner, page intro) puts
 - **New pages:** build from sections (blank, simple or landing starter), or describe the page to the **site agent**, which drafts it for review. In any page, the agent box can also change an existing page ("add a section with our Bible study times"), with one-click undo.
 - **Blog posts, Photos, Settings:** posts with a cover photo, an upload library (large photos are shrunk in the browser), and the site-wide details and menu.
 
-Every save is a commit to this repo, so there is a full history, and Cloudflare Pages rebuilds the live site in about a minute.
+Every save is a commit to this repo, so there is a full history, and Cloudflare rebuilds the live site in about a minute.
 
 The site agent can only use the section library. Its answer is cleaned against the same field definitions as the editor (unknown sections, unknown photos, `javascript:` links and extra fields are dropped, and all text is escaped when rendered), and it never publishes: the staff review the draft and press Save.
 
 ### One-time setup in Cloudflare
 
-Pages project → Settings → Variables and Secrets (add as *secrets* unless noted):
+**1. Create the Worker from this repo.** Cloudflare dashboard → **Workers & Pages** → **Create application** → **Import a repository** (Workers Builds) → pick this repo, production branch `main`.
 
-| Name | What it is |
-|---|---|
-| `ADMIN_PASSWORD` | The shared password the team signs in with. |
-| `SESSION_SECRET` | Any long random string (signs the login cookie). Optional, but recommended. |
-| `GITHUB_REPO` | `tanner-svg/crosstown-community-site` (plain variable). |
-| `GITHUB_BRANCH` | The production branch, usually `main` (plain variable). |
-| `GITHUB_TOKEN` | A fine-grained GitHub token for this one repo with **Contents: Read and write**. |
-| `ANTHROPIC_API_KEY` | Turns on the site agent. Without it the rest of the editor still works. |
-| `ANTHROPIC_MODEL` | Optional. Defaults to `claude-sonnet-5-5`. |
+- Project / Worker name: `crosstown-community` (must match `name` in `wrangler.jsonc`)
+- Build command: `npm run build`
+- Deploy command: `npx wrangler deploy`
+- Root directory: leave empty
 
-Recommended extras: put the `/admin*` and `/api/admin*` paths behind **Cloudflare Access** (free for small teams) so staff sign in with their own email, and add a Cloudflare rate-limiting rule on `/api/admin/login`. The password sign-in works without them.
+Node 22 is picked up from `.nvmrc`. Under **Settings → Build → Variables and secrets** add the *build* variable `PUBLIC_TURNSTILE_SITE_KEY` (see Forms below); build variables are separate from the Worker's runtime settings.
+
+**2. Add the runtime settings.** Worker → **Settings → Variables and Secrets**:
+
+| Name | Type | What it is |
+|---|---|---|
+| `ADMIN_PASSWORD` | Secret | The shared password the team signs in with. |
+| `SESSION_SECRET` | Secret | Any long random string (`openssl rand -base64 32`). Signs the login cookie. |
+| `GITHUB_TOKEN` | Secret | Fine-grained GitHub token for this one repo with **Contents: Read and write**. |
+| `GITHUB_REPO` | Text | `tanner-svg/crosstown-community-site` |
+| `GITHUB_BRANCH` | Text | The production branch, usually `main`. |
+| `ANTHROPIC_API_KEY` | Secret | Turns on the site agent. Without it the rest of the editor still works. |
+| `ANTHROPIC_MODEL` | Text | Optional. Defaults to `claude-sonnet-5-5`. |
+| `RESEND_API_KEY`, `TURNSTILE_SECRET_KEY` | Secret | For the forms (below). |
+| `CONTACT_TO`, `CONTACT_FROM` | Text | For the forms (below). |
+
+Saving these redeploys the Worker with the new values. Don't copy the editor secrets into preview builds of other branches, or those previews could write to `main`.
+
+**3. Custom domain.** Worker → **Settings → Domains & Routes** → add `www.crosstowncommunitychurch.com` and the bare domain (redirect the bare domain to `www`). The domain's DNS has to be on Cloudflare. Cut over from Wix last.
+
+**4. Lock down `/admin` (recommended).** Zero Trust → **Access → Applications → Self-hosted**: add `/admin*` and `/api/admin*` on your domain with an allow-list of staff emails, and add a rate-limiting rule on `/api/admin/login`. The shared password works without these.
+
+The editor shows plain-language errors if something is mis-set (expired token, wrong repo name, missing permission).
+
+### How the Worker is wired
+
+`wrangler.jsonc` serves `dist/` as static assets and runs `worker/index.ts` only for `/api/*` (`run_worker_first`). `worker/index.ts` routes `/api/admin/*` to the editor API (`src/server/api.ts`, saving through the GitHub API) and `/api/contact` and `/api/subscribe` to the form handlers (`src/server/forms.ts`). `_headers` and `_redirects` in `public/` are applied by Workers static assets. Deploy by hand with `npm run deploy`.
 
 ## Forms and email
 
-Forms post to Cloudflare Pages Functions in `functions/api/`, which check Turnstile and send email through Resend. Environment variables:
+The forms check a hidden honeypot and Cloudflare Turnstile, then email the church through Resend. Settings:
 
-- `PUBLIC_TURNSTILE_SITE_KEY` (build) and `TURNSTILE_SECRET_KEY` (secret): from Cloudflare Turnstile.
+- `PUBLIC_TURNSTILE_SITE_KEY` (**build** variable) and `TURNSTILE_SECRET_KEY` (runtime secret): from Cloudflare Turnstile.
 - `RESEND_API_KEY` (secret): from [resend.com](https://resend.com) (free tier), after verifying the domain.
 - `CONTACT_TO`: `crosstownstockton@gmail.com`
 - `CONTACT_FROM`: e.g. `Crosstown Website <web@crosstowncommunitychurch.com>`
-
-## Deploy (Cloudflare Pages)
-
-1. Cloudflare dashboard → Workers & Pages → Create → Pages → connect this GitHub repo.
-2. Build command `npm run build`, output directory `dist`, Node 22.
-3. Add the variables above.
-4. Add the custom domain (`www` plus apex, redirect apex to `www`).
 
 ## Before launch
 
@@ -84,7 +99,7 @@ Forms post to Cloudflare Pages Functions in `functions/api/`, which check Turnst
 - [ ] **Partner links:** add the Pray Stockton and Stockton Police Chaplaincy links on the Ministry Partners page (the "Visit their website" button stays hidden until a link is set).
 - [ ] **Leaders:** confirm roles and bios on the About page.
 - [ ] **Service times:** confirm the Sunday end time (Wix said both 12:30 and 1).
-- [ ] **Newsletter list:** export subscribers from Wix (Contacts, filtered to subscribers) and pick a newsletter tool; `functions/api/subscribe.ts` emails the church until then.
+- [ ] **Newsletter list:** export subscribers from Wix (Contacts, filtered to subscribers) and pick a newsletter tool; `src/server/forms.ts` emails the church until then.
 
 ## How it maps to the old site
 

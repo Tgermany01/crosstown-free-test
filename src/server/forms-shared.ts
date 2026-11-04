@@ -1,6 +1,6 @@
-// Shared helpers for the form endpoints (Cloudflare Pages Functions).
+// Shared helpers for the form endpoints (contact + newsletter), run by the Worker in worker/index.ts.
 
-export interface Env {
+export interface FormEnv {
   RESEND_API_KEY: string;
   TURNSTILE_SECRET_KEY?: string;
   /** Where form submissions are emailed. */
@@ -9,7 +9,7 @@ export interface Env {
   CONTACT_FROM: string;
 }
 
-export async function verifyTurnstile(form: FormData, request: Request, env: Env): Promise<boolean> {
+export async function verifyTurnstile(form: FormData, request: Request, env: FormEnv): Promise<boolean> {
   // Skip when no secret is configured (local dev).
   if (!env.TURNSTILE_SECRET_KEY) return true;
   const token = form.get('cf-turnstile-response');
@@ -24,7 +24,7 @@ export async function verifyTurnstile(form: FormData, request: Request, env: Env
   return data.success;
 }
 
-export async function sendEmail(env: Env, msg: { subject: string; text: string; replyTo?: string }) {
+export async function sendEmail(env: FormEnv, msg: { subject: string; text: string; replyTo?: string }) {
   const res = await fetch('https://api.resend.com/emails', {
     method: 'POST',
     headers: { Authorization: `Bearer ${env.RESEND_API_KEY}`, 'Content-Type': 'application/json' },

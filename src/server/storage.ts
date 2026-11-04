@@ -1,5 +1,5 @@
 // Where /admin reads and writes the site's files.
-//   GitHubStore: production. Every save is a commit; Cloudflare Pages rebuilds from it.
+//   GitHubStore: production. Every save is a commit; Cloudflare rebuilds the site from it.
 //   FsStore (dev-api.ts): local `npm run dev`, writes straight into the working copy.
 
 export interface Entry { name: string; path: string; size: number }
@@ -16,6 +16,15 @@ const b64 = (data: string | Uint8Array): string => {
   for (let i = 0; i < bytes.length; i += 0x8000) bin += String.fromCharCode(...bytes.subarray(i, i + 0x8000));
   return btoa(bin);
 };
+
+/** Turns GitHub's raw error into something the person setting this up can act on. */
+async function ghError(res: Response): Promise<Error> {
+  const detail = (await res.text()).slice(0, 300);
+  if (res.status === 401) return new Error('GitHub rejected the token. GITHUB_TOKEN is wrong or has expired: make a new one and update it in Cloudflare.');
+  if (res.status === 403) return new Error(detail.includes('rate limit') ? 'GitHub is rate-limiting requests. Wait a minute and try again.' : 'GitHub says the token is not allowed to do that. It needs "Contents: Read and write" on this repository.');
+  if (res.status === 404) return new Error('GitHub could not find the repository or branch. Check GITHUB_REPO and GITHUB_BRANCH, and that the token has access to the repository.');
+  return new Error(`GitHub error ${res.status}: ${detail}`);
+}
 
 export class GitHubStore implements Store {
   constructor(private repo: string, private token: string, private branch = 'main', private apiBase = 'https://api.github.com') {}
@@ -37,7 +46,7 @@ export class GitHubStore implements Store {
   async list(dir: string): Promise<Entry[]> {
     const res = await this.gh(`contents/${this.enc(dir)}?ref=${encodeURIComponent(this.branch)}`);
     if (res.status === 404) return [];
-    if (!res.ok) throw new Error(`GitHub ${res.status}: ${await res.text()}`);
+    if (!res.ok) throw await ghError(res);
     const items = (await res.json()) as { name: string; path: string; size: number; type: string }[];
     return items.filter((i) => i.type === 'file').map((i) => ({ name: i.name, path: i.path, size: i.size }));
   }
@@ -45,14 +54,14 @@ export class GitHubStore implements Store {
   async read(path: string): Promise<string | null> {
     const res = await this.gh(`contents/${this.enc(path)}?ref=${encodeURIComponent(this.branch)}`, { headers: { Accept: 'application/vnd.github.raw+json' } });
     if (res.status === 404) return null;
-    if (!res.ok) throw new Error(`GitHub ${res.status}: ${await res.text()}`);
+    if (!res.ok) throw await ghError(res);
     return res.text();
   }
 
   private async sha(path: string): Promise<string | undefined> {
     const res = await this.gh(`contents/${this.enc(path)}?ref=${encodeURIComponent(this.branch)}`);
     if (res.status === 404) return undefined;
-    if (!res.ok) throw new Error(`GitHub ${res.status}: ${await res.text()}`);
+    if (!res.ok) throw await ghError(res);
     return ((await res.json()) as { sha: string }).sha;
   }
 
@@ -65,7 +74,7 @@ export class GitHubStore implements Store {
         body: JSON.stringify({ message, content: b64(content), branch: this.branch, ...(sha ? { sha } : {}) }),
       });
       if (res.ok) return;
-      if (res.status !== 409 && res.status !== 422) throw new Error(`GitHub ${res.status}: ${await res.text()}`);
+      if (res.status !== 409 && res.status !== 422) throw await ghError(res);
     }
     throw new Error('Could not save: someone else changed this at the same time. Please try again.');
   }
@@ -74,6 +83,6 @@ export class GitHubStore implements Store {
     const sha = await this.sha(path);
     if (!sha) return;
     const res = await this.gh(`contents/${this.enc(path)}`, { method: 'DELETE', body: JSON.stringify({ message, sha, branch: this.branch }) });
-    if (!res.ok) throw new Error(`GitHub ${res.status}: ${await res.text()}`);
+    if (!res.ok) throw await ghError(res);
   }
 }
