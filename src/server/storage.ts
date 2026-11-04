@@ -8,6 +8,8 @@ export interface Store {
   read(path: string): Promise<string | null>;
   write(path: string, content: string | Uint8Array, message: string): Promise<void>;
   remove(path: string, message: string): Promise<void>;
+  /** Explains, in plain words, why the site files could not be found (wrong repo, wrong branch, no token access...). */
+  diagnose?(): Promise<string>;
 }
 
 const b64 = (data: string | Uint8Array): string => {
@@ -30,7 +32,7 @@ export class GitHubStore implements Store {
   constructor(private repo: string, private token: string, private branch = 'main', private apiBase = 'https://api.github.com') {}
 
   private async gh(path: string, init: RequestInit = {}): Promise<Response> {
-    return fetch(`${this.apiBase}/repos/${this.repo}/${path}`, {
+    return fetch(`${this.apiBase}/repos/${this.repo}${path ? `/${path}` : ''}`, {
       ...init,
       headers: {
         Authorization: `Bearer ${this.token}`,
@@ -77,6 +79,27 @@ export class GitHubStore implements Store {
       if (res.status !== 409 && res.status !== 422) throw await ghError(res);
     }
     throw new Error('Could not save: someone else changed this at the same time. Please try again.');
+  }
+
+  async diagnose(): Promise<string> {
+    const where = `"${this.repo}" on branch "${this.branch}"`;
+    const repoRes = await this.gh('');
+    if (repoRes.status === 401) return 'GitHub rejected the token. GITHUB_TOKEN is wrong or has expired: make a new one and update it in Cloudflare.';
+    if (repoRes.status === 404) {
+      return `GitHub can't see the repository "${this.repo}". Either GITHUB_REPO is not exactly owner/name, or the token was not given access to this repository (when creating the token, "Repository access" must include it).`;
+    }
+    if (!repoRes.ok) return `GitHub error ${repoRes.status} while looking for ${where}.`;
+    const info = (await repoRes.json()) as { permissions?: { push?: boolean }; default_branch?: string };
+    if (info.permissions && info.permissions.push === false) {
+      return `The token can read "${this.repo}" but not change it. Give it "Contents: Read and write" permission.`;
+    }
+    const branchRes = await this.gh(`branches/${this.enc(this.branch)}`);
+    if (branchRes.status === 404) {
+      const list = await this.gh('branches?per_page=8');
+      const names = list.ok ? ((await list.json()) as { name: string }[]).map((b) => b.name).join(', ') : '';
+      return `The repository exists but has no branch called "${this.branch}". Set GITHUB_BRANCH to the production branch${info.default_branch ? ` (the default is "${info.default_branch}")` : ''}${names ? `. Branches found: ${names}` : ''}.`;
+    }
+    return `Found ${where}, but it has no src/data/site.json. The branch must contain this site's files.`;
   }
 
   async remove(path: string, message: string): Promise<void> {

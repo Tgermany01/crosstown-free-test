@@ -86,7 +86,7 @@ export async function handleAdmin(request: Request, env: AdminEnv, store: Store,
       const [siteText, pageFiles, postFiles, mediaFiles] = await Promise.all([
         store.read(SITE_FILE), store.list(PAGES_DIR), store.list(POSTS_DIR), store.list(IMAGES_DIR),
       ]);
-      if (siteText === null) throw new HttpError('Connected to GitHub, but the site files were not found there. Check GITHUB_REPO and GITHUB_BRANCH (the branch must contain this site).', 502);
+      if (siteText === null) throw new HttpError((await store.diagnose?.()) ?? 'The site files were not found. Check GITHUB_REPO and GITHUB_BRANCH.', 502);
       const pages = await Promise.all(
         pageFiles.filter((f) => f.name.endsWith('.json')).map(async (f) => {
           const slug = f.name.replace(/\.json$/, '');

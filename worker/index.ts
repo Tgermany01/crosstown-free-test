@@ -21,7 +21,10 @@ export default {
       if (!env.GITHUB_TOKEN || !env.GITHUB_REPO) {
         return jsonError('Admin is not set up yet: add GITHUB_TOKEN and GITHUB_REPO in Cloudflare.', 503);
       }
-      return handleAdmin(request, env, new GitHubStore(env.GITHUB_REPO, env.GITHUB_TOKEN, env.GITHUB_BRANCH || 'main'));
+      // Be forgiving about how the settings were typed: stray spaces, a pasted URL, a trailing ".git".
+      const repo = env.GITHUB_REPO.trim().replace(/^https?:\/\/(www\.)?github\.com\//i, '').replace(/\.git$/i, '').replace(/^\/+|\/+$/g, '');
+      const branch = (env.GITHUB_BRANCH || 'main').trim();
+      return handleAdmin(request, env, new GitHubStore(repo, env.GITHUB_TOKEN.trim(), branch));
     }
 
     if (path === '/api/contact' || path === '/api/subscribe') {
