@@ -1,0 +1,60 @@
+{
+  "title": "Ministry Partners",
+  "description": "The local organizations Crosstown Community Church partners with in Stockton, CA.",
+  "draft": false,
+  "sections": [
+    {
+      "id": "s_xxxfa",
+      "type": "split-intro",
+      "image": "/images/ministry-partners.jpg",
+      "alt": "Crosstown members with the Stockton Police Chaplaincy",
+      "focus": "center",
+      "imageSide": "left",
+      "heading": "Ministry Partners",
+      "text": "We're grateful to partner with fellow believers and local partners in Stockton, CA, all under the guiding light of our faith in Jesus. Through this united effort, we're committed to making a lasting impact on our city. Join us as we let our faith inspire acts of compassion, community, and positive change. Together, with Jesus as our cornerstone, we're praying & believing for a brighter future for Stockton.",
+      "arrow": false,
+      "parallax": true,
+      "edge": "flat",
+      "anchor": "",
+      "height": "medium"
+    },
+    {
+      "id": "s_xxxga",
+      "type": "partners",
+      "edge": "flat",
+      "anchor": "",
+      "slides": [
+        {
+          "icon": "pray",
+          "name": "Pray Stockton",
+          "text": "We are creating a prayer chain that unites the body of Christ for the purpose of blanketing the city in prayer. Our goal is to the enlist at least 52 ministries, churches or prayer groups to commit to strategic prayer for one full week. As each church or ministry covers the city in prayer, we ask all participating ministries pray for and with that group. We can’t do this alone.",
+          "url": "",
+          "buttonLabel": "Visit their website"
+        },
+        {
+          "icon": "badge",
+          "name": "Stockton Police Chaplaincy",
+          "text": "The SPD works in partnership with our community, to build and maintain relationships of trust and mutual respect while reducing crime and improving quality of life. Communication is a key component to accomplishing the mission of the SPD. Please contact them about services or programs you need.",
+          "url": "",
+          "buttonLabel": "Visit their website"
+        },
+        {
+          "icon": "dove",
+          "name": "Victims of Violent Crimes",
+          "text": "The Victims of Violent Crimes of San Joaquin, Inc. Support Group provides ongoing emotional support to help parents, family members and friends through the healing process. Families are given assistance in accessing services and obtaining information on the criminal justice system. If you have recently lost a loved one from violence or if your loved one has been missing, VOVC is a great resource to help and support you.",
+          "url": "https://www.victimsofviolentcrimes.org/",
+          "buttonLabel": "Visit their website"
+        }
+      ]
+    },
+    {
+      "id": "s_xxxha",
+      "type": "contact-form",
+      "heading": "Get in touch",
+      "subject": "Ministry partners",
+      "bg": "ice",
+      "edge": "flat",
+      "anchor": "contact"
+    }
+  ]
+}

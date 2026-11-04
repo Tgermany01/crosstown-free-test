@@ -1,0 +1,35 @@
+{
+  "name": "Crosstown Community Church",
+  "city": "Stockton",
+  "tagline": "Come as you are.",
+  "description": "We believe every person matters to God and there’s no problem in the world that discipleship with Jesus can’t fix.",
+  "hours": "Sundays 11-1",
+  "phone": "(209) 462 6560",
+  "phoneHref": "tel:+12094626560",
+  "textNumber": "209-462-6560",
+  "email": "crosstownstockton@gmail.com",
+  "street": "924 North Filbert Street",
+  "cityStateZip": "Stockton, CA 95205",
+  "mailing": "P.O. Box 5097 Stockton, CA 95205",
+  "mapUrl": "https://goo.gl/maps/quExzCbFR5r72b5S6",
+  "donateUrl": "https://crosstown-church.churchcenter.com/giving",
+  "donateLabel": "Donate",
+  "facebookUrl": "https://www.facebook.com/crosstowncommunitychurch",
+  "youtubeUrl": "https://www.youtube.com/@crosstownstockton9983",
+  "affiliationName": "Growing Healthy Churches",
+  "affiliationUrl": "https://growinghealthychurches.com/",
+  "creditName": "Nectarine Studio",
+  "creditUrl": "https://www.nectarine.ink",
+  "newsletterHeading": "Subscribe to the Crosstown Newsletter",
+  "nav": [
+    { "label": "Home", "href": "/" },
+    { "label": "About Us", "href": "/about" },
+    { "label": "Ministry Partners", "href": "/ministry-partners" },
+    { "label": "Community Outreach", "href": "/outreach" },
+    { "label": "Blog", "href": "/blog" }
+  ],
+  "categories": [
+    { "key": "csi", "label": "CSI - Crime Scene Intercessors", "slug": "csi-crime-scene-intercessors" },
+    { "key": "feeding-hands", "label": "God's Feeding Hands", "slug": "god-s-feeding-hands" }
+  ]
+}

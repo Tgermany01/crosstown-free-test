@@ -1,0 +1,19 @@
+{
+  "title": "Blog",
+  "description": "Testimonies and outreach reports from Crosstown Community Church.",
+  "draft": false,
+  "sections": [
+    {
+      "id": "s_xxxna",
+      "type": "post-feed",
+      "heading": "Blog",
+      "category": "all",
+      "layout": "rows",
+      "tabs": true,
+      "limit": "0",
+      "bg": "white",
+      "edge": "flat",
+      "anchor": ""
+    }
+  ]
+}

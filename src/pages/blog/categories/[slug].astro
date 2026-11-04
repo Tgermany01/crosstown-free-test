@@ -1,17 +1,19 @@
 ---
 import Base from '../../../layouts/Base.astro';
-import PostList from '../../../components/PostList.astro';
-import { getCollection } from 'astro:content';
-import { categories } from '../../../data/site';
+import { site } from '../../../data/site';
+import { renderSections } from '../../../lib/blocks';
+import { loadPosts } from '../../../lib/posts';
 
-export async function getStaticPaths() {
-  return Object.entries(categories).map(([key, c]) => ({ params: { slug: c.slug }, props: { key } }));
+export function getStaticPaths() {
+  return site.categories.map((c) => ({ params: { slug: c.slug }, props: { cat: c } }));
 }
-
-const { key } = Astro.props as { key: keyof typeof categories };
-const posts = (await getCollection('posts', (p) => p.data.category === key)).sort((a, b) => +b.data.date - +a.data.date);
-const label = categories[key].label;
+const { cat } = Astro.props;
+const posts = await loadPosts();
+const html = renderSections(
+  [{ type: 'post-feed', heading: cat.label, category: cat.key, layout: 'rows', tabs: true, limit: '0', bg: 'white' }],
+  { site, posts },
+);
 ---
-<Base title={label} description={`${label} posts from Crosstown Community Church.`}>
-  <PostList posts={posts} active={key} heading={label} />
+<Base title={cat.label} description={`${cat.label} posts from Crosstown Community Church.`}>
+  <Fragment set:html={html} />
 </Base>

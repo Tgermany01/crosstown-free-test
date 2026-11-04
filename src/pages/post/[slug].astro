@@ -1,8 +1,9 @@
 ---
 import Base from '../../layouts/Base.astro';
-import BlogTabs from '../../components/BlogTabs.astro';
-import PostCard from '../../components/PostCard.astro';
 import { getCollection, render } from 'astro:content';
+import { site } from '../../data/site';
+import { renderBlogTabs, renderPostCard } from '../../lib/blocks';
+import { loadPosts } from '../../lib/posts';
 
 export async function getStaticPaths() {
   const posts = await getCollection('posts');
@@ -13,41 +14,41 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 const { title, date, author, description, image } = post.data;
 const fmt = new Intl.DateTimeFormat('en-US', { dateStyle: 'medium', timeZone: 'UTC' });
-const recent = (await getCollection('posts', (p) => p.id !== post.id)).sort((a, b) => +b.data.date - +a.data.date).slice(0, 3);
+const recent = (await loadPosts()).filter((p) => p.id !== post.id).slice(0, 3);
 const minutes = Math.max(1, Math.round((post.body?.split(/\s+/).length ?? 0) / 200));
 ---
 <Base title={title} description={description} image={image}>
   <section class="post-page">
     <div class="blog-wrap">
-      <BlogTabs />
+      <Fragment set:html={renderBlogTabs(site, '')} />
       <article class="box">
         <p class="meta">{author} · {fmt.format(date)} · {minutes} min read</p>
         <h1>{title}</h1>
-        <div class="prose"><Content /></div>
+        <div class="post-body"><Content /></div>
         <p class="back"><a href="/blog">← All posts</a></p>
       </article>
       {recent.length > 0 && (
         <aside class="recent">
           <div class="recent-head"><h2>Recent Posts</h2><a href="/blog">See All</a></div>
-          <div class="recent-row">{recent.map((p) => <PostCard post={p} />)}</div>
+          <div class="recent-row"><Fragment set:html={recent.map((p) => renderPostCard(p, site)).join('')} /></div>
         </aside>
       )}
     </div>
   </section>
 </Base>
 
-<style>
+<style is:global>
   .post-page { padding: 32px 0 64px; }
   .blog-wrap { max-width: 940px; margin: 0 auto; padding: 0 16px; }
-  .box { border: 1px solid #d9d9d9; margin-top: 40px; padding: clamp(24px, 6vw, 64px) clamp(20px, 10vw, 100px); }
-  .meta { font-size: 0.8rem; margin-bottom: 1.2em; }
-  h1 { font-size: clamp(1.8rem, 3vw, 2.3rem); margin-bottom: 0.9em; }
-  .prose { max-width: none; font-size: 1.05rem; }
-  .prose :global(img) { width: 100%; }
+  .post-page .box { border: 1px solid #d9d9d9; margin-top: 40px; padding: clamp(24px, 6vw, 64px) clamp(20px, 10vw, 100px); }
+  .post-page .meta { font-size: 0.8rem; margin-bottom: 1.2em; }
+  .post-page h1 { font-size: clamp(1.8rem, 3vw, 2.3rem); margin-bottom: 0.9em; color: var(--navy); }
+  .post-body { font-size: 1.05rem; }
+  .post-body img { width: 100%; margin: 1.5em 0; border-radius: 4px; }
   .recent { margin-top: 48px; }
   .recent-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px; }
-  .recent-head h2 { font-family: var(--body); font-style: normal; font-size: 1rem; font-weight: 400; }
+  .recent-head h2 { font-family: var(--body); font-style: normal; font-size: 1rem; font-weight: 400; color: var(--navy); margin: 0; }
   .recent-head a { font-size: 0.85rem; color: var(--navy); }
   .recent-row { display: flex; flex-wrap: wrap; gap: 20px; }
-  .back { margin-top: 2em; font-size: 0.9rem; }
+  .post-page .back { margin-top: 2em; font-size: 0.9rem; }
 </style>

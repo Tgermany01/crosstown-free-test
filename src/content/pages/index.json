@@ -1,0 +1,169 @@
+{
+  "title": "Home",
+  "description": "We believe every person matters to God and there’s no problem in the world that discipleship with Jesus can’t fix.",
+  "draft": false,
+  "sections": [
+    {
+      "id": "s_xxx1a",
+      "type": "hero",
+      "image": "/images/hero.jpg",
+      "focus": "center",
+      "overlay": "light",
+      "logo": true,
+      "eyebrow": "Welcome to",
+      "heading": "Crosstown Community Church",
+      "text": "**Crosstown Community Church of Stockton**\n**Sunday Service at 11 a.m. | Bible Study on Wednesdays at 2 & 6:30 p.m.**\n*Come as you are.*",
+      "buttons": [],
+      "height": "tall",
+      "parallax": true,
+      "edge": "flat",
+      "anchor": ""
+    },
+    {
+      "id": "s_xxx2a",
+      "type": "resources",
+      "heading": "Resources",
+      "edge": "flat",
+      "anchor": "",
+      "cards": [
+        {
+          "icon": "broadcast",
+          "title": "Live at 5",
+          "text": "See this week's episode of Live at 5 with Pastor Kevin.",
+          "link": "#liveat5"
+        },
+        {
+          "icon": "church",
+          "title": "This Week's Service",
+          "text": "Click here to watch this Sunday's Service.",
+          "link": "#thisweekssermon"
+        },
+        {
+          "icon": "camera",
+          "title": "Past Sermons",
+          "text": "Click here to select from and watch past services.",
+          "link": "https://www.youtube.com/watch?v=qwHFS4a5dPE&list=PL2qqQqZBs7A7O_2bvnYcBUfOxqdgdEqju"
+        },
+        {
+          "icon": "book",
+          "title": "Bible Study Resources",
+          "text": "Browse book recommendations & Bible study resources.",
+          "link": "/blog"
+        },
+        {
+          "icon": "pin",
+          "title": "Contact & Locate",
+          "text": "Find our church, request prayer, connect with us.",
+          "link": "#contact"
+        },
+        {
+          "icon": "hands",
+          "title": "God's Feeding Hands",
+          "text": "Get information about our homeless outreach ministry.",
+          "link": "/outreach#feeding-hands"
+        },
+        {
+          "icon": "dove",
+          "title": "Victims of Violent Crimes",
+          "text": "Learn more about VOVC support groups & resources.",
+          "link": "https://www.victimsofviolentcrimes.org/"
+        }
+      ]
+    },
+    {
+      "id": "s_xxx3a",
+      "type": "photo-band",
+      "image": "/images/bible-study.jpg",
+      "focus": "bottom",
+      "tint": "teal",
+      "height": "short",
+      "parallax": true,
+      "edge": "wave",
+      "anchor": ""
+    },
+    {
+      "id": "s_xxx4a",
+      "type": "quote",
+      "text": "\"If Crosstown had an anthem, it would be the song that begins, ‘Everyone needs compassion; A love that’s never failing, let mercy fall on me; Everyone needs forgiveness, the kindness of a Savior, the Hope of nations.\"",
+      "attribution": "",
+      "bg": "teal",
+      "edge": "flat",
+      "anchor": ""
+    },
+    {
+      "id": "s_xxx5a",
+      "type": "image-text",
+      "image": "/images/kevin-and-paula.jpg",
+      "alt": "Pastor Kevin and Paula White",
+      "imageSide": "left",
+      "heading": "About",
+      "body": "At Crosstown Church we believe that every person matters to God and there’s no problem in the world that discipleship with Jesus can’t fix. Our mission is to make disciples through worship, growth and service.",
+      "buttons": [
+        {
+          "label": "Learn More",
+          "url": "/about",
+          "style": "orange"
+        }
+      ],
+      "bg": "navy",
+      "edge": "wave",
+      "anchor": ""
+    },
+    {
+      "id": "s_xxx6a",
+      "type": "video-banner",
+      "kicker": "Crosstown Stockton",
+      "heading": "Can Your Faith Heal The Planet",
+      "youtubeId": "qwHFS4a5dPE",
+      "image": "",
+      "moreLabel": "All Videos",
+      "moreUrl": "https://www.youtube.com/watch?v=qwHFS4a5dPE&list=PL2qqQqZBs7A7O_2bvnYcBUfOxqdgdEqju",
+      "parallax": true,
+      "edge": "flat",
+      "anchor": "thisweekssermon"
+    },
+    {
+      "id": "s_xxx7a",
+      "type": "text",
+      "heading": "Sunday Gatherings",
+      "headingStyle": "badge-up",
+      "body": "We gather for Worship Services every Sunday from 11 am to 12:30 pm, consisting of worship through song and prayer and a message. Invitations are also given for those who are in need of personal prayer near the close of each service. Those in attendance are encouraged to hang out after the service to meet with one another, pray and generally catch up with one another.\n\n### Watch Past Gatherings\n\nTo see past Sunday gatherings and sermons, you can click above to visit our YouTube Sunday Gathering playlist. You can also find the full version of our gatherings on our **Facebook** channel, Crosstown Community Church of Stockton.\n\n[Watch on Facebook Live](https://www.facebook.com/crosstowncommunitychurch)  |  [Watch on Youtube](https://www.youtube.com/@crosstownstockton9983)",
+      "buttons": [],
+      "align": "left",
+      "width": "narrow",
+      "bodyColor": "auto",
+      "bg": "navy",
+      "edge": "flat",
+      "anchor": ""
+    },
+    {
+      "id": "s_xxx8a",
+      "type": "text",
+      "heading": "Live at 5",
+      "headingStyle": "badge-down",
+      "body": "We have a 5-minute weekly broadcast on Wednesdays at 5:00-5:15 pm on Crosstown's Facebook Live including a scripture for the day and a time of prayer together. Send your prayer requests by text to 209-462-6560 or e-mail: [crosstownstockton@gmail.com](mailto:crosstownstockton@gmail.com?subject=Prayer%20Request) any day & time before 4pm Wednesday to be included in that day’s prayer time.",
+      "buttons": [
+        {
+          "label": "Watch Live @ 5 Now",
+          "url": "https://www.facebook.com/watch/100064523388859/526844176217781",
+          "style": "orange"
+        }
+      ],
+      "align": "left",
+      "width": "narrow",
+      "bodyColor": "auto",
+      "bg": "teal",
+      "edge": "flat",
+      "anchor": "liveat5"
+    },
+    {
+      "id": "s_xxx9a",
+      "type": "contact-form",
+      "heading": "Get in touch",
+      "subject": "Website contact form",
+      "bg": "ice",
+      "edge": "flat",
+      "anchor": "contact"
+    }
+  ]
+}

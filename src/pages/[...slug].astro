@@ -1,0 +1,27 @@
+---
+// Every page made in /admin (and the original pages) lives in src/content/pages/<slug>.json.
+// The "index" file is the home page. Pages marked as drafts are not built.
+import Base from '../layouts/Base.astro';
+import { site } from '../data/site';
+import { normalizePage, renderSections } from '../lib/blocks';
+import { loadPosts } from '../lib/posts';
+
+export async function getStaticPaths() {
+  const files = import.meta.glob('../content/pages/*.json', { eager: true, import: 'default' });
+  return Object.entries(files)
+    .map(([path, data]) => {
+      const slug = path.split('/').pop()!.replace(/\.json$/, '');
+      return { slug, page: normalizePage(data) };
+    })
+    .filter((p) => !p.page.draft)
+    .map(({ slug, page }) => ({ params: { slug: slug === 'index' ? undefined : slug }, props: { slug, page } }));
+}
+
+const { slug, page } = Astro.props;
+const posts = await loadPosts();
+const turnstileKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY as string | undefined;
+const html = renderSections(page.sections, { site, posts, turnstileKey });
+---
+<Base title={slug === 'index' ? undefined : page.title} description={page.description || site.description}>
+  <Fragment set:html={html} />
+</Base>

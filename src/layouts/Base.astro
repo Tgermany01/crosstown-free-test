@@ -1,8 +1,7 @@
 ---
 import '../styles/global.css';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import { site } from '../data/site';
+import { renderHeader, renderFooter, renderNewsletterForm } from '../lib/chrome';
 
 interface Props {
   title?: string;
@@ -11,8 +10,10 @@ interface Props {
 }
 const { title, description = site.description, image = '/images/og-image.jpg' } = Astro.props;
 const fullTitle = title ? `${title} | ${site.name}` : `${site.name} | ${site.city}, CA`;
-const canonical = new URL(Astro.url.pathname, Astro.site);
+const path = Astro.url.pathname.replace(/\.html$/, '').replace(/\/$/, '') || '/';
+const canonical = new URL(path, Astro.site);
 const ogImage = new URL(image, Astro.site);
+const turnstileKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY as string | undefined;
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -49,33 +50,17 @@ const jsonLd = {
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Vollkorn:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Vollkorn:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    {turnstileKey && <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>}
   </head>
   <body>
-    <Header />
+    <Fragment set:html={renderHeader(site, path)} />
     <main><slot /></main>
-    <Footer />
+    <Fragment set:html={renderFooter(site, path, renderNewsletterForm(turnstileKey))} />
     <script>
-      // Submit forms with fetch so visitors stay on the page.
-      for (const form of document.querySelectorAll<HTMLFormElement>('form.js-form')) {
-        form.addEventListener('submit', async (e) => {
-          e.preventDefault();
-          const status = form.querySelector('.form-status');
-          const button = form.querySelector('button');
-          if (button) button.disabled = true;
-          try {
-            const res = await fetch(form.action, { method: 'POST', body: new FormData(form) });
-            if (!res.ok) throw new Error(await res.text());
-            form.reset();
-            if (status) status.textContent = form.dataset.success ?? 'Sent.';
-          } catch {
-            if (status) status.textContent = 'Sorry, that didn\'t go through. Please email or call us instead.';
-          } finally {
-            if (button) button.disabled = false;
-          }
-        });
-      }
+      import { initSite } from '../scripts/site';
+      initSite();
     </script>
   </body>
 </html>

@@ -1,0 +1,98 @@
+{
+  "title": "Community Outreach",
+  "description": "Crime Scene Intercessors and God's Feeding Hands: how Crosstown Community Church serves Stockton.",
+  "draft": false,
+  "sections": [
+    {
+      "id": "s_xxxia",
+      "type": "collage-hero",
+      "heading": "Community Outreach",
+      "text": "\"But you are a chosen race, a royal priesthood, a holy nation, a people for his own possession, that you may proclaim the excellencies of him who called you out of darkness into his marvelous light\"\n- 1 Peter 2:9",
+      "imageSmall": "/images/outreach-hero.jpg",
+      "altSmall": "Crosstown volunteers at a homeless encampment",
+      "imageBig": "/images/csi.jpg",
+      "altBig": "An open Bible at a prayer vigil",
+      "edge": "flat",
+      "anchor": ""
+    },
+    {
+      "id": "s_xxxja",
+      "type": "text-signup",
+      "headingStyle": "dot",
+      "buttons": [],
+      "align": "left",
+      "width": "narrow",
+      "bodyColor": "teal",
+      "anchor": "csi",
+      "heading": "Crime Scene Intercessors",
+      "body": "Wednesdays at noon, we gather for prayer at various sites in the city of Stockton, where there has been a homicide. We invite you all to pray with us in person if you're available or from wherever you are at around noon on Wednesdays for our people and our city. Our city needs us to pray. For more information, or to be added to the group texts, e-mail crosstownstockton@gmail.com or register using the form.",
+      "asideIcon": "fingerprint",
+      "list": "csi",
+      "asideButton": "Join the CSI Team",
+      "asideSuccess": "Thanks! We'll add you to the CSI group texts.",
+      "bg": "white",
+      "edge": "wave"
+    },
+    {
+      "id": "s_xxxka",
+      "type": "post-feed",
+      "heading": "Testimonies from CSI",
+      "category": "csi",
+      "layout": "cards",
+      "tabs": false,
+      "limit": "0",
+      "bg": "white",
+      "edge": "flat",
+      "anchor": ""
+    },
+    {
+      "id": "s_xxxla",
+      "type": "text-gallery",
+      "headingStyle": "dot",
+      "buttons": [],
+      "align": "left",
+      "width": "narrow",
+      "bodyColor": "auto",
+      "anchor": "feeding-hands",
+      "heading": "God's Feeding Hands",
+      "body": "We gather at Crosstown on the last two Mondays of the month at 7:30 am to prepare sack lunches followed by an outreach to our homeless community from  9:00 am - 12:30 pm..  If you have a heart to reach the homeless and for community service, we invite you to join us this month!  There is a way for everyone to participate whether praying for people we encounter,  preparing lunches at the church, distributing food, water and clothing, or providing  reliable transportation for the team   members.  Contact Rose Kaufmann at 209-471-4850 for more  information.",
+      "images": [
+        {
+          "image": "/images/feeding-hands-1.jpg",
+          "alt": "God's Feeding Hands volunteers"
+        },
+        {
+          "image": "/images/outreach-hero.jpg",
+          "alt": "Volunteers at an encampment"
+        },
+        {
+          "image": "/images/feeding-hands-2.jpg",
+          "alt": "Serving a meal"
+        },
+        {
+          "image": "/images/feeding-hands-3.jpg",
+          "alt": "Volunteers serving"
+        },
+        {
+          "image": "/images/feeding-hands-4.jpg",
+          "alt": "Feeding hands outreach"
+        }
+      ],
+      "bg": "navy",
+      "edge": "wave-flip",
+      "space": "roomy"
+    },
+    {
+      "id": "s_xxxma",
+      "type": "post-feed",
+      "heading": "Testimonies from God's Feeding Hands",
+      "category": "feeding-hands",
+      "layout": "cards",
+      "tabs": false,
+      "limit": "0",
+      "bg": "navy",
+      "edge": "flat",
+      "anchor": ""
+    }
+  ]
+}

@@ -8,8 +8,8 @@ const posts = defineCollection({
     title: z.string(),
     date: z.coerce.date(),
     author: z.string(),
-    // Matches a key in `categories` in src/data/site.ts.
-    category: z.enum(['csi', 'feeding-hands']),
+    // A category `key` from src/data/site.json.
+    category: z.string(),
     image: z.string(),
     description: z.string(),
   }),
