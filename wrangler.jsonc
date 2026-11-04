@@ -4,6 +4,9 @@
   "name": "crosstown-community",
   "main": "worker/index.ts",
   "compatibility_date": "2026-11-04",
+  // Settings are entered in the Cloudflare dashboard (see README). Without this, every deploy would delete the
+  // plain-text ones. Secrets are never deleted either way.
+  "keep_vars": true,
   "assets": {
     "directory": "./dist",
     "binding": "ASSETS",

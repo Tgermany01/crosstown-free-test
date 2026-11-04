@@ -70,7 +70,7 @@ Node 22 is picked up from `.nvmrc`. Under **Settings → Build → Variables and
 | `RESEND_API_KEY`, `TURNSTILE_SECRET_KEY` | Secret | For the forms (below). |
 | `CONTACT_TO`, `CONTACT_FROM` | Text | For the forms (below). |
 
-Saving these redeploys the Worker with the new values. Don't copy the editor secrets into preview builds of other branches, or those previews could write to `main`.
+`wrangler.jsonc` sets `keep_vars`, so deploys never wipe values you entered in the dashboard. (If you ever remove that line, enter everything as a Secret instead: secrets always survive deploys.) Saving these redeploys the Worker with the new values. Don't copy the editor secrets into preview builds of other branches, or those previews could write to `main`.
 
 **3. Custom domain.** Worker → **Settings → Domains & Routes** → add `www.crosstowncommunitychurch.com` and the bare domain (redirect the bare domain to `www`). The domain's DNS has to be on Cloudflare. Cut over from Wix last.
 
