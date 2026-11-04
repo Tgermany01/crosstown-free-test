@@ -22,14 +22,41 @@
   "creditUrl": "https://www.nectarine.ink",
   "newsletterHeading": "Subscribe to the Crosstown Newsletter",
   "nav": [
-    { "label": "Home", "href": "/" },
-    { "label": "About Us", "href": "/about" },
-    { "label": "Ministry Partners", "href": "/ministry-partners" },
-    { "label": "Community Outreach", "href": "/outreach" },
-    { "label": "Blog", "href": "/blog" }
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "About Us",
+      "href": "/about"
+    },
+    {
+      "label": "Ministry Partners",
+      "href": "/ministry-partners"
+    },
+    {
+      "label": "Community Outreach",
+      "href": "/outreach"
+    },
+    {
+      "label": "Blog",
+      "href": "/blog"
+    },
+    {
+      "label": "Events",
+      "href": "/potluck-12-16"
+    }
   ],
   "categories": [
-    { "key": "csi", "label": "CSI - Crime Scene Intercessors", "slug": "csi-crime-scene-intercessors" },
-    { "key": "feeding-hands", "label": "God's Feeding Hands", "slug": "god-s-feeding-hands" }
+    {
+      "key": "csi",
+      "label": "CSI - Crime Scene Intercessors",
+      "slug": "csi-crime-scene-intercessors"
+    },
+    {
+      "key": "feeding-hands",
+      "label": "God's Feeding Hands",
+      "slug": "god-s-feeding-hands"
+    }
   ]
 }
