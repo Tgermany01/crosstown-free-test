@@ -244,16 +244,21 @@ add({
   description: 'A wide, shallow strip of photo tinted blue. The photo slides gently as you scroll. Use between sections.',
   fields: [
     { key: 'image', label: 'Photo', type: 'image' },
-    { key: 'focus', label: 'Photo focus', type: 'select', options: FOCUS_OPTIONS, default: 'center' },
+    { key: 'fit', label: 'Shape', type: 'select', default: 'strip', options: [{ value: 'strip', label: 'Wide strip (photo is cropped, slides on scroll)' }, { value: 'full', label: 'Whole photo (nothing is cropped)' }] },
+    { key: 'focus', label: 'Photo focus (strip only)', type: 'select', options: FOCUS_OPTIONS, default: 'center' },
     { key: 'tint', label: 'Tint', type: 'select', default: 'teal', options: [{ value: 'teal', label: 'Teal' }, { value: 'navy', label: 'Navy' }, { value: 'none', label: 'None' }] },
-    { key: 'height', label: 'Height', type: 'select', default: 'short', options: [{ value: 'short', label: 'Short' }, { value: 'medium', label: 'Medium' }, { value: 'tall', label: 'Tall' }] },
-    { key: 'parallax', label: 'Parallax scroll', type: 'boolean', default: true },
+    { key: 'height', label: 'Height (strip only)', type: 'select', default: 'short', options: [{ value: 'short', label: 'Short' }, { value: 'medium', label: 'Medium' }, { value: 'tall', label: 'Tall' }] },
+    { key: 'parallax', label: 'Parallax scroll (strip only)', type: 'boolean', default: true },
     ...commonFields,
   ],
-  defaults: { image: '', focus: 'center', tint: 'teal', height: 'short', parallax: true, edge: 'wave', anchor: '' },
+  defaults: { image: '', fit: 'strip', focus: 'center', tint: 'teal', height: 'short', parallax: true, edge: 'wave', anchor: '' },
   bg: () => null,
   render(p, ctx) {
     const def = blocksByType['photo-band']!;
+    if (p.fit === 'full' && p.image) {
+      // The whole photo at its natural proportions: nothing is cropped, so there is nothing to slide.
+      return section(def, p, ctx, `<img class="band-full" src="${attr(p.image)}" alt="" loading="lazy">`, `tint-${p.tint} fit-full`);
+    }
     return section(def, p, ctx, parallaxImg(p.image, '', { parallax: p.parallax, speed: 0.3, focus: p.focus }), `tint-${p.tint} h-${p.height}`);
   },
 });

@@ -79,7 +79,8 @@
       "height": "short",
       "parallax": true,
       "edge": "wave",
-      "anchor": ""
+      "anchor": "",
+      "fit": "full"
     },
     {
       "id": "s_xxx4a",

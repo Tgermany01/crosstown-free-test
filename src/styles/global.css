@@ -435,3 +435,9 @@ form.stack { display: grid; gap: 14px; }
   .res-card { min-height: 0; padding: 20px 10px 16px; }
   .cf-grid .message textarea { height: 140px; }
 }
+
+/* photo band showing the whole photo (no crop): the section takes the photo's own height */
+.blk-photo-band.fit-full { height: auto; background: var(--teal); }
+.band-full { display: block; width: 100%; height: auto; }
+.blk-photo-band.fit-full.tint-teal::after { background: linear-gradient(rgba(4, 81, 116, 0.28), rgba(4, 81, 116, 0.4)); }
+.blk-photo-band.fit-full.tint-navy::after { background: linear-gradient(rgba(0, 31, 61, 0.28), rgba(0, 31, 61, 0.4)); }
