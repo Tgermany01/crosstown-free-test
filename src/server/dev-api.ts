@@ -2,7 +2,7 @@
 import { mkdir, readdir, readFile, rm, stat, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { handleAdmin, type AdminEnv } from './api';
-import type { Entry, Store } from './storage';
+import type { Entry, Store, TextEntry } from './storage';
 
 export class FsStore implements Store {
   constructor(private root: string) {}
@@ -16,6 +16,10 @@ export class FsStore implements Store {
       }
       return out;
     } catch { return []; }
+  }
+  async readDir(dir: string): Promise<TextEntry[]> {
+    const files = await this.list(dir);
+    return Promise.all(files.map(async (f) => ({ ...f, text: await this.read(f.path) })));
   }
   async read(path: string) { try { return await readFile(join(this.root, path), 'utf8'); } catch { return null; } }
   async write(path: string, content: string | Uint8Array) {

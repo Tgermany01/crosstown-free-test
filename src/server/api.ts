@@ -49,6 +49,14 @@ function serializePost(p: PostFile): string {
   return `---\ntitle: ${q(p.title)}\ndate: ${p.date}\nauthor: ${q(p.author)}\ncategory: ${p.category}\nimage: ${p.image}\ndescription: ${q(p.description)}\n---\n\n${p.body.trim()}\n`;
 }
 
+/** All files in a folder with their text. One request on GitHub; falls back to reading a file alone only if it was too big to include. */
+async function readAll(store: Store, dir: string): Promise<{ name: string; path: string; text: string }[]> {
+  const files = await store.readDir(dir);
+  const out: { name: string; path: string; text: string }[] = [];
+  for (const f of files) out.push({ name: f.name, path: f.path, text: f.text ?? (await store.read(f.path)) ?? '' });
+  return out;
+}
+
 // ---------------------------------------------------------------- handler
 export async function handleAdmin(request: Request, env: AdminEnv, store: Store, opts: { dev?: boolean } = {}): Promise<Response> {
   const url = new URL(request.url);
@@ -84,22 +92,17 @@ export async function handleAdmin(request: Request, env: AdminEnv, store: Store,
 
     if (head === 'bootstrap') {
       const [siteText, pageFiles, postFiles, mediaFiles] = await Promise.all([
-        store.read(SITE_FILE), store.list(PAGES_DIR), store.list(POSTS_DIR), store.list(IMAGES_DIR),
+        store.read(SITE_FILE), readAll(store, PAGES_DIR), readAll(store, POSTS_DIR), store.list(IMAGES_DIR),
       ]);
       if (siteText === null) throw new HttpError((await store.diagnose?.()) ?? 'The site files were not found. Check GITHUB_REPO and GITHUB_BRANCH.', 502);
-      const pages = await Promise.all(
-        pageFiles.filter((f) => f.name.endsWith('.json')).map(async (f) => {
-          const slug = f.name.replace(/\.json$/, '');
-          const p = normalizePage(JSON.parse((await store.read(f.path)) ?? '{}'));
-          return { slug, title: p.title, draft: p.draft, sections: p.sections.length };
-        }),
-      );
-      const posts = await Promise.all(
-        postFiles.filter((f) => f.name.endsWith('.md')).map(async (f) => {
-          const { body, ...meta } = parsePost(f.name.replace(/\.md$/, ''), (await store.read(f.path)) ?? '');
-          return { ...meta, minutes: Math.max(1, Math.round(body.split(/\s+/).length / 200)), id: meta.slug };
-        }),
-      );
+      const pages = pageFiles.filter((f) => f.name.endsWith('.json')).map((f) => {
+        const p = normalizePage(JSON.parse(f.text || '{}'));
+        return { slug: f.name.replace(/\.json$/, ''), title: p.title, draft: p.draft, sections: p.sections.length };
+      });
+      const posts = postFiles.filter((f) => f.name.endsWith('.md')).map((f) => {
+        const { body, ...meta } = parsePost(f.name.replace(/\.md$/, ''), f.text);
+        return { ...meta, minutes: Math.max(1, Math.round(body.split(/\s+/).length / 200)), id: meta.slug };
+      });
       return json({
         user: session.name,
         site: JSON.parse(siteText ?? '{}'),
@@ -205,11 +208,11 @@ export async function handleAdmin(request: Request, env: AdminEnv, store: Store,
       const body = (await request.json()) as { prompt?: string; current?: { title: string; description: string; sections: unknown[] } };
       const prompt = String(body.prompt ?? '').trim();
       if (prompt.length < 4) throw new HttpError('Tell the agent what you would like.');
-      const [siteText, pageFiles, mediaFiles] = await Promise.all([store.read(SITE_FILE), store.list(PAGES_DIR), store.list(IMAGES_DIR)]);
+      const [siteText, pageFiles, mediaFiles] = await Promise.all([store.read(SITE_FILE), readAll(store, PAGES_DIR), store.list(IMAGES_DIR)]);
       const site = JSON.parse(siteText ?? '{}');
-      const pages = await Promise.all(pageFiles.filter((f) => f.name.endsWith('.json')).map(async (f) => ({
-        slug: f.name.replace(/\.json$/, ''), title: normalizePage(JSON.parse((await store.read(f.path)) ?? '{}')).title,
-      })));
+      const pages = pageFiles.filter((f) => f.name.endsWith('.json')).map((f) => ({
+        slug: f.name.replace(/\.json$/, ''), title: normalizePage(JSON.parse(f.text || '{}')).title,
+      }));
       const result = await runAgent(env, {
         prompt: prompt.slice(0, 4000),
         current: body.current,

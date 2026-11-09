@@ -3,8 +3,11 @@
 //   FsStore (dev-api.ts): local `npm run dev`, writes straight into the working copy.
 
 export interface Entry { name: string; path: string; size: number }
+export interface TextEntry extends Entry { text: string | null }
 export interface Store {
   list(dir: string): Promise<Entry[]>;
+  /** Every file in a folder with its text, ideally in ONE request (Cloudflare's free plan allows only 50 outgoing calls per request). `text` is null when it couldn't be included; read it with read(). */
+  readDir(dir: string): Promise<TextEntry[]>;
   read(path: string): Promise<string | null>;
   write(path: string, content: string | Uint8Array, message: string): Promise<void>;
   remove(path: string, message: string): Promise<void>;
@@ -51,6 +54,34 @@ export class GitHubStore implements Store {
     if (!res.ok) throw await ghError(res);
     const items = (await res.json()) as { name: string; path: string; size: number; type: string }[];
     return items.filter((i) => i.type === 'file').map((i) => ({ name: i.name, path: i.path, size: i.size }));
+  }
+
+  async readDir(dir: string): Promise<TextEntry[]> {
+    try {
+      return await this.readDirGraphQL(dir);
+    } catch (e) {
+      // Safety net: if the one-call route fails for any reason, read files one by one (fine for small sites).
+      console.error('readDir via GraphQL failed, falling back:', e instanceof Error ? e.message : e);
+      const files = await this.list(dir);
+      return Promise.all(files.map(async (f) => ({ ...f, text: await this.read(f.path) })));
+    }
+  }
+
+  private async readDirGraphQL(dir: string): Promise<TextEntry[]> {
+    const [owner, name] = this.repo.split('/');
+    const query = `query($owner:String!,$name:String!,$expr:String!){repository(owner:$owner,name:$name){object(expression:$expr){... on Tree{entries{name type object{... on Blob{byteSize isBinary isTruncated text}}}}}}}`;
+    const res = await fetch(`${this.apiBase}/graphql`, {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${this.token}`, 'User-Agent': 'crosstown-admin', 'content-type': 'application/json' },
+      body: JSON.stringify({ query, variables: { owner, name, expr: `${this.branch}:${dir}` } }),
+    });
+    if (!res.ok) throw await ghError(res);
+    const data = (await res.json()) as { errors?: { message: string }[]; data?: { repository?: { object?: { entries?: { name: string; type: string; object?: { byteSize: number; isBinary: boolean; isTruncated: boolean; text: string | null } }[] } | null } | null } };
+    if (data.errors?.length && !data.data?.repository) throw new Error(`GitHub error: ${data.errors[0]!.message}`);
+    const entries = data.data?.repository?.object?.entries ?? [];
+    return entries
+      .filter((e) => e.type === 'blob')
+      .map((e) => ({ name: e.name, path: `${dir}/${e.name}`, size: e.object?.byteSize ?? 0, text: e.object && !e.object.isBinary && !e.object.isTruncated ? e.object.text : null }));
   }
 
   async read(path: string): Promise<string | null> {
