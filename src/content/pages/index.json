@@ -23,8 +23,6 @@
       "id": "s_xxx2a",
       "type": "resources",
       "heading": "Resources",
-      "edge": "flat",
-      "anchor": "",
       "cards": [
         {
           "icon": "broadcast",
@@ -68,7 +66,9 @@
           "text": "Learn more about VOVC support groups & resources.",
           "link": "https://www.victimsofviolentcrimes.org/"
         }
-      ]
+      ],
+      "edge": "flat",
+      "anchor": ""
     },
     {
       "id": "s_xxx4a",
@@ -76,17 +76,17 @@
       "text": "\"If Crosstown had an anthem, it would be the song that begins, ‘Everyone needs compassion; A love that’s never failing, let mercy fall on me; Everyone needs forgiveness, the kindness of a Savior, the Hope of nations.\"",
       "attribution": "",
       "bg": "teal",
-      "edge": "wave",
-      "anchor": "",
       "image": "/images/bible-study.jpg",
       "tint": "teal",
       "focus": "center",
-      "parallax": true
+      "parallax": true,
+      "edge": "wave",
+      "anchor": ""
     },
     {
       "id": "s_xxx5a",
       "type": "image-text",
-      "image": "/images/kevin-and-paula.jpg",
+      "image": "/images/pexels-divinetechygirl-1181370.jpg",
       "alt": "Pastor Kevin and Paula White",
       "imageSide": "left",
       "heading": "About",
@@ -125,6 +125,7 @@
       "align": "left",
       "width": "narrow",
       "bodyColor": "auto",
+      "space": "normal",
       "bg": "navy",
       "edge": "flat",
       "anchor": ""
@@ -145,6 +146,7 @@
       "align": "left",
       "width": "narrow",
       "bodyColor": "auto",
+      "space": "normal",
       "bg": "teal",
       "edge": "flat",
       "anchor": "liveat5"
