@@ -3,12 +3,25 @@
     "target": "ES2022",
     "module": "ES2022",
     "moduleResolution": "Bundler",
-    "lib": ["ES2022", "DOM"],
-    "types": ["@cloudflare/workers-types"],
+    "lib": [
+      "ES2022",
+      "DOM"
+    ],
+    "types": [
+      "@cloudflare/workers-types"
+    ],
     "strict": true,
     "noEmit": true,
     "skipLibCheck": true
   },
-  "include": ["./**/*.ts", "../src/server/**/*.ts", "../src/lib/**/*.ts"],
-  "exclude": ["../src/server/dev-api.ts", "../src/lib/posts.ts"]
+  "include": [
+    "./**/*.ts",
+    "../src/server/**/*.ts",
+    "../src/lib/**/*.ts"
+  ],
+  "exclude": [
+    "../src/server/dev-api.ts",
+    "../src/lib/posts.ts",
+    "../src/server/dev-db.ts"
+  ]
 }

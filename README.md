@@ -11,7 +11,7 @@ npm run build      # outputs dist/
 npm run preview:worker   # build, then run the real Worker locally (http://localhost:8787)
 ```
 
-In `npm run dev` the editor works without any setup: sign in with the password `crosstown` and every save is written straight into the files in this folder. To try the site agent locally, start the dev server with `ANTHROPIC_API_KEY=... npm run dev`.
+In `npm run dev` the editor works without any setup: sign in with the first-run account below and every save is written straight into the files in this folder. Contacts and team accounts live in `.local/dev.sqlite`; emails that would be sent are written to `.local/outbox.txt`. To try the site agent locally, start the dev server with `ANTHROPIC_API_KEY=... npm run dev`.
 
 ## How the site is built
 
@@ -39,6 +39,8 @@ Parallax: every photo section (hero, photo strip, video banner, page intro) puts
 
 - **Pages:** edit any page, add / reorder / duplicate / delete sections, and see a live desktop, tablet and phone preview. Click a section in the preview to jump to its form. Pages can be Draft (hidden) or Published, and can be added to the top menu.
 - **New pages:** build from sections (blank, simple or landing starter), or describe the page to the **site agent**, which drafts it for review. In any page, the agent box can also change an existing page ("add a section with our Bible study times"), with one-click undo.
+- **Contacts:** every form fill lands here, tagged by the form it came through (e.g. *Get in touch*, *CSI Prayer Team*, *Crosstown Newsletter*). Search and filter by tag, status or subscription, add notes, edit, export to CSV, and import the old Wix list (see below).
+- **Team:** invite people by email address (you get a private link to send, and an email goes out too if sending is set up), reset passwords, disable people, and choose who is emailed when a form is filled in.
 - **Blog posts, Photos, Settings:** posts with a cover photo, an upload library (large photos are shrunk in the browser), and the site-wide details and menu.
 
 Every save is a commit to this repo, so there is a full history, and Cloudflare rebuilds the live site in about a minute.
@@ -67,8 +69,9 @@ Node 22 is picked up from `.nvmrc`. Under **Settings → Build → Variables and
 | `GITHUB_BRANCH` | Text | The production branch, usually `main`. |
 | `ANTHROPIC_API_KEY` | Secret | Turns on the site agent. Without it the rest of the editor still works. |
 | `ANTHROPIC_MODEL` | Text | Optional. Defaults to `claude-sonnet-5-5`. |
-| `RESEND_API_KEY`, `TURNSTILE_SECRET_KEY` | Secret | For the forms (below). |
-| `CONTACT_TO`, `CONTACT_FROM` | Text | For the forms (below). |
+| `ADMIN_EMAIL`, `ADMIN_PASSWORD`, `SESSION_SECRET` | Text / Secret | Optional: first admin account and login-cookie secret (see Accounts below). |
+| `CONTACT_FROM`, `CONTACT_TO` | Text | Sender address for notification emails; optional extra recipient. |
+| `RESEND_API_KEY`, `TURNSTILE_SECRET_KEY` | Secret | Optional Resend fallback; Turnstile spam check (below). |
 
 `wrangler.jsonc` sets `keep_vars`, so deploys never wipe values you entered in the dashboard. (If you ever remove that line, enter everything as a Secret instead: secrets always survive deploys.) Saving these redeploys the Worker with the new values. Don't copy the editor secrets into preview builds of other branches, or those previews could write to `main`.
 
@@ -78,9 +81,23 @@ Node 22 is picked up from `.nvmrc`. Under **Settings → Build → Variables and
 
 The editor shows plain-language errors if something is mis-set (expired token, wrong repo name, missing permission).
 
+### Accounts, contacts and email notifications
+
+Accounts, contacts and form submissions are stored in a **Cloudflare D1** database (free plan: 5 GB, plenty for a church list). `wrangler.jsonc` declares the binding `DB` without an id, so the first deploy creates the database `crosstown-contacts` automatically, and the tables are created on first use.
+
+- **First sign-in:** `tanner@nectarine.ink` with the temporary password `test`. You are made to choose a new password immediately. To use a different first account, set `ADMIN_EMAIL` and `ADMIN_PASSWORD` before the first sign-in (the account is only created while the user list is empty). Passwords are stored as salted PBKDF2 hashes, five wrong tries lock an account for 15 minutes.
+- **Inviting people:** Team → *Invite someone*. The invitation link works once and expires in 7 days. `SESSION_SECRET` is optional (a random one is generated and stored in the database).
+- **Who gets emailed:** everyone on the Team page with *Email me form fills* ticked (plus `CONTACT_TO` if set). Each person is emailed separately, so one bad address never blocks the others, and failures are shown in the contact's history.
+- **Email sending:** the Worker uses the Cloudflare `send_email` binding (`EMAIL`). On the free plan Cloudflare only delivers to **verified destination addresses**: add each team member under *Email Service → Email Routing → Destination addresses* and have them click the confirmation. `CONTACT_FROM` must be an address on a domain with Email Routing enabled. With `RESEND_API_KEY` set instead, any address works.
+- **Tags:** the contact form on any page has a *Tag* field in the editor (default *Get in touch*); sign-up forms too (*CSI Prayer Team*, *Crosstown Newsletter*). Change the tag per form to track interest, e.g. a form on the Ministry Partners page can use *Ministry Partners*. A person filling in several forms is one contact with several tags.
+
+### Moving the Wix contacts over
+
+In Wix: **Contacts → Export** (CSV). In the editor: **Contacts → Import CSV**, choose the file, check the matched columns and the summary, optionally add a tag for everyone (default *Wix import*), and press Import. People are matched by email, so importing twice never makes duplicates. Wix labels become tags, unsubscribed people are kept as “do not email”, and the export file itself should never be committed to this repo (it holds personal data).
+
 ### How the Worker is wired
 
-`wrangler.jsonc` serves `dist/` as static assets and runs `worker/index.ts` only for `/api/*` (`run_worker_first`). `worker/index.ts` routes `/api/admin/*` to the editor API (`src/server/api.ts`, saving through the GitHub API) and `/api/contact` and `/api/subscribe` to the form handlers (`src/server/forms.ts`). `_headers` and `_redirects` in `public/` are applied by Workers static assets. Deploy by hand with `npm run deploy`.
+`wrangler.jsonc` serves `dist/` as static assets and runs `worker/index.ts` only for `/api/*` (`run_worker_first`). The D1 database is bound as `DB`. `worker/index.ts` routes `/api/admin/*` to the editor API (`src/server/api.ts`, saving through the GitHub API) and `/api/contact` and `/api/subscribe` to the form handlers (`src/server/forms.ts`). `_headers` and `_redirects` in `public/` are applied by Workers static assets. Deploy by hand with `npm run deploy`.
 
 ## Forms and email
 
@@ -99,7 +116,8 @@ The forms check a hidden honeypot and Cloudflare Turnstile, then email the churc
 - [ ] **Partner links:** add the Pray Stockton and Stockton Police Chaplaincy links on the Ministry Partners page (the "Visit their website" button stays hidden until a link is set).
 - [ ] **Leaders:** confirm roles and bios on the About page.
 - [ ] **Service times:** confirm the Sunday end time (Wix said both 12:30 and 1).
-- [ ] **Newsletter list:** export subscribers from Wix (Contacts, filtered to subscribers) and pick a newsletter tool; `src/server/forms.ts` emails the church until then.
+- [ ] **Contacts:** import the Wix export (see above) and verify each team member's email in Cloudflare Email Routing.
+- [ ] **First password:** sign in once and replace the temporary `test` password.
 
 ## How it maps to the old site
 

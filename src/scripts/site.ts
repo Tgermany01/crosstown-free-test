@@ -116,7 +116,9 @@ export function initSite() {
     const button = form.querySelector<HTMLButtonElement>('button[type=submit]');
     if (button) button.disabled = true;
     try {
-      const res = await fetch(form.action, { method: 'POST', body: new FormData(form) });
+      const data = new FormData(form);
+      data.set('page', location.pathname); // so the team can see which page the message came from
+      const res = await fetch(form.action, { method: 'POST', body: data });
       if (!res.ok) throw new Error(await res.text());
       form.reset();
       if (status) status.textContent = form.dataset.success ?? 'Sent.';

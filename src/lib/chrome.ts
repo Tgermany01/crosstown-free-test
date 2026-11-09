@@ -43,9 +43,9 @@ export function renderFooter(site: SiteLite, path: string, newsletterForm: strin
   </div></footer>`;
 }
 
-export function renderNewsletterForm(turnstileKey?: string): string {
+export function renderNewsletterForm(turnstileKey?: string, tag = 'Crosstown Newsletter'): string {
   return `<form class="stack js-form" method="post" action="/api/subscribe" data-success="Thanks for subscribing!">
-    <input type="hidden" name="list" value="newsletter">
+    <input type="hidden" name="tag" value="${esc(tag)}">
     <label class="field">Email *<input name="email" type="email" autocomplete="email" placeholder="e.g., email@example.com" required></label>
     <label class="hp" aria-hidden="true">Leave blank <input name="website" tabindex="-1" autocomplete="off"></label>
     ${turnstileKey ? `<div class="cf-turnstile" data-sitekey="${esc(turnstileKey)}"></div>` : ''}

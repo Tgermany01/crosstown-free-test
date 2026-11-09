@@ -42,7 +42,7 @@ a { color: var(--teal); }
 .top-right { margin-left: auto; display: flex; gap: 18px; font-size: 0.85rem; align-items: center; }
 .top-right a { color: #fff; }
 .devbar { background: #fff4d6; color: #6b4b00; text-align: center; font-size: 0.82rem; padding: 6px; }
-main { max-width: 960px; margin: 0 auto; padding: 28px 20px 80px; }
+main { max-width: 1100px; margin: 0 auto; padding: 28px 20px 80px; }
 main.wide { max-width: none; padding: 0; }
 .narrow-col { max-width: 760px; margin: 0 auto; }
 .page-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
@@ -68,7 +68,7 @@ details.card[open] > summary { margin-bottom: 12px; }
 .fld-label { font-weight: 600; font-size: 0.85rem; color: var(--navy); }
 .fld.check { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .fld.check .help { flex-basis: 100%; }
-input[type='text'], input[type='date'], input[type='password'], input:not([type]), textarea, select {
+input[type='text'], input[type='email'], input[type='search'], input[type='date'], input[type='password'], input:not([type]), textarea, select {
   font: inherit; font-size: 0.95rem; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; width: 100%; background: #fff; color: var(--text);
 }
 textarea { resize: vertical; }
@@ -174,3 +174,47 @@ input[type='checkbox'] { width: 18px; height: 18px; accent-color: var(--teal); }
   .topbar { gap: 10px; padding: 0 12px; overflow-x: auto; }
   .topbar .brand span, .top-right a { display: none; }
 }
+
+/* contacts + team */
+.pill.off { background: #e8edf1; color: var(--muted); }
+.pill.st-new { background: #dbeaff; color: #0b4a94; }
+.pill.st-contacted { background: #fdebd0; color: #8a4b00; }
+.pill.st-closed { background: #e8edf1; color: var(--muted); }
+.filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+.filters input, .filters select { width: auto; min-width: 150px; flex: 1 1 150px; }
+.table-wrap { overflow-x: auto; background: #fff; border: 1px solid var(--line); border-radius: 12px; }
+table.contacts { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+table.contacts th { text-align: left; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); padding: 10px 12px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+table.contacts td { padding: 10px 12px; border-bottom: 1px solid #edf1f5; vertical-align: top; }
+table.contacts tbody tr { cursor: pointer; }
+table.contacts tbody tr:hover { background: var(--ice); }
+table.contacts tbody tr:last-child td { border-bottom: 0; }
+.chips { display: flex; gap: 5px; flex-wrap: wrap; }
+.chip { display: inline-flex; align-items: center; gap: 4px; font-size: 0.75rem; font-weight: 600; background: var(--ice); color: var(--teal); padding: 2px 9px; border-radius: 99px; border: 0; font-family: inherit; }
+.chips.edit { margin-bottom: 6px; }
+.chips.edit .chip { cursor: pointer; }
+.chips.edit .chip:hover { background: #f6d9d7; color: var(--danger); }
+.pager { display: flex; align-items: center; justify-content: center; gap: 14px; padding: 14px 0; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+.contact-detail { display: grid; gap: 4px; }
+.history { display: grid; gap: 8px; margin-top: 6px; }
+.history > div { border-left: 3px solid var(--ice); padding: 2px 10px; }
+.warn-note { color: #8a4b00; background: #fff4d6; border-radius: 6px; padding: 4px 8px; font-size: 0.82rem; }
+.ok-note { color: #17653a; font-size: 0.9rem; }
+.team-row { flex-wrap: wrap; }
+.notify-tog { display: flex; align-items: center; gap: 6px; font-size: 0.85rem; }
+.row-actions { display: flex; gap: 6px; flex-wrap: wrap; }
+.invite-form { display: grid; grid-template-columns: 1fr 1fr auto; gap: 12px; align-items: end; margin-top: 10px; }
+.invite-done { display: grid; gap: 12px; }
+.note { background: #f7fafc; }
+.map-scroll { max-height: 280px; overflow: auto; border: 1px solid var(--line); border-radius: 8px; }
+table.map { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+table.map td, table.map th { padding: 6px 10px; border-bottom: 1px solid #edf1f5; text-align: left; }
+.import-summary { background: var(--ice); border-radius: 8px; padding: 10px 14px; margin: 10px 0; }
+.empty { padding: 40px; text-align: center; }
+progress { width: 100%; height: 10px; accent-color: var(--teal); }
+@media (max-width: 720px) {
+  .grid2, .invite-form { grid-template-columns: 1fr; }
+  .topbar { gap: 10px; overflow-x: auto; }
+}
+.stack-list + .card { margin-top: 14px; }

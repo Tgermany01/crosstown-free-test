@@ -3,13 +3,21 @@
 import { blockDefs, normalizePage, PALETTE, type PageData } from '../lib/blocks';
 import { iconNames } from '../lib/icons';
 import { slugify } from '../lib/html';
-import { clearCookie, makeSession, passwordMatches, readSession, sessionCookie } from './auth';
+import { clearCookie, makeSession, readSession, sessionCookie } from './auth';
+import { ensureSchema, type Db } from './db';
+import { HttpError, json } from './http';
+import { acceptInvite, getUser, login, seedIfEmpty, sessionSecret, type User } from './users';
+import { handleCrm } from './admin-crm';
+import type { FormEnv } from './forms-shared';
 import { AgentError, runAgent, type AgentEnv } from './agent';
 import type { Store } from './storage';
 
-export interface AdminEnv extends AgentEnv {
+export interface AdminEnv extends AgentEnv, FormEnv {
+  /** Optional: sign in details for the very first account (otherwise see FIRST_RUN in users.ts). */
+  ADMIN_EMAIL?: string;
   ADMIN_PASSWORD?: string;
   SESSION_SECRET?: string;
+  DB?: Db;
   GITHUB_TOKEN?: string;
   GITHUB_REPO?: string;
   GITHUB_BRANCH?: string;
@@ -22,10 +30,6 @@ const SITE_FILE = 'src/data/site.json';
 const RESERVED = new Set(['admin', 'api', 'post', '404', 'index']);
 const IMAGE_EXT = /\.(jpe?g|png|webp|gif|svg|avif)$/i;
 const MAX_UPLOAD = 4 * 1024 * 1024;
-
-const json = (data: unknown, status = 200, headers: Record<string, string> = {}) =>
-  new Response(JSON.stringify(data), { status, headers: { 'content-type': 'application/json', 'cache-control': 'no-store', ...headers } });
-class HttpError extends Error { constructor(message: string, public status = 400) { super(message); } }
 
 const validSlug = (s: string) => /^[a-z0-9][a-z0-9-]{0,59}$/.test(s);
 
@@ -65,31 +69,45 @@ export async function handleAdmin(request: Request, env: AdminEnv, store: Store,
   const method = request.method;
   const secure = url.protocol === 'https:';
 
-  const password = env.ADMIN_PASSWORD ?? (opts.dev ? 'crosstown' : undefined);
-  if (!password) return json({ error: 'Admin is not set up yet: add the ADMIN_PASSWORD setting in Cloudflare.' }, 503);
-  const secret = env.SESSION_SECRET ?? `${password}|crosstown-admin`;
+  const db = env.DB;
+  if (!db) return json({ error: 'The contacts database is not set up yet. It is created automatically when the Worker is deployed with the DB binding (see README).' }, 503);
 
   try {
+    await ensureSchema(db);
+    await seedIfEmpty(db, env);
+    const secret = await sessionSecret(db, env);
+    const cookieFor = async (u: User) => sessionCookie(await makeSession({ uid: u.id, sv: u.sv }, secret), secure);
+
     if (head === 'login' && method === 'POST') {
-      const { name, password: given } = (await request.json()) as { name?: string; password?: string };
-      if (!(await passwordMatches(String(given ?? ''), password))) {
-        await new Promise((r) => setTimeout(r, 600));
-        return json({ error: 'That password is not right.' }, 401);
-      }
-      const cookie = sessionCookie(await makeSession(String(name || 'Editor').trim() || 'Editor', secret), secure);
-      return json({ ok: true }, 200, { 'set-cookie': cookie });
+      const { email, password } = (await request.json()) as { email?: string; password?: string };
+      const r = await login(db, String(email ?? ''), String(password ?? ''));
+      if (!r.ok) { await new Promise((res) => setTimeout(res, 400)); return json({ error: r.error }, r.status); }
+      return json({ ok: true, mustChange: Boolean(r.user.must_change) }, 200, { 'set-cookie': await cookieFor(r.user) });
+    }
+    if (head === 'accept-invite' && method === 'POST') {
+      const b = (await request.json()) as { email?: string; token?: string; name?: string; password?: string };
+      try {
+        const u = await acceptInvite(db, String(b.email ?? ''), String(b.token ?? ''), String(b.name ?? ''), String(b.password ?? ''));
+        return json({ ok: true }, 200, { 'set-cookie': await cookieFor(u) });
+      } catch (e) { return json({ error: (e as Error).message }, 400); }
     }
     if (head === 'logout') return json({ ok: true }, 200, { 'set-cookie': clearCookie(secure) });
 
     const session = await readSession(request, secret);
-    if (!session) return json({ error: 'Please sign in.' }, 401);
+    const user = session ? await getUser(db, session.uid) : null;
+    if (!session || !user || user.status !== 'active' || user.sv !== session.sv) return json({ error: 'Please sign in.' }, 401);
     // Cross-site form posts cannot set custom headers, so this blocks CSRF on top of SameSite=Strict.
     if (method !== 'GET' && request.headers.get('x-admin') !== '1') throw new HttpError('Bad request', 400);
-    const by = `(by ${session.name})`;
+    const by = `(by ${user.name || user.email})`;
 
-    // -------- session / bootstrap
-    if (head === 'session') return json({ name: session.name });
+    if (head === 'session') return json({ user: { id: user.id, name: user.name, email: user.email, mustChange: Boolean(user.must_change) } });
+    if (user.must_change && !(head === 'me' || head === 'logout')) {
+      return json({ error: 'Please choose a new password first.', mustChange: true }, 403);
+    }
+    const crm = await handleCrm({ head: head ?? '', rest, method, request, db, user, env: env as FormEnv, origin: url.origin, cookieFor });
+    if (crm) return crm;
 
+    // -------- site content
     if (head === 'bootstrap') {
       const [siteText, pageFiles, postFiles, mediaFiles] = await Promise.all([
         store.read(SITE_FILE), readAll(store, PAGES_DIR), readAll(store, POSTS_DIR), store.list(IMAGES_DIR),
@@ -104,7 +122,7 @@ export async function handleAdmin(request: Request, env: AdminEnv, store: Store,
         return { ...meta, minutes: Math.max(1, Math.round(body.split(/\s+/).length / 200)), id: meta.slug };
       });
       return json({
-        user: session.name,
+        user: { id: user.id, name: user.name, email: user.email },
         site: JSON.parse(siteText ?? '{}'),
         pages: pages.sort((a, b) => (a.slug === 'index' ? -1 : b.slug === 'index' ? 1 : a.title.localeCompare(b.title))),
         posts: posts.sort((a, b) => b.date.localeCompare(a.date)),

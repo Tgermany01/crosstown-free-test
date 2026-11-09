@@ -19,5 +19,8 @@
   // Needs Email Routing enabled on the domain and the church address verified. See README. If unset or
   // missing, the forms fall back to Resend.
   "send_email": [{ "name": "EMAIL" }],
+  // Contacts, form submissions and admin accounts live in a Cloudflare D1 database. With no id given, Wrangler creates
+  // it on the first deploy (automatic provisioning) and keeps it linked. The tables are created on first use.
+  "d1_databases": [{ "binding": "DB", "database_name": "crosstown-contacts" }],
   "observability": { "enabled": true }
 }

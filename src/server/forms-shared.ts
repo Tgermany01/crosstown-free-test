@@ -16,10 +16,12 @@ export interface FormEnv {
   EMAIL?: EmailBinding;
   RESEND_API_KEY?: string;
   TURNSTILE_SECRET_KEY?: string;
-  /** Where form submissions are emailed. With the EMAIL binding this must be a verified destination address. */
-  CONTACT_TO: string;
+  /** Optional extra recipient for form notifications (team members from the admin Team list are always included). With the EMAIL binding it must be a verified destination address. */
+  CONTACT_TO?: string;
+  /** The contacts database (Cloudflare D1). */
+  DB?: import('./db').Db;
   /** Sender, e.g. "Crosstown Website <web@crosstowncommunitychurch.com>". The domain must be set up with Cloudflare Email Routing (EMAIL) or verified in Resend. */
-  CONTACT_FROM: string;
+  CONTACT_FROM?: string;
 }
 
 /** "Name <a@b.com>" or "a@b.com" -> { email, name }. */
@@ -47,13 +49,15 @@ export async function verifyTurnstile(form: FormData, request: Request, env: For
   return data.success;
 }
 
-export async function sendEmail(env: FormEnv, msg: { subject: string; text: string; replyTo?: string }) {
+export async function sendEmail(env: FormEnv, msg: { subject: string; text: string; replyTo?: string; to?: string }) {
+  const to = parseAddress(msg.to ?? env.CONTACT_TO ?? '').email;
   const subject = oneLine(msg.subject).slice(0, 200);
+  if (!env.CONTACT_FROM) throw new Error('CONTACT_FROM is not set: add the sender address in Cloudflare.');
   if (env.EMAIL) {
     // Cloudflare Email Service binding: free to verified destination addresses, no API key.
     await env.EMAIL.send({
       from: parseAddress(env.CONTACT_FROM),
-      to: parseAddress(env.CONTACT_TO).email,
+      to,
       subject,
       text: msg.text,
       ...(msg.replyTo && isEmail(msg.replyTo) ? { replyTo: msg.replyTo } : {}),
@@ -66,7 +70,7 @@ export async function sendEmail(env: FormEnv, msg: { subject: string; text: stri
     headers: { Authorization: `Bearer ${env.RESEND_API_KEY}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({
       from: env.CONTACT_FROM,
-      to: [env.CONTACT_TO],
+      to: [to],
       subject,
       text: msg.text,
       reply_to: msg.replyTo,
