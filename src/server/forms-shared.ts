@@ -29,7 +29,8 @@ export function parseAddress(s: string): { email: string; name?: string } {
 }
 
 /** Headers can't contain line breaks: collapse anything a visitor typed into one line. */
-export const oneLine = (s: string) => s.replace(/[\r\n  ]+/g, ' ').trim();
+export const oneLine = (s: string) =>
+  s.replace(/[\r\n]+/g, ' ').replace(new RegExp('[' + String.fromCharCode(0x2028, 0x2029) + ']+', 'g'), ' ').trim();
 
 export async function verifyTurnstile(form: FormData, request: Request, env: FormEnv): Promise<boolean> {
   // Skip when no secret is configured (local dev).
