@@ -3,6 +3,8 @@ import { icon } from '../lib/icons';
 import { slugify, uid } from '../lib/html';
 import type { Field } from '../lib/blocks';
 import { api, ApiError, clear, clone, debounce, h, modal, toast } from './dom';
+import { contactsView } from './contacts';
+import { teamView } from './team';
 import { fieldsForm, pickImage, setFormContext, uploadPhoto, fieldEl, type Media } from './forms';
 
 // ------------------------------------------------------------------ types + state
@@ -12,7 +14,7 @@ interface PostSummary { slug: string; title: string; date: string; author: strin
 interface Section { id: string; type: string; [k: string]: any }
 interface PageDoc { title: string; description: string; draft: boolean; sections: Section[] }
 interface Boot {
-  user: string; site: Record<string, any>; pages: PageSummary[]; posts: PostSummary[]; media: Media[];
+  user: { id: string; name: string; email: string }; site: Record<string, any>; pages: PageSummary[]; posts: PostSummary[]; media: Media[];
   blocks: BlockInfo[]; palette: Record<string, string>; icons: string[]; agent: boolean; dev: boolean;
 }
 let boot: Boot;
@@ -21,7 +23,12 @@ const blockInfo = (t: string) => boot.blocks.find((b) => b.type === t);
 
 // ------------------------------------------------------------------ boot + routing
 async function start() {
-  try { await load(); route(); } catch (e) { if (e instanceof ApiError && e.status === 401) showLogin(); else showFatal(e as Error); }
+  if (location.hash.startsWith('#/accept')) { showAccept(); return; }
+  try { await load(); route(); } catch (e) {
+    if (e instanceof ApiError && e.status === 401) showLogin();
+    else if (e instanceof ApiError && e.status === 403 && e.data?.mustChange) showChangePassword(true);
+    else showFatal(e as Error);
+  }
 }
 async function load() {
   boot = await api<Boot>('bootstrap');
@@ -36,25 +43,68 @@ function showFatal(e: Error) {
   clear(app).append(h('div', { class: 'login' }, h('div', { class: 'login-card' }, h('h1', null, 'Crosstown Admin'), h('p', { class: 'error' }, e.message))));
 }
 
+function authCard(title: string, ...children: (Node | null)[]) {
+  const form = h('form', { class: 'login-card' },
+    h('img', { src: '/images/logo-navy.png', alt: 'Crosstown', width: 140 }), h('h1', null, title), ...children);
+  clear(app).append(h('div', { class: 'login' }, form));
+  return form;
+}
+const field = (label: string, input: HTMLElement, help = '') =>
+  h('label', { class: 'fld' }, h('span', { class: 'fld-label' }, label), input, help ? h('span', { class: 'help' }, help) : null);
+
 function showLogin() {
-  const name = h('input', { type: 'text', autocomplete: 'name', placeholder: 'e.g. Rose', value: localStorage.getItem('adminName') ?? '' });
+  const email = h('input', { type: 'email', autocomplete: 'username', required: true, value: localStorage.getItem('adminEmail') ?? '' });
   const pass = h('input', { type: 'password', autocomplete: 'current-password', required: true });
   const err = h('p', { class: 'error', role: 'alert' });
-  const form = h('form', { class: 'login-card', onsubmit: async (e: Event) => {
+  const form = authCard('Site editor', field('Email', email), field('Password', pass), err, h('button', { class: 'btn primary wide', type: 'submit' }, 'Sign in'));
+  form.onsubmit = async (e: Event) => {
     e.preventDefault(); err.textContent = '';
     try {
-      localStorage.setItem('adminName', name.value);
-      await api('login', 'POST', { name: name.value, password: pass.value });
-      await start();
+      localStorage.setItem('adminEmail', email.value);
+      const r = await api<{ mustChange?: boolean }>('login', 'POST', { email: email.value, password: pass.value });
+      if (r.mustChange) showChangePassword(true); else await start();
     } catch (x) { err.textContent = (x as Error).message; }
-  } },
-    h('img', { src: '/images/logo-navy.png', alt: 'Crosstown', width: 140 }),
-    h('h1', null, 'Site editor'),
-    h('label', { class: 'fld' }, h('span', { class: 'fld-label' }, 'Your name'), name, h('span', { class: 'help' }, 'So the team can see who changed what.')),
-    h('label', { class: 'fld' }, h('span', { class: 'fld-label' }, 'Password'), pass),
-    err, h('button', { class: 'btn primary wide', type: 'submit' }, 'Sign in'));
-  clear(app).append(h('div', { class: 'login' }, form));
+  };
+  (email.value ? pass : email).focus();
+}
+
+// Opened from an invitation or reset link: #/accept?email=...&token=...
+function showAccept() {
+  const q = new URLSearchParams(location.hash.split('?')[1] ?? '');
+  const email = q.get('email') ?? '', token = q.get('token') ?? '';
+  const pass = h('input', { type: 'password', autocomplete: 'new-password', required: true, minLength: 8 });
+  const again = h('input', { type: 'password', autocomplete: 'new-password', required: true });
+  const err = h('p', { class: 'error', role: 'alert' });
+  const form = authCard('Choose your password', h('p', { class: 'muted' }, email), field('New password', pass, 'At least 8 characters.'), field('Type it again', again), err, h('button', { class: 'btn primary wide', type: 'submit' }, 'Save and sign in'));
+  form.onsubmit = async (e: Event) => {
+    e.preventDefault(); err.textContent = '';
+    if (pass.value !== again.value) { err.textContent = 'The two passwords do not match.'; return; }
+    try {
+      await api('accept-invite', 'POST', { email, token, password: pass.value });
+      history.replaceState(null, '', '/admin#/'); await start();
+    } catch (x) { err.textContent = (x as Error).message; }
+  };
   pass.focus();
+}
+
+// Used for the forced change after first sign-in, and from the top bar.
+function showChangePassword(forced: boolean) {
+  const cur = h('input', { type: 'password', autocomplete: 'current-password', required: true });
+  const pass = h('input', { type: 'password', autocomplete: 'new-password', required: true, minLength: 8 });
+  const again = h('input', { type: 'password', autocomplete: 'new-password', required: true });
+  const err = h('p', { class: 'error', role: 'alert' });
+  const form = authCard(forced ? 'Choose a new password' : 'Change password',
+    forced ? h('p', { class: 'muted' }, 'You signed in with a temporary password. Pick your own to continue.') : null,
+    field('Current password', cur), field('New password', pass, 'At least 8 characters.'), field('Type it again', again), err,
+    h('button', { class: 'btn primary wide', type: 'submit' }, 'Save password'),
+    forced ? null : h('button', { class: 'btn ghost wide', type: 'button', onclick: () => route() }, 'Cancel'));
+  form.onsubmit = async (e: Event) => {
+    e.preventDefault(); err.textContent = '';
+    if (pass.value !== again.value) { err.textContent = 'The two new passwords do not match.'; return; }
+    try { await api('me/password', 'POST', { current: cur.value, next: pass.value }); toast('Password changed.'); await start(); }
+    catch (x) { err.textContent = (x as Error).message; }
+  };
+  cur.focus();
 }
 
 function shell(active: string, content: HTMLElement, wide = false) {
@@ -62,10 +112,11 @@ function shell(active: string, content: HTMLElement, wide = false) {
   clear(app).append(
     h('header', { class: 'topbar' },
       h('a', { class: 'brand', href: '#/' }, h('img', { src: '/images/logo-white.png', alt: '' }), h('span', null, 'Site editor')),
-      h('nav', null, link('#/', 'Pages', 'pages'), link('#/posts', 'Blog posts', 'posts'), link('#/media', 'Photos', 'media'), link('#/settings', 'Settings', 'settings')),
+      h('nav', null, link('#/', 'Pages', 'pages'), link('#/posts', 'Blog posts', 'posts'), link('#/media', 'Photos', 'media'), link('#/contacts', 'Contacts', 'contacts'), link('#/team', 'Team', 'team'), link('#/settings', 'Settings', 'settings')),
       h('div', { class: 'top-right' },
         h('a', { href: '/', target: '_blank', rel: 'noopener' }, 'View site ↗'),
-        h('button', { class: 'link', type: 'button', onclick: async () => { await api('logout', 'POST', {}); showLogin(); } }, `Sign out (${boot.user})`))),
+        h('button', { class: 'link', type: 'button', onclick: () => showChangePassword(false) }, 'Change password'),
+        h('button', { class: 'link', type: 'button', onclick: async () => { await api('logout', 'POST', {}); showLogin(); } }, `Sign out (${boot.user.name})`))),
     ...(boot.dev ? [h('div', { class: 'devbar' }, 'Local test mode: changes are saved to files on this computer, not published.')] : []),
     h('main', { class: wide ? 'wide' : '' }, content));
 }
@@ -82,6 +133,8 @@ function route() {
   if (section === 'pages' && id) return pageEditor(decodeURIComponent(id));
   if (section === 'posts') return id ? postEditor(decodeURIComponent(id)) : postsList();
   if (section === 'media') return mediaView();
+  if (section === 'contacts') return contactsView({ shell, me: boot.user }, id ? decodeURIComponent(id) : undefined);
+  if (section === 'team') return teamView({ shell, me: boot.user });
   if (section === 'settings') return settingsView();
   return pagesList();
 }
@@ -369,7 +422,7 @@ function postsList() {
 
 async function postEditor(slugIn: string) {
   const isNew = slugIn === 'new';
-  let post: any = { slug: '', title: '', date: new Date().toISOString().slice(0, 10), author: boot.user, category: boot.site.categories?.[0]?.key ?? '', image: '', description: '', body: '' };
+  let post: any = { slug: '', title: '', date: new Date().toISOString().slice(0, 10), author: boot.user.name, category: boot.site.categories?.[0]?.key ?? '', image: '', description: '', body: '' };
   if (!isNew) { try { post = (await api<{ post: any }>(`posts/${slugIn}`)).post; } catch (e) { toast((e as Error).message, 'error'); location.hash = '#/posts'; return; } }
   const saved = JSON.stringify(post);
   const touch = () => { dirtyFlag = JSON.stringify(post) !== saved; };

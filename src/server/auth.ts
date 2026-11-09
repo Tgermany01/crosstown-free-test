@@ -18,31 +18,21 @@ async function hmac(secret: string, data: string): Promise<string> {
   return toB64Url(await crypto.subtle.sign('HMAC', key, enc.encode(data)));
 }
 
-async function sha(s: string): Promise<Uint8Array> {
-  return new Uint8Array(await crypto.subtle.digest('SHA-256', enc.encode(s)));
-}
+export interface SessionData { uid: string; sv: number }
 
-/** Constant-time password check (compares fixed-length hashes). */
-export async function passwordMatches(given: string, expected: string): Promise<boolean> {
-  const [a, b] = await Promise.all([sha(given), sha(expected)]);
-  let diff = 0;
-  for (let i = 0; i < a.length; i++) diff |= a[i]! ^ b[i]!;
-  return diff === 0;
-}
-
-export async function makeSession(name: string, secret: string): Promise<string> {
-  const body = toB64Url(enc.encode(JSON.stringify({ n: name.slice(0, 60), e: Date.now() + DAYS * 864e5 })));
+export async function makeSession(data: SessionData, secret: string): Promise<string> {
+  const body = toB64Url(enc.encode(JSON.stringify({ u: data.uid, v: data.sv, e: Date.now() + DAYS * 864e5 })));
   return `${body}.${await hmac(secret, body)}`;
 }
 
-export async function readSession(request: Request, secret: string): Promise<{ name: string } | null> {
+export async function readSession(request: Request, secret: string): Promise<SessionData | null> {
   const raw = request.headers.get('Cookie')?.split(/;\s*/).find((c) => c.startsWith(COOKIE + '='))?.slice(COOKIE.length + 1);
   if (!raw) return null;
   const [body, sig] = raw.split('.');
   if (!body || !sig || (await hmac(secret, body)) !== sig) return null;
   try {
-    const data = JSON.parse(new TextDecoder().decode(fromB64Url(body))) as { n: string; e: number };
-    return data.e > Date.now() ? { name: data.n } : null;
+    const data = JSON.parse(new TextDecoder().decode(fromB64Url(body))) as { u: string; v: number; e: number };
+    return data.e > Date.now() && data.u ? { uid: data.u, sv: data.v } : null;
   } catch { return null; }
 }
 

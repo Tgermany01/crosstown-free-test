@@ -116,9 +116,9 @@ function turnstile(ctx: Ctx): string {
   return ctx.turnstileKey ? `<div class="cf-turnstile" data-sitekey="${attr(ctx.turnstileKey)}"></div>` : '';
 }
 
-function signupForm(ctx: Ctx, o: { list: string; button: string; success: string; buttonClass: string; label?: string }): string {
+function signupForm(ctx: Ctx, o: { tag: string; button: string; success: string; buttonClass: string; label?: string }): string {
   return `<form class="stack js-form" method="post" action="/api/subscribe" data-success="${attr(o.success)}">
-    <input type="hidden" name="list" value="${attr(o.list)}">
+    <input type="hidden" name="tag" value="${attr(o.tag)}">
     <label class="field">${esc(o.label ?? 'Email *')}<input name="email" type="email" autocomplete="email" placeholder="e.g., email@example.com" required></label>
     <label class="hp" aria-hidden="true">Leave blank <input name="website" tabindex="-1" autocomplete="off"></label>
     ${turnstile(ctx)}
@@ -325,15 +325,15 @@ add({
   fields: [
     ...textFields,
     { key: 'asideIcon', label: 'Card icon', type: 'icon', default: 'fingerprint' },
-    { key: 'list', label: 'Sign-up list name', type: 'text', default: 'newsletter', help: 'Shown in the email you receive, e.g. "csi" or "newsletter".' },
+    { key: 'tag', label: 'Tag for these sign-ups', type: 'text', default: 'CSI Prayer Team', help: 'Everyone who signs up here gets this tag on the admin Contacts screen, so you can tell what they are interested in.' },
     { key: 'asideButton', label: 'Card button text', type: 'text', default: 'Join' },
     { key: 'asideSuccess', label: 'Thank-you message', type: 'text', default: 'Thanks! We will be in touch.' },
     bgField('white'), ...commonFields,
   ],
-  defaults: { ...textDefaults, asideIcon: 'fingerprint', list: 'newsletter', asideButton: 'Join', asideSuccess: 'Thanks! We will be in touch.' },
+  defaults: { ...textDefaults, asideIcon: 'fingerprint', tag: 'CSI Prayer Team', asideButton: 'Join', asideSuccess: 'Thanks! We will be in touch.' },
   bg: bgOf,
   render(p, ctx) {
-    const aside = `<div class="join-card">${icon(p.asideIcon, 64, 'join-icon')}${signupForm(ctx, { list: p.list, button: p.asideButton, success: p.asideSuccess, buttonClass: 'btn btn-teal' })}</div>`;
+    const aside = `<div class="join-card">${icon(p.asideIcon, 64, 'join-icon')}${signupForm(ctx, { tag: p.tag, button: p.asideButton, success: p.asideSuccess, buttonClass: 'btn btn-teal' })}</div>`;
     return section(blocksByType['text-signup']!, p, ctx, textInner(p, aside), `sp-${p.space}`);
   },
 });
@@ -563,14 +563,16 @@ add({
   fields: [
     { key: 'heading', label: 'Heading', type: 'text', default: 'Get in touch' },
     { key: 'subject', label: 'Email subject label', type: 'text', default: 'Website contact form' },
+    { key: 'tag', label: 'Tag for people who use this form', type: 'text', default: 'Get in touch', help: 'Shown on the admin Contacts screen so you can tell what they are interested in.' },
     bgField('ice'), ...commonFields,
   ],
-  defaults: { heading: 'Get in touch', subject: 'Website contact form', bg: 'ice', edge: 'flat', anchor: 'contact' },
+  defaults: { heading: 'Get in touch', subject: 'Website contact form', tag: 'Get in touch', bg: 'ice', edge: 'flat', anchor: 'contact' },
   bg: bgOf,
   render(p, ctx) {
     return section(blocksByType['contact-form']!, p, ctx, `<div class="contact-wrap"><h2>${esc(p.heading)}</h2>
       <form class="stack js-form" method="post" action="/api/contact" data-success="Thanks! Your message was sent. We'll be in touch soon.">
         <input type="hidden" name="subject" value="${attr(p.subject)}">
+        <input type="hidden" name="tag" value="${attr(p.tag)}">
         <div class="cf-grid">
           <label class="field">First Name <input name="firstName" autocomplete="given-name" required></label>
           <label class="field">Last Name <input name="lastName" autocomplete="family-name"></label>

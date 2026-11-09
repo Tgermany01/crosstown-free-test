@@ -9,7 +9,7 @@ const adminDevApi = () => ({
   name: 'crosstown-admin-dev-api',
   configureServer(server) {
     server.middlewares.use(async (/** @type {any} */ req, /** @type {any} */ res, /** @type {() => void} */ next) => {
-      if (!req.url?.startsWith('/api/admin')) return next();
+      if (!req.url?.startsWith('/api/')) return next();
       const { devHandler } = await server.ssrLoadModule('/src/server/dev-api.ts');
       return devHandler(fileURLToPath(new URL('.', import.meta.url)), process.env)(req, res, next);
     });

@@ -23,7 +23,7 @@ export function h<K extends keyof HTMLElementTagNameMap>(tag: K, attrs?: Attrs, 
 export const clear = (el: Element) => { while (el.firstChild) el.firstChild.remove(); return el; };
 export const clone = <T,>(v: T): T => JSON.parse(JSON.stringify(v));
 
-export class ApiError extends Error { constructor(message: string, public status: number) { super(message); } }
+export class ApiError extends Error { constructor(message: string, public status: number, public data: any = null) { super(message); } }
 export async function api<T = any>(path: string, method = 'GET', body?: unknown): Promise<T> {
   const res = await fetch(`/api/admin/${path}`, {
     method,
@@ -33,7 +33,7 @@ export async function api<T = any>(path: string, method = 'GET', body?: unknown)
   });
   let data: any = null;
   try { data = await res.json(); } catch { /* not json */ }
-  if (!res.ok) throw new ApiError(data?.error ?? `Something went wrong (${res.status}).`, res.status);
+  if (!res.ok) throw new ApiError(data?.error ?? `Something went wrong (${res.status}).`, res.status, data);
   return data as T;
 }
 
