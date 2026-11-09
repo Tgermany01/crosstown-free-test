@@ -1,5 +1,5 @@
 // The public form endpoints. Both check a hidden honeypot field and Cloudflare Turnstile, then email the church via Resend.
-import { type FormEnv, verifyTurnstile, sendEmail, field, isEmail } from './forms-shared';
+import { type FormEnv, verifyTurnstile, sendEmail, field, isEmail, oneLine } from './forms-shared';
 
 export type { FormEnv };
 
@@ -9,12 +9,12 @@ export async function handleContact(request: Request, env: FormEnv): Promise<Res
   if (field(form, 'website')) return new Response('OK');
   if (!(await verifyTurnstile(form, request, env))) return new Response('Spam check failed', { status: 400 });
 
-  const firstName = field(form, 'firstName', 100);
-  const lastName = field(form, 'lastName', 100);
+  const firstName = oneLine(field(form, 'firstName', 100));
+  const lastName = oneLine(field(form, 'lastName', 100));
   const email = field(form, 'email', 200);
   const phone = field(form, 'phone', 50);
   const message = field(form, 'message');
-  const subject = field(form, 'subject', 100) || 'Website contact form';
+  const subject = oneLine(field(form, 'subject', 100)) || 'Website contact form';
   if (!firstName || !isEmail(email) || !message) return new Response('Missing fields', { status: 400 });
 
   await sendEmail(env, {
