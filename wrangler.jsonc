@@ -15,5 +15,9 @@
     // Serve dist/404.html for unknown addresses.
     "not_found_handling": "404-page"
   },
+  // Cloudflare Email Service: lets the contact form email the church for free (to a verified address).
+  // Needs Email Routing enabled on the domain and the church address verified. See README. If unset or
+  // missing, the forms fall back to Resend.
+  "send_email": [{ "name": "EMAIL" }],
   "observability": { "enabled": true }
 }
