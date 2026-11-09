@@ -9,13 +9,15 @@ export interface Store {
   /** Every file in a folder with its text, ideally in ONE request (Cloudflare's free plan allows only 50 outgoing calls per request). `text` is null when it couldn't be included; read it with read(). */
   readDir(dir: string): Promise<TextEntry[]>;
   read(path: string): Promise<string | null>;
-  write(path: string, content: string | Uint8Array, message: string): Promise<void>;
+  /** `content` is text, bytes, or already-base64 data wrapped as { base64 } (lets the Worker skip decoding big photos, which would exceed the free plan's 10 ms CPU limit). */
+  write(path: string, content: string | Uint8Array | { base64: string }, message: string): Promise<void>;
   remove(path: string, message: string): Promise<void>;
   /** Explains, in plain words, why the site files could not be found (wrong repo, wrong branch, no token access...). */
   diagnose?(): Promise<string>;
 }
 
-const b64 = (data: string | Uint8Array): string => {
+const b64 = (data: string | Uint8Array | { base64: string }): string => {
+  if (typeof data === 'object' && 'base64' in data) return data.base64;
   const bytes = typeof data === 'string' ? new TextEncoder().encode(data) : data;
   let bin = '';
   for (let i = 0; i < bytes.length; i += 0x8000) bin += String.fromCharCode(...bytes.subarray(i, i + 0x8000));
@@ -98,7 +100,7 @@ export class GitHubStore implements Store {
     return ((await res.json()) as { sha: string }).sha;
   }
 
-  async write(path: string, content: string | Uint8Array, message: string): Promise<void> {
+  async write(path: string, content: string | Uint8Array | { base64: string }, message: string): Promise<void> {
     // A second editor saving at the same moment can make the sha stale; retry once with a fresh one.
     for (let attempt = 0; attempt < 3; attempt++) {
       const sha = await this.sha(path);

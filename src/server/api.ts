@@ -21,7 +21,7 @@ const IMAGES_DIR = 'public/images';
 const SITE_FILE = 'src/data/site.json';
 const RESERVED = new Set(['admin', 'api', 'post', '404', 'index']);
 const IMAGE_EXT = /\.(jpe?g|png|webp|gif|svg|avif)$/i;
-const MAX_UPLOAD = 6 * 1024 * 1024;
+const MAX_UPLOAD = 4 * 1024 * 1024;
 
 const json = (data: unknown, status = 200, headers: Record<string, string> = {}) =>
   new Response(JSON.stringify(data), { status, headers: { 'content-type': 'application/json', 'cache-control': 'no-store', ...headers } });
@@ -96,8 +96,8 @@ export async function handleAdmin(request: Request, env: AdminEnv, store: Store,
       ]);
       if (siteText === null) throw new HttpError((await store.diagnose?.()) ?? 'The site files were not found. Check GITHUB_REPO and GITHUB_BRANCH.', 502);
       const pages = pageFiles.filter((f) => f.name.endsWith('.json')).map((f) => {
-        const p = normalizePage(JSON.parse(f.text || '{}'));
-        return { slug: f.name.replace(/\.json$/, ''), title: p.title, draft: p.draft, sections: p.sections.length };
+        const p = JSON.parse(f.text || '{}');
+        return { slug: f.name.replace(/\.json$/, ''), title: String(p.title ?? f.name), draft: Boolean(p.draft), sections: Array.isArray(p.sections) ? p.sections.length : 0 };
       });
       const posts = postFiles.filter((f) => f.name.endsWith('.md')).map((f) => {
         const { body, ...meta } = parsePost(f.name.replace(/\.md$/, ''), f.text);
@@ -187,13 +187,17 @@ export async function handleAdmin(request: Request, env: AdminEnv, store: Store,
         const base = slugify(dot > 0 ? name.slice(0, dot) : name) || 'photo';
         const ext = dot > 0 ? name.slice(dot).toLowerCase() : '.jpg';
         if (!IMAGE_EXT.test(ext)) throw new HttpError('Only photos (JPG, PNG, WebP, GIF) can be uploaded.');
-        const bytes = Uint8Array.from(atob(data), (c) => c.charCodeAt(0));
-        if (bytes.length > MAX_UPLOAD) throw new HttpError('That photo is too large (6 MB max).');
+        // Don't decode the photo here: GitHub wants base64 anyway, and decoding millions of characters would
+        // exceed the free plan's 10 ms CPU limit. Check the size from the length instead.
+        const clean = String(data ?? '');
+        if (!/^[A-Za-z0-9+/]+={0,2}$/.test(clean.slice(0, 200)) || clean.length < 8) throw new HttpError('That file could not be read.');
+        const size = Math.floor((clean.length * 3) / 4);
+        if (size > MAX_UPLOAD) throw new HttpError('That photo is too large (4 MB max).');
         const existing = new Set((await store.list(IMAGES_DIR)).map((f) => f.name));
         let file = `${base}${ext}`, n = 2;
         while (existing.has(file)) file = `${base}-${n++}${ext}`;
-        await store.write(`${IMAGES_DIR}/${file}`, bytes, `Add photo ${file} ${by}`);
-        return json({ ok: true, media: { name: file, path: `/images/${file}`, size: bytes.length } });
+        await store.write(`${IMAGES_DIR}/${file}`, { base64: clean }, `Add photo ${file} ${by}`);
+        return json({ ok: true, media: { name: file, path: `/images/${file}`, size } });
       }
       if (method === 'DELETE') {
         const file = rest[0] ?? '';
@@ -211,7 +215,7 @@ export async function handleAdmin(request: Request, env: AdminEnv, store: Store,
       const [siteText, pageFiles, mediaFiles] = await Promise.all([store.read(SITE_FILE), readAll(store, PAGES_DIR), store.list(IMAGES_DIR)]);
       const site = JSON.parse(siteText ?? '{}');
       const pages = pageFiles.filter((f) => f.name.endsWith('.json')).map((f) => ({
-        slug: f.name.replace(/\.json$/, ''), title: normalizePage(JSON.parse(f.text || '{}')).title,
+        slug: f.name.replace(/\.json$/, ''), title: String(JSON.parse(f.text || '{}').title ?? f.name),
       }));
       const result = await runAgent(env, {
         prompt: prompt.slice(0, 4000),

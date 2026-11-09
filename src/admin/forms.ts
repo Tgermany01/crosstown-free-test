@@ -17,13 +17,14 @@ async function toUploadable(file: File): Promise<{ name: string; data: string }>
   const resizable = /^image\/(jpeg|png|webp)$/.test(file.type);
   if (!resizable) return { name: file.name, data: asBase64(await file.arrayBuffer()) };
   const bmp = await createImageBitmap(file);
-  const scale = Math.min(1, 2200 / Math.max(bmp.width, bmp.height));
-  if (scale === 1 && file.size < 1.5 * 1024 * 1024) return { name: file.name, data: asBase64(await file.arrayBuffer()) };
+  // Keep uploads small: the free Cloudflare plan gives the server only 10 ms of CPU per request.
+  const scale = Math.min(1, 1800 / Math.max(bmp.width, bmp.height));
+  if (scale === 1 && file.size < 500 * 1024) return { name: file.name, data: asBase64(await file.arrayBuffer()) };
   const canvas = document.createElement('canvas');
   canvas.width = Math.round(bmp.width * scale); canvas.height = Math.round(bmp.height * scale);
   canvas.getContext('2d')!.drawImage(bmp, 0, 0, canvas.width, canvas.height);
   const png = file.type === 'image/png';
-  const blob: Blob = await new Promise((r) => canvas.toBlob((b) => r(b!), png ? 'image/png' : 'image/jpeg', 0.86));
+  const blob: Blob = await new Promise((r) => canvas.toBlob((b) => r(b!), png ? 'image/png' : 'image/jpeg', 0.8));
   const name = file.name.replace(/\.\w+$/, png ? '.png' : '.jpg');
   return { name, data: asBase64(await blob.arrayBuffer()) };
 }

@@ -22,9 +22,9 @@ export class FsStore implements Store {
     return Promise.all(files.map(async (f) => ({ ...f, text: await this.read(f.path) })));
   }
   async read(path: string) { try { return await readFile(join(this.root, path), 'utf8'); } catch { return null; } }
-  async write(path: string, content: string | Uint8Array) {
+  async write(path: string, content: string | Uint8Array | { base64: string }) {
     await mkdir(dirname(join(this.root, path)), { recursive: true });
-    await writeFile(join(this.root, path), content);
+    await writeFile(join(this.root, path), typeof content === 'object' && 'base64' in content ? Buffer.from(content.base64, 'base64') : content);
   }
   async remove(path: string) { await rm(join(this.root, path), { force: true }); }
 }
